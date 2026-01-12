@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio & KI-Assistentin</title>
+  <title>Projektstart: Portfolio & KI-Assistentin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="portfolio.css">
 </head>
@@ -19,22 +19,24 @@
 <section>
   <div class="container">
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-      <a href="portfolio.html">Portfolio</a>
-      <span>›</span>
-      <a href="blog.html">Blog</a>
-      <span>›</span>
-      <span>KI-Assistentin</span>
-    </nav>
-
-    <!-- Artikel -->
     <article class="tech-box">
-      <span>📅 2026-01-09</span>
+      <span>📅 2026-01-08</span>
 
-      <h3>Portfolio & KI-Assistentin</h3>
+      <!-- VORLESEN -->
+      <div class="tts-wrapper">
+        <button id="ttsPlay" onclick="ttsPlayPause()">🔊 Vorlesen</button>
+        <button onclick="ttsStop()">⏹️ Stop</button>
 
-      <p>
+        <div class="tts-progress">
+          <div id="ttsBar"></div>
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <div id="ttsText">
+        <h3>Portfolio & KI-Assistentin</h3>
+
+<p>
 In diesem Beitrag dokumentiere ich die Planung und Umsetzung
 der digitalen Assistentin, die Besucher auf meiner Website begleitet.
 </p>
@@ -58,6 +60,7 @@ ergaben.
 Gerade dieses schrittweise Arbeiten hat mir gezeigt,
 wie motivierend praktische Projekte im Lernprozess sein können.
 </p>
+      </div>
 
     </article>
 
@@ -67,6 +70,9 @@ wie motivierend praktische Projekte im Lernprozess sein können.
 <footer>
   <p><a href="blog.html">← Zurück zum Blog</a></p>
 </footer>
+
+<!-- ✅ RICHTIGER PFAD (ROOT) -->
+<script src="tts.js"></script>
 
 </body>
 </html>

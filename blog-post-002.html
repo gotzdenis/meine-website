@@ -19,20 +19,22 @@
 <section>
   <div class="container">
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-      <a href="portfolio.html">Portfolio</a>
-      <span>›</span>
-      <a href="blog.html">Blog</a>
-      <span>›</span>
-      <span>KI als Lernhilfe</span>
-    </nav>
-
-    <!-- Artikel -->
     <article class="tech-box">
       <span>📅 2026-01-08</span>
 
-      <h3>Zusammenarbeit mit KI als Lernhilfe</h3>
+      <!-- VORLESEN -->
+      <div class="tts-wrapper">
+        <button id="ttsPlay" onclick="ttsPlayPause()">🔊 Vorlesen</button>
+        <button onclick="ttsStop()">⏹️ Stop</button>
+
+        <div class="tts-progress">
+          <div id="ttsBar"></div>
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <div id="ttsText">
+        <h3>Zusammenarbeit mit KI als Lernhilfe</h3>
 
       <p>
         In diesem Beitrag reflektiere ich meine Erfahrungen mit KI
@@ -54,6 +56,8 @@
         und praktischer Erfahrung.
 
       </p>
+      </div>
+
     </article>
 
   </div>
@@ -62,6 +66,9 @@
 <footer>
   <p><a href="blog.html">← Zurück zum Blog</a></p>
 </footer>
+
+<!-- ✅ RICHTIGER PFAD (ROOT) -->
+<script src="tts.js"></script>
 
 </body>
 </html>

@@ -19,46 +19,49 @@
 <section>
   <div class="container">
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-      <a href="portfolio.html">Portfolio</a>
-      <span>›</span>
-      <a href="blog.html">Blog</a>
-      <span>›</span>
-      <span>Projektstart</span>
-    </nav>
-
-    <!-- Artikel -->
     <article class="tech-box">
       <span>📅 2026-01-08</span>
 
-      <h3>Projektstart: Aufbau der Website</h3>
+      <!-- VORLESEN -->
+      <div class="tts-wrapper">
+        <button id="ttsPlay" onclick="ttsPlayPause()">🔊 Vorlesen</button>
+        <button onclick="ttsStop()">⏹️ Stop</button>
 
-<p>
-Dieses Projekt begann mit dem Ziel, eine eigene Website von Grund auf
-zu erstellen. Der Fokus lag zunächst nicht auf besonderen Funktionen,
-sondern auf einer sauberen Struktur und einem klaren Aufbau.
-</p>
+        <div class="tts-progress">
+          <div id="ttsBar"></div>
+        </div>
+      </div>
 
-<p>
-Zu Beginn habe ich eine einfache Startseite mit Navigation,
-klaren Bereichen und einem technischen Design umgesetzt.
-Dabei ging es vor allem darum, HTML, CSS und JavaScript
-in einem realen Projekt sinnvoll zusammenzuführen.
-</p>
+      <!-- TEXT -->
+      <div id="ttsText">
+        <h3>Projektstart: Aufbau der Website</h3>
 
-<p>
-Die erste Version der Website diente als Grundlage,
-um später weitere Inhalte und Ideen integrieren zu können.
-Wichtig war mir dabei, den Code übersichtlich zu halten
-und keine unnötigen Abhängigkeiten zu verwenden.
-</p>
+       <p>
+          Dieses Projekt begann mit dem Ziel, eine eigene Website von Grund auf
+          zu erstellen. Der Fokus lag zunächst nicht auf besonderen Funktionen,
+          sondern auf einer sauberen Struktur und einem klaren Aufbau.
+        </p>
 
-<p>
-Dieser erste Schritt war entscheidend, um ein Gefühl
-für Struktur, Dateiaufbau und Wartbarkeit zu entwickeln.
-Er bildet die Basis für alle späteren Erweiterungen.
-</p>
+        <p>
+          Zu Beginn habe ich eine einfache Startseite mit Navigation,
+          klaren Bereichen und einem technischen Design umgesetzt.
+          Dabei ging es vor allem darum, HTML, CSS und JavaScript
+          in einem realen Projekt sinnvoll zusammenzuführen.
+        </p>
+
+        <p>
+          Die erste Version der Website diente als Grundlage,
+          um später weitere Inhalte und Ideen integrieren zu können.
+          Wichtig war mir dabei, den Code übersichtlich zu halten
+          und keine unnötigen Abhängigkeiten zu verwenden.
+        </p>
+
+        <p>
+          Dieser erste Schritt war entscheidend, um ein Gefühl
+          für Struktur, Dateiaufbau und Wartbarkeit zu entwickeln.
+          Er bildet die Basis für alle späteren Erweiterungen.
+        </p>
+      </div>
 
     </article>
 
@@ -68,6 +71,9 @@ Er bildet die Basis für alle späteren Erweiterungen.
 <footer>
   <p><a href="blog.html">← Zurück zum Blog</a></p>
 </footer>
+
+<!-- ✅ RICHTIGER PFAD (ROOT) -->
+<script src="tts.js"></script>
 
 </body>
 </html>
