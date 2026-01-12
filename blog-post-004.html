@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Vorlesefunktion: Barrierefreiheit ohne externe Dienste</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <span class="logo">[ SYS-PORTFOLIO ]</span>
+  <ul>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- CONTENT -->
+<section>
+  <div class="container">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="portfolio.html">Portfolio</a>
+      <span>›</span>
+      <a href="blog.html">Blog</a>
+      <span>›</span>
+      <span>Vorlesefunktion</span>
+    </nav>
+
+    <!-- BLOG ARTIKEL -->
+    <article class="tech-box">
+      <span>📅 2026-01-20</span>
+
+      <!-- VORLESEN -->
+      <div class="tts-wrapper">
+        <button id="ttsPlay" onclick="ttsPlayPause()">🔊 Vorlesen</button>
+        <button onclick="ttsStop()">⏹️ Stop</button>
+
+        <div class="tts-progress">
+          <div id="ttsBar"></div>
+        </div>
+      </div>
+
+      <!-- BLOGTEXT -->
+      <div id="ttsText">
+        <h3>Vorlesefunktion: Barrierefreiheit ohne externe Dienste</h3>
+
+        <p>
+          Im Rahmen der Weiterentwicklung dieser Website wurde eine
+          Vorlesefunktion integriert, mit der Blog- und Projekttexte
+          direkt im Browser vorgelesen werden können.
+        </p>
+
+        <p>
+          Ziel war es, die Zugänglichkeit der Inhalte zu verbessern,
+          ohne dabei auf externe Dienste oder APIs zurückzugreifen.
+          Die Umsetzung basiert vollständig auf browserinternen
+          Funktionen und arbeitet komplett lokal.
+        </p>
+
+        <p>
+          Technisch kommt die Web Speech API des Browsers zum Einsatz.
+          Dadurch werden keine Texte an Server übertragen, keine
+          Audiodateien gespeichert und keine personenbezogenen Daten
+          verarbeitet.
+        </p>
+
+        <p>
+          Die Vorlesefunktion wird bewusst nur auf Benutzeraktion
+          gestartet. Es gibt keine automatische Wiedergabe, sondern
+          eine klare Steuerung über Start, Pause und Stop.
+        </p>
+
+        <p>
+          Diese Lösung vereint Barrierefreiheit, Datenschutz und
+          technische Einfachheit und passt damit gut zum
+          grundsätzlichen Aufbau der Website als statisches
+          Portfolio-Projekt.
+        </p>
+      </div>
+
+    </article>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><a href="blog.html">← Zurück zum Blog</a></p>
+</footer>
+
+<!-- SCRIPT -->
+<script src="tts.js"></script>
+
+</body>
+</html>
