@@ -48,41 +48,57 @@
 
       <!-- BLOGTEXT -->
       <div id="ttsText">
-        <h3>Vorlesefunktion: Barrierefreiheit ohne externe Dienste</h3>
+<h1>Vorlesefunktion: Barrierefreiheit ohne externe Dienste</h1>
 
-        <p>
-          Im Rahmen der Weiterentwicklung dieser Website wurde eine
-          Vorlesefunktion integriert, mit der Blog- und Projekttexte
-          direkt im Browser vorgelesen werden können.
-        </p>
+<h2>Ziel</h2>
+<p>
+Ziel dieses Beitrags war es,
+die Zugänglichkeit der Inhalte dieser Website zu verbessern,
+ohne dabei auf externe Dienste oder APIs zurückzugreifen.
+Die Vorlesefunktion sollte vollständig lokal im Browser arbeiten
+und sich nahtlos in das bestehende statische Konzept einfügen.
+</p>
 
-        <p>
-          Ziel war es, die Zugänglichkeit der Inhalte zu verbessern,
-          ohne dabei auf externe Dienste oder APIs zurückzugreifen.
-          Die Umsetzung basiert vollständig auf browserinternen
-          Funktionen und arbeitet komplett lokal.
-        </p>
+<h2>Ausgangslage</h2>
+<p>
+Im Rahmen der Weiterentwicklung der Website stellte sich die Frage,
+wie Barrierefreiheit sinnvoll umgesetzt werden kann,
+ohne Datenschutz, Einfachheit oder Kontrolle über die Inhalte zu verlieren.
+Viele bestehende Lösungen setzen auf externe Text-to-Speech-Dienste,
+die Daten übertragen oder zusätzliche Abhängigkeiten erzeugen.
+</p>
 
-        <p>
-          Technisch kommt die Web Speech API des Browsers zum Einsatz.
-          Dadurch werden keine Texte an Server übertragen, keine
-          Audiodateien gespeichert und keine personenbezogenen Daten
-          verarbeitet.
-        </p>
+<h2>Umsetzung</h2>
+<p>
+Die Vorlesefunktion wurde vollständig mit browserinternen Möglichkeiten umgesetzt.
+Technisch kommt die Web Speech API des jeweiligen Browsers zum Einsatz.
+Dabei werden keine Texte an externe Server übertragen
+und es werden keine Audiodateien gespeichert.
+</p>
 
-        <p>
-          Die Vorlesefunktion wird bewusst nur auf Benutzeraktion
-          gestartet. Es gibt keine automatische Wiedergabe, sondern
-          eine klare Steuerung über Start, Pause und Stop.
-        </p>
+<p>
+Die Vorlesefunktion wird ausschließlich auf aktive Benutzeraktion gestartet.
+Es gibt keine automatische Wiedergabe,
+sondern eine bewusste Steuerung über Start, Pause und Stop.
+Dadurch bleibt die Kontrolle jederzeit beim Nutzer.
+</p>
 
-        <p>
-          Diese Lösung vereint Barrierefreiheit, Datenschutz und
-          technische Einfachheit und passt damit gut zum
-          grundsätzlichen Aufbau der Website als statisches
-          Portfolio-Projekt.
-        </p>
-      </div>
+<h2>Ergebnis</h2>
+<p>
+Das Ergebnis ist eine funktionierende Vorlesefunktion,
+die Barrierefreiheit, Datenschutz und technische Einfachheit miteinander vereint.
+Sie passt sich nahtlos in den bestehenden Aufbau der Website ein
+und unterstützt die Nutzung als statisches Portfolio- und Dokumentationsprojekt.
+</p>
+
+<h2>Lernpunkte</h2>
+<ul>
+  <li>Barrierefreiheit lässt sich auch ohne externe Dienste umsetzen</li>
+  <li>Browserinterne APIs bieten oft mehr Möglichkeiten als erwartet</li>
+  <li>Datenschutz und Funktionalität schließen sich nicht aus</li>
+  <li>Bewusste Nutzersteuerung erhöht Transparenz und Kontrolle</li>
+</ul>
+
 
     </article>
 
