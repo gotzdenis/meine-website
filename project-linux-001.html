@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Projekt – Linux Ubuntu Entwicklungsumgebung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ZENTRALES CSS -->
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<nav>
+  <span class="logo">[ SYS-PORTFOLIO ]</span>
+  <ul>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="projects.html">Projekte</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="hero">
+  <h1>Linux Ubuntu – Entwicklungsumgebung</h1>
+  <p>Umstellung eines älteren Laptops auf Linux als stabiles Hauptsystem</p>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<section>
+  <div class="container">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="portfolio.html">Portfolio</a>
+      <span>›</span>
+      <a href="projects.html">Projekte</a>
+      <span>›</span>
+      <span>Linux Ubuntu</span>
+    </nav>
+
+    <article class="tech-box">
+
+      <span>✅ Status: Abgeschlossen · Linux / Systemintegration</span>
+
+      <h3>Projektziel</h3>
+      <p>
+        Ziel dieses Projekts war es, einen älteren Laptop, der nicht mehr
+        Windows-11-tauglich ist, sinnvoll weiterzuverwenden.
+        Statt eines Neukaufs wurde bewusst Linux als Hauptbetriebssystem gewählt.
+      </p>
+
+      <p>
+        Der Laptop soll zukünftig als stabiles Lern- und Spielgerät
+        für meine Tochter (7) dienen und gleichzeitig als dokumentiertes
+        Praxisprojekt im Rahmen meiner Umschulung genutzt werden.
+      </p>
+
+      <h3>Ausgangslage</h3>
+      <ul>
+        <li>Älterer Lenovo-Laptop</li>
+        <li>Windows 10 vorhanden, Upgrade auf Windows 11 nicht möglich</li>
+        <li>Hardware funktionstüchtig, aber nicht mehr zeitgemäß</li>
+        <li>Ziel: Wartbares, sicheres und alltagstaugliches System</li>
+      </ul>
+
+      <h3>Umsetzung</h3>
+
+      <h4>Installation</h4>
+      <p>
+        Ubuntu 24.04 LTS wurde offline per USB-Stick installiert.
+        Die Installation erfolgte bewusst minimal, ohne zusätzliche
+        Software oder automatische Treiberinstallation.
+      </p>
+
+      <h4>Treiber & Secure Boot</h4>
+      <p>
+        Der verbaute Broadcom BCM43142 WLAN-Chip benötigte einen
+        proprietären Treiber. Da Secure Boot aktiv war, musste dieser
+        über das MOK-Verfahren autorisiert werden.
+      </p>
+
+      <p>
+        Nach erfolgreicher Autorisierung und einem Neustart
+        funktionierte die WLAN-Verbindung zuverlässig.
+      </p>
+
+      <h4>Benutzer- & Rechtekonzept</h4>
+      <p>
+        Es wurden getrennte Benutzerkonten eingerichtet.
+        Für meine Tochter wurde ein Standardkonto ohne Administratorrechte
+        erstellt, inklusive automatischer Anmeldung und vereinfachter Oberfläche.
+      </p>
+
+      <h3>Ergebnis</h3>
+      <ul>
+        <li>Ubuntu 24.04 LTS läuft stabil und performant</li>
+        <li>WLAN und Systemupdates funktionieren zuverlässig</li>
+        <li>Klare Trennung von Administrator- und Kinderkonto</li>
+        <li>Alltagstaugliches System für Lernen und Freizeit</li>
+      </ul>
+
+      <h3>Lernpunkte</h3>
+      <ul>
+        <li>Analyse von Hardware und Treiberproblemen unter Linux</li>
+        <li>Umgang mit Secure Boot und MOK</li>
+        <li>Bewusste, dokumentierte Systementscheidungen</li>
+        <li>Nutzerorientierte Einrichtung von IT-Systemen</li>
+      </ul>
+
+      <h3>Dokumentation</h3>
+      <p>
+        Der komplette Ablauf sowie die getroffenen Entscheidungen
+        sind im zugehörigen Blogpost dokumentiert:
+      </p>
+
+      <p>
+        <a href="blog-post-005.html">→ Blogpost: Linux statt Wegwerfen</a>
+      </p>
+
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p><a href="projects.html">← Zurück zur Projektübersicht</a></p><br>
+  <p>© 2026 · Linux-Projekt</p>
+</footer>
+
+</body>
+</html>

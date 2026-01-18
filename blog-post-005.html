@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Linux statt Wegwerfen – Ubuntu als Lernsystem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <span class="logo">[ SYS-PORTFOLIO ]</span>
+  <ul>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- CONTENT -->
+<section>
+  <div class="container">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="portfolio.html">Portfolio</a>
+      <span>›</span>
+      <a href="blog.html">Blog</a>
+      <span>›</span>
+      <span>Linux & Ubuntu</span>
+    </nav>
+
+    <!-- BLOG ARTIKEL -->
+    <article class="tech-box">
+      <span>📅 2026-01-21 · ⏱️ 4–5 Min Lesezeit · 🧩 Linux / Systemintegration</span>
+
+      <!-- VORLESEN -->
+      <div class="tts-wrapper">
+        <button id="ttsPlay" onclick="ttsPlayPause()">🔊 Vorlesen</button>
+        <button onclick="ttsStop()">⏹️ Stop</button>
+
+        <div class="tts-progress">
+          <div id="ttsBar"></div>
+        </div>
+      </div>
+
+      <!-- BLOGTEXT -->
+      <div id="ttsText">
+
+        <h3>Linux statt Wegwerfen – Ubuntu als Lernsystem für alte Hardware</h3>
+
+        <h4>Ziel</h4>
+        <p>
+          Ein älterer Laptop, der nicht mehr Windows-11-tauglich ist,
+          sollte sinnvoll weiterverwendet werden. Ziel war ein stabiles
+          Linux-System, das später von meiner Tochter (7) zum Lernen
+          und Spielen genutzt werden kann.
+        </p>
+
+        <h4>Ausgangslage</h4>
+        <ul>
+          <li>Lenovo-Laptop mit Windows-10-Lizenz</li>
+          <li>Hardware technisch funktionsfähig</li>
+          <li>Kein Upgrade auf Windows 11 möglich</li>
+          <li>Entscheidung für Linux statt Neukauf</li>
+        </ul>
+
+        <h4>Installation</h4>
+        <p>
+          Ubuntu 24.04 LTS wurde offline per USB-Stick installiert.
+          Die Installation erfolgte bewusst minimal, ohne zusätzliche
+          Software oder Treiber.
+        </p>
+
+        <h4>Erster Start & Systemprüfung</h4>
+        <p>
+          Nach dem ersten Start wurde der Systemzustand überprüft,
+          einschließlich Version, Hardware und Grundkonfiguration.
+        </p>
+
+        <h4>Treiber & Secure Boot (WLAN-Problem)</h4>
+        <p>
+          Der Laptop nutzt einen Broadcom BCM43142 WLAN-Chip, der unter
+          Linux einen proprietären Treiber benötigt. Da Secure Boot
+          aktiv war, musste der Treiber über das sogenannte
+          MOK-Verfahren autorisiert werden.
+        </p>
+
+        <p>
+          Nach der Autorisierung und einem Neustart war WLAN verfügbar
+          und das System vollständig einsatzbereit.
+        </p>
+
+        <h4>Ergebnis</h4>
+        <ul>
+          <li>Ubuntu 24.04 LTS läuft stabil</li>
+          <li>WLAN funktioniert zuverlässig</li>
+          <li>System ist alltagstauglich</li>
+          <li>Kinderkonto ohne Adminrechte eingerichtet</li>
+        </ul>
+
+        <h4>Lernpunkte</h4>
+        <ul>
+          <li>Analyse von Hardware und Treibern unter Linux</li>
+          <li>Umgang mit Secure Boot und MOK</li>
+          <li>Bewusste Systementscheidungen</li>
+          <li>Nutzerorientierte Einrichtung für Kinder</li>
+        </ul>
+
+        <h4>Fazit</h4>
+        <p>
+          Linux ist eine sehr gute Möglichkeit, ältere Hardware sinnvoll
+          weiterzuverwenden. Ubuntu bietet eine stabile, sichere und
+          kostenlose Basis für Lern- und Alltagszwecke.
+        </p>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><a href="blog.html">← Zurück zum Blog</a></p>
+</footer>
+
+<!-- SCRIPT -->
+<script src="tts.js"></script>
+
+</body>
+</html>
