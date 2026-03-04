@@ -52,12 +52,28 @@ nav ul {
 
 
 /* =========================================
-   LAYOUT
+   HERO / LAYOUT
    ========================================= */
 
-header.hero {
+.hero {
+  padding: 80px 20px;
   text-align: center;
-  padding: 60px 20px 50px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-role {
+  color: #00ffcc;
+  letter-spacing: 1px;
+}
+
+.hero-desc {
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.85;
 }
 
 section {
@@ -72,7 +88,7 @@ section {
 
 
 /* =========================================
-   GRID-STRUKTUREN
+   GRID
    ========================================= */
 
 .process-grid {
@@ -89,7 +105,7 @@ section {
 
 
 /* =========================================
-   TECH-BOXEN
+   TECH BOX / CARDS
    ========================================= */
 
 .tech-box {
@@ -97,12 +113,17 @@ section {
   padding: 14px;
   background: #050505;
   font-size: 14px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  border-radius: 8px;
+
+  transition: transform 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
 .tech-box:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: #00ffcc;
+  box-shadow: 0 0 12px #00ffcc22;
 }
 
 .tech-box h4 {
@@ -114,6 +135,72 @@ section {
 .tech-box p {
   margin: 0;
   opacity: 0.9;
+}
+
+.tech-box > span {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #00ffcc;
+  border: 1px solid #00ffcc55;
+  padding: 3px 8px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SKILL BARS
+   ========================================= */
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  background: #111;
+  border: 1px solid #00ffcc55;
+  height: 8px;
+}
+
+.skill-bar div {
+  background: #00ffcc;
+  height: 100%;
+}
+
+
+/* =========================================
+   BLOG META
+   ========================================= */
+
+.blog-card {
+  position: relative;
+  padding-top: 36px;
+}
+
+.blog-meta {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.blog-date {
+  font-size: 11px;
+  padding: 3px 8px;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  letter-spacing: 1px;
+  background: #000;
+}
+
+.blog-tag {
+  font-size: 10px;
+  padding: 3px 6px;
+  border: 1px dashed #00ffcc88;
+  color: #00ffccaa;
+  letter-spacing: 1px;
 }
 
 
@@ -131,7 +218,7 @@ footer {
 
 
 /* =========================================
-   ASSISTENT
+   ASSISTENT – SCI-FI HUD
    ========================================= */
 
 #assistant {
@@ -142,12 +229,64 @@ footer {
   align-items: center;
   gap: 10px;
   z-index: 9999;
+
+  padding: 6px 10px;
+  border: 1px solid #00ffcc33;
+  border-radius: 8px;
+
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#assistant img {
-  width: 80px;
-  height: auto;
+#assistant:hover {
+  border-color: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc33;
 }
+
+
+/* Assistent Bild */
+
+#assistant img {
+  width: 55px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #00ffcc66);
+
+  transition: transform 0.3s ease,
+              filter 0.3s ease;
+}
+
+#assistant:hover img {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 12px #00ffcc);
+}
+
+
+/* Aktiv Zustand */
+
+#assistant.enabled img {
+  animation: assistantPulse 2.5s infinite;
+}
+
+@keyframes assistantPulse {
+
+  0% {
+    filter: drop-shadow(0 0 6px #00ffcc66);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 16px #00ffcc);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 6px #00ffcc66);
+  }
+
+}
+
+
+/* Hinweis Text */
 
 #assistant-hint {
   text-align: right;
@@ -165,127 +304,49 @@ footer {
   display: none;
 }
 
+
+/* Button */
+
 #assistant-toggle {
   background: none;
   border: none;
   color: #00ffcc;
   cursor: pointer;
   font-size: 14px;
+  transition: transform 0.2s ease;
 }
 
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 900px) {
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skill-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .process-grid,
-  .skill-grid {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    padding: 12px 18px;
-  }
-
-  section {
-    padding: 32px 0;
-  }
+#assistant-toggle:hover {
+  transform: scale(1.15);
 }
 
 /* =========================================
-   BLOG – GRAFISCHES GIMMICK
+   ASSISTENT SYSTEM PANEL
    ========================================= */
 
-.blog-card {
-  position: relative;
-  padding-top: 36px; /* Platz für Meta-Leiste */
-}
-
-/* obere Meta-Leiste */
-.blog-meta {
-  position: absolute;
-  top: 8px;
-  left: 12px;
+#assistant-panel {
   display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-/* Datum = System-Label */
-.blog-date {
-  font-size: 11px;
-  padding: 3px 8px;
-  border: 1px solid #00ffcc;
-  color: #00ffcc;
-  letter-spacing: 1px;
-  background: #000;
-}
-
-/* Tag = Gimmick */
-.blog-tag {
+  flex-direction: column;
   font-size: 10px;
-  padding: 3px 6px;
-  border: 1px dashed #00ffcc88;
-  color: #00ffccaa;
-  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-right: 6px;
+  font-family: monospace;
 }
 
-/* =========================================
-   BLOG – DATUM (DEZENTES GIMMICK)
-   ========================================= */
-
-.tech-box > span {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-size: 12px;
+.assistant-title {
   color: #00ffcc;
-  border: 1px solid #00ffcc55;
-  padding: 3px 8px;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* =========================================
-   MOBILE NAV – LESBARKEIT
-   ========================================= */
-
-@media (max-width: 600px) {
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-    padding: 6px 0;
-  }
-
-  .logo {
-    font-size: 16px;
-  }
-
+.assistant-status {
+  color: #00ffccaa;
+  font-size: 9px;
 }
 
+
 /* =========================================
-   RECHTLICHE SEITEN – EINHEITLICH
+   RECHTLICHE SEITEN
    ========================================= */
 
 .legal-wrapper {
@@ -314,7 +375,56 @@ footer {
   font-size: 14px;
 }
 
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
 @media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 18px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .process-grid,
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 32px 0;
+  }
+
   .legal-wrapper {
     padding: 20px 14px;
   }
@@ -326,13 +436,110 @@ footer {
   .legal-content h2 {
     font-size: 18px;
   }
+
+  #assistant {
+    bottom: 110px;
+  }
+
+}
+
+.assistant-status::after {
+  content: " ▌";
+  animation: assistantCursor 1s infinite;
+}
+
+@keyframes assistantCursor {
+
+  0% { opacity: 1; }
+
+  50% { opacity: 0; }
+
+  100% { opacity: 1; }
+
 }
 
 /* =========================================
-   MOBILE FIX: Assistent blockiert Footer nicht
+   TERMINAL
    ========================================= */
-@media (max-width: 600px) {
-  #assistant {
-    bottom: 110px; /* Abstand vom unteren Rand */
-  }
+
+.terminal-section {
+  padding: 40px 0;
+}
+
+#terminal {
+  background: #050505;
+  border: 1px solid #00ffcc44;
+  padding: 16px;
+  font-family: monospace;
+  max-width: 700px;
+  margin: auto;
+}
+
+.terminal-header {
+  color: #00ffcc;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+#terminal-output {
+  min-height: 120px;
+  font-size: 13px;
+}
+
+.terminal-input-line {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.prompt {
+  color: #00ffcc;
+}
+
+#terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ffcc;
+  flex: 1;
+  font-family: monospace;
+}
+
+.cmd {
+  color: #00ffcc;
+}
+
+/* =========================================
+   BOOT SCREEN
+   ========================================= */
+
+#boot-screen {
+
+position: fixed;
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+background: #000;
+
+color: #00ffcc;
+
+font-family: monospace;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+z-index: 99999;
+
+}
+
+#boot-text {
+
+white-space: pre-line;
+font-size: 14px;
+line-height: 1.6;
+
 }

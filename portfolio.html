@@ -1,66 +1,129 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio – Fachinformatiker Systemintegration</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Portfolio – Fachinformatiker Systemintegration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ZENTRALES CSS -->
-  <link rel="stylesheet" href="portfolio.css">
+<link rel="stylesheet" href="portfolio.css">
 </head>
+
 <body>
+
+<!-- ================= BOOT SCREEN ================= -->
+<div id="boot-screen">
+<div id="boot-text">
+SYS-PORTFOLIO BOOTING...
+
+Loading modules...
+Assistant........OK
+Terminal.........OK
+Projects.........OK
+
+System ready.
+</div>
+</div>
 
 <!-- ================= NAVIGATION ================= -->
 <nav>
-  <span class="logo">[ SYS-PORTFOLIO ]</span>
-  <ul>
-    <li><a href="#about" id="nav-about">Über mich</a></li>
-    <li><a href="#projects" id="nav-projects">Aktuelles Projekt</a></li>
-    <li><a href="projects.html" id="nav-projects-archive">Projekte</a></li>
-    <li><a href="#skills" id="nav-skills">Kompetenzen</a></li>
-    <li><a href="blog.html" id="nav-blog">Blog</a></li>
-  </ul>
+<span class="logo">[ SYS-PORTFOLIO ]</span>
+
+<ul>
+<li><a href="#about" id="nav-about">Über mich</a></li>
+<li><a href="#projects" id="nav-projects">Aktuelles Projekt</a></li>
+<li><a href="projects.html" id="nav-projects-archive">Projekte</a></li>
+<li><a href="#skills" id="nav-skills">Kompetenzen</a></li>
+<li><a href="blog.html" id="nav-blog">Blog</a></li>
+</ul>
 </nav>
-
-
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-<h1>DenisBackground</h1>
-<h2>Fachinformatiker Systemintegration (Umschulung)</h2>
 
-  <p>IT lernen · Linux verstehen · Systeme sauber dokumentieren</p>
+<div class="hero-content">
+
+<h1>Denis Gotz</h1>
+
+<p class="hero-role">
+Fachinformatiker Systemintegration · Umschulung
+</p>
+
+<p class="hero-desc">
+Dokumentation meines Lernwegs in IT, Linux,
+Systemadministration und technischer Analyse.
+</p>
+
+</div>
+
 </header>
+
+<!-- ================= TERMINAL ================= -->
+<section class="terminal-section">
+
+<div class="container">
+
+<div id="terminal">
+
+<div class="terminal-header">
+SYS-CONSOLE
+</div>
+
+<div id="terminal-output">
+<p>System bereit.</p>
+<p>Tippe <span class="cmd">help</span> für Befehle.</p>
+</div>
+
+<div class="terminal-input-line">
+<span class="prompt">></span>
+<input id="terminal-input" type="text" autocomplete="off">
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <!-- ================= PROJEKTE ================= -->
 <section id="projects">
-  <div class="container">
-    <h3>Projekte</h3>
+
+<div class="container">
+
+<h3>Projekte</h3>
 
 <div class="tech-box" id="linux">
-   <h4>Linux Ubuntu – Entwicklungsumgebung (Laptop)</h4>
 
-  <p>
-    Umstellung eines älteren, nicht Windows-11-tauglichen Laptops
-    auf Linux als stabiles Hauptsystem.
-  </p>
+<h4>Linux Ubuntu – Entwicklungsumgebung (Laptop)</h4>
 
-  <p>
-    Fokus: Installation, Treiber (Broadcom),
-    Secure Boot (MOK) sowie ein kindgerechtes
-    Benutzer- und Rechtekonzept.
-  </p>
+<p>
+Umstellung eines älteren, nicht Windows-11-tauglichen Laptops
+auf Linux als stabiles Hauptsystem.
+</p>
 
-  <p>
-    <strong>Status:</strong> ✅ abgeschlossen<br>
-    <a href="project-linux-001.html">Projekt ansehen →</a>
-  </p>
+<p>
+Fokus: Installation, Treiber (Broadcom),
+Secure Boot (MOK) sowie ein kindgerechtes
+Benutzer- und Rechtekonzept.
+</p>
+
+<p>
+<strong>Status:</strong> ✅ abgeschlossen<br>
+<a href="project-linux-001.html">Projekt ansehen →</a>
+</p>
+
 </div>
+
+</div>
+
+</section>
 
 <!-- ================= ÜBER MICH ================= -->
 <section id="about">
-  <div class="container tech-box">
-    <h3>Über mich</h3>
+
+<div class="container tech-box">
+
+<h3>Über mich</h3>
+
 <p>
 Ich beginne eine Umschulung zum Fachinformatiker für Systemintegration
 und nutze diese Website als persönliches Lern- und Portfolio-Projekt.
@@ -83,128 +146,166 @@ Ziel ist es, Systeme zu verstehen,
 Probleme logisch zu analysieren
 und Lösungen stabil und wartbar umzusetzen.
 </p>
-  </div>
+
+</div>
+
 </section>
 
 <!-- ================= ARBEITSWEISE ================= -->
 <section id="process">
-  <div class="container">
-    <h3>Arbeitsweise</h3>
 
-    <!-- WICHTIG: process-grid -->
-    <div class="process-grid">
-      <div class="tech-box">
-        <h4>Verstehen</h4>
-        <p>Anforderungen erfassen und Systeme überblicken.</p>
-      </div>
+<div class="container">
 
-      <div class="tech-box">
-        <h4>Analysieren</h4>
-        <p>Zusammenhänge erkennen und Probleme strukturieren.</p>
-      </div>
+<h3>Arbeitsweise</h3>
 
-      <div class="tech-box">
-        <h4>Umsetzen</h4>
-        <p>Schrittweise und stabil Lösungen realisieren.</p>
-      </div>
+<div class="process-grid">
 
-      <div class="tech-box">
-        <h4>Dokumentieren</h4>
-        <p>Ergebnisse und Lernprozesse nachvollziehbar festhalten.</p>
-      </div>
-    </div>
-  </div>
+<div class="tech-box">
+<h4>Verstehen</h4>
+<p>Anforderungen erfassen und Systeme überblicken.</p>
+</div>
+
+<div class="tech-box">
+<h4>Analysieren</h4>
+<p>Zusammenhänge erkennen und Probleme strukturieren.</p>
+</div>
+
+<div class="tech-box">
+<h4>Umsetzen</h4>
+<p>Schrittweise und stabil Lösungen realisieren.</p>
+</div>
+
+<div class="tech-box">
+<h4>Dokumentieren</h4>
+<p>Ergebnisse und Lernprozesse nachvollziehbar festhalten.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- ================= KOMPETENZEN ================= -->
 <section id="skills">
-  <div class="container">
-    <h3>Kompetenzen (im Aufbau)</h3>
 
-    <!-- WICHTIG: skill-grid -->
-    <div class="skill-grid">
-      <div class="tech-box">
-        <h4>Systeme & Grundlagen</h4>
-        <p>IT-Grundlagen, Windows, Linux</p>
-      </div>
+<div class="container">
 
-      <div class="tech-box">
-        <h4>Web & Automatisierung</h4>
-        <p>HTML, CSS, JavaScript</p>
-      </div>
+<h3>Kompetenzen (im Aufbau)</h3>
 
-      <div class="tech-box">
-        <h4>KI & Werkzeuge</h4>
-        <p>KI als Lern- und Unterstützungstool</p>
-      </div>
-    </div>
-  </div>
+<div class="skill-grid">
+
+<div class="tech-box">
+
+<h4>Systeme & Grundlagen</h4>
+
+<div class="skill">
+Linux
+<div class="skill-bar">
+<div style="width:60%"></div>
+</div>
+</div>
+
+</div>
+
+<div class="tech-box">
+<h4>Web & Automatisierung</h4>
+<p>HTML, CSS, JavaScript</p>
+</div>
+
+<div class="tech-box">
+<h4>KI & Werkzeuge</h4>
+<p>KI als Lern- und Unterstützungstool</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
+<!-- ================= SECURITY ================= -->
 <section id="security">
-  <div class="container tech-box">
-    <h3>Cyber­sicherheit & Verantwortung</h3>
 
-    <p>
-      Cyber­sicherheit ist ein zentraler Bestandteil der
-      Fachinformatik für Systemintegration.
-    </p>
+<div class="container tech-box">
 
-    <p>
-      Bereits bei diesem Portfolio achte ich bewusst auf einen
-      einfachen, transparenten und wartbaren Aufbau.
-      Die Website verzichtet auf Tracking, Cookies
-      und externe Skripte.
-    </p>
+<h3>Cyber­sicherheit & Verantwortung</h3>
 
-    <p>
-      Ziel ist es, die Angriffsfläche möglichst gering zu halten
-      und technische Zusammenhänge nachvollziehbar zu gestalten.
-    </p>
+<p>
+Cyber­sicherheit ist ein zentraler Bestandteil der
+Fachinformatik für Systemintegration.
+</p>
 
-    <p>
-      Sicherheitsrelevante Themen wie Zugriffskontrolle,
-      Netzwerksicherheit und Datenschutz werden im Rahmen
-      meiner Umschulung weiter vertieft.
-    </p>
-  </div>
+<p>
+Bereits bei diesem Portfolio achte ich bewusst auf einen
+einfachen, transparenten und wartbaren Aufbau.
+Die Website verzichtet auf Tracking, Cookies
+und externe Skripte.
+</p>
+
+<p>
+Ziel ist es, die Angriffsfläche möglichst gering zu halten
+und technische Zusammenhänge nachvollziehbar zu gestalten.
+</p>
+
+<p>
+Sicherheitsrelevante Themen wie Zugriffskontrolle,
+Netzwerksicherheit und Datenschutz werden im Rahmen
+meiner Umschulung weiter vertieft.
+</p>
+
+</div>
+
 </section>
-
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  <div class="container footer-grid">
-    <div>
-      <p>© 2026 · Persönliches Lern- & Portfolio-Projekt</p>
-    </div>
-    <div>
+
+<div class="container footer-grid">
+
+<div>
+<p>© 2026 · Persönliches Lern- & Portfolio-Projekt</p>
+</div>
+
+<div>
 <a href="kontakt.html">Kontakt</a> ·
 <a href="datenschutz.html">Datenschutz</a> ·
 <a href="impressum.html">Impressum</a><br>
+
 <a href="https://www.youtube.com/@DenisBackground" target="_blank">YouTube</a> ·
 <a href="https://www.twitch.tv/DenisBackground" target="_blank">Twitch</a>
+</div>
 
-    </div>
-  </div>
+</div>
+
 </footer>
 
-
-<!-- ================= KI-ASSISTENTIN ================= -->
+<!-- ================= KI ASSISTENT ================= -->
 <div id="assistant">
-  <div id="assistant-hint">
-    <strong>🔈 Einschalten</strong>
-    <small>für Begrüßung & Erklärungen</small>
-  </div>
 
-  <img src="assistant.png" alt="Digitale Assistentin">
+<div id="assistant-panel">
+<span class="assistant-title">AI ASSISTANT</span>
+<span class="assistant-status">STATUS: ONLINE</span>
+<span class="assistant-status">VOICE: READY</span>
+</div>
 
-  <button id="assistant-toggle" aria-label="Assistent aktivieren">
-    🔊
-  </button>
+<div id="assistant-hint">
+<strong>🔈 Einschalten</strong>
+<small>für Begrüßung & Erklärungen</small>
+</div>
+
+<img src="assistant.png" alt="Digitale Assistentin">
+
+<button id="assistant-toggle" aria-label="Assistent aktivieren">
+🔊
+</button>
+
 </div>
 
 <!-- ================= JAVASCRIPT ================= -->
 <script src="assistant.js"></script>
+<script src="terminal.js"></script>
+<script src="boot.js"></script>
 
 </body>
 </html>
