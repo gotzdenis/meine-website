@@ -613,3 +613,33 @@ line-height: 1.6;
   max-width: 320px;
 
 }
+
+/* ================= SYSTEM STATUS LED ================= */
+
+.status-led {
+
+display:inline-block;
+
+width:8px;
+height:8px;
+
+border-radius:50%;
+
+margin-right:8px;
+
+box-shadow:0 0 6px #00ffcc;
+
+}
+
+.status-led.online{
+
+background:#00ffcc;
+
+}
+
+.status-led.offline{
+
+background:#ff4444;
+box-shadow:0 0 6px #ff4444;
+
+}
