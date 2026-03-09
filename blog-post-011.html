@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>SYS-PORTFOLIO v2 – Technischer Umbau</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<span class="logo">[ SYS-PORTFOLIO ]</span>
+<ul>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="blog.html">Blog</a></li>
+</ul>
+</nav>
+
+
+<!-- CONTENT -->
+
+<section>
+<div class="container">
+
+<!-- BREADCRUMB -->
+
+<nav class="breadcrumb">
+<a href="portfolio.html">Portfolio</a>
+<span>›</span>
+<a href="blog.html">Blog</a>
+<span>›</span>
+<span>Portfolio v2</span>
+</nav>
+
+
+<!-- BLOG ARTIKEL -->
+
+<article class="tech-box">
+
+<span>📅 2026 · ⏱️ 3–4 Min Lesezeit · 🧩 Portfolio</span>
+
+
+<!-- VORLESEN -->
+
+<div class="tts-wrapper">
+
+<button id="ttsPlay" onclick="ttsPlayPause()">
+🔊 Vorlesen
+</button>
+
+<button onclick="ttsStop()">
+⏹️ Stop
+</button>
+
+<div class="tts-progress">
+<div id="ttsBar"></div>
+</div>
+
+</div>
+
+
+<!-- BLOGTEXT -->
+
+<div id="ttsText">
+
+<h1>SYS-PORTFOLIO v2 – Technischer Umbau</h1>
+
+<h2>Ziel</h2>
+
+<p>
+Die Portfolio-Website wurde strukturell überarbeitet,
+um eine klarere Trennung zwischen Portfolio,
+Projekten und Blog zu erreichen.
+</p>
+
+<h2>Änderungen</h2>
+
+<ul>
+<li>Einführung eines Terminal-Interfaces</li>
+<li>Integration einer lokalen Assistentin</li>
+<li>Vorlesefunktion für Blogartikel</li>
+<li>Verbesserte Navigation</li>
+<li>Blogstruktur mit chronologischen Einträgen</li>
+</ul>
+
+<h2>Technische Umsetzung</h2>
+
+<ul>
+<li>HTML5</li>
+<li>CSS Grid Layout</li>
+<li>JavaScript ohne Frameworks</li>
+<li>keine externen APIs</li>
+</ul>
+
+<h2>Ergebnis</h2>
+
+<p>
+Die Website fungiert jetzt als persönliche
+Dokumentationsplattform während der Umschulung
+zum Fachinformatiker für Systemintegration.
+</p>
+
+<h2>Fazit</h2>
+
+<p>
+Durch den Umbau zu Version 2 wurde die Website
+strukturierter und modularer aufgebaut.
+Das Portfolio dient nun nicht nur als Präsentation,
+sondern auch als technisches Lernjournal während
+der Umschulung.
+</p>
+
+</div>
+
+</article>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+<p><a href="blog.html">← Zurück zum Blog</a></p>
+</footer>
+
+
+<!-- SCRIPT -->
+
+<script src="tts.js"></script>
+
+</body>
+</html>

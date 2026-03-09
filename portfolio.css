@@ -543,3 +543,50 @@ font-size: 14px;
 line-height: 1.6;
 
 }
+
+/* ================= BLOG MONATS CONTAINER ================= */
+
+.month-header {
+  grid-column: 1 / -1;
+  background: #020202;
+  border: 1px solid #00ffcc88;
+  text-align: center;
+}
+
+.month-header h3 {
+  margin: 0;
+  color: #00ffcc;
+}
+
+
+/* ================= BLOG CARD ================= */
+
+.blog-card {
+  position: relative;
+  padding-top: 36px;
+}
+
+.blog-meta {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.blog-date {
+  font-size: 11px;
+  padding: 3px 8px;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  letter-spacing: 1px;
+}
+
+.blog-tag {
+  font-size: 10px;
+  padding: 3px 6px;
+  border: 1px dashed #00ffcc88;
+  color: #00ffccaa;
+  letter-spacing: 1px;
+}
