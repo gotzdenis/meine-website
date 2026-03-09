@@ -1,6 +1,10 @@
 const input = document.getElementById("terminal-input");
 const output = document.getElementById("terminal-output");
 
+/* Linux Prompt */
+
+const prompt = "denis@sys-portfolio:~$";
+
 const commands = {
 
 help: `
@@ -9,8 +13,8 @@ Verfügbare Befehle:
 help      → Hilfe anzeigen
 about     → Über mich
 skills    → Fähigkeiten anzeigen
-projects  → Projekte öffnen
-blog      → Blog öffnen
+projects  → Projektseite öffnen
+blog      → letzte Blogposts anzeigen
 sysinfo   → Systemprofil anzeigen
 clear     → Terminal leeren
 `,
@@ -46,16 +50,27 @@ Fokus: Linux / Netzwerke / Systemadministration
 Portfolio: SYS-PORTFOLIO
 `,
 
-projects: () => {
-window.location.href = "projects.html";
-},
+blog: `
+LETZTE BLOGPOSTS
 
-blog: () => {
-window.location.href = "blog.html";
+011  SYS-PORTFOLIO v2 – Technischer Umbau
+010  Einführung Datenbanken
+009  Einführung Programmierung
+
+Alle Artikel:
+blog.html
+`,
+
+projects: () => {
+
+window.location.href = "projects.html";
+
 },
 
 clear: () => {
+
 output.innerHTML = "";
+
 }
 
 };
@@ -66,7 +81,11 @@ if(e.key === "Enter"){
 
 const cmd = input.value.trim().toLowerCase();
 
-output.innerHTML += `<p>> ${cmd}</p>`;
+/* Prompt Ausgabe */
+
+output.innerHTML += `<p><span class="cmd">${prompt}</span> ${cmd}</p>`;
+
+/* Command prüfen */
 
 if(commands[cmd]){
 
@@ -88,7 +107,7 @@ output.innerHTML += `<p>Befehl nicht gefunden.</p>`;
 
 input.value = "";
 
-/* automatische Terminal Scrollfunktion */
+/* Auto Scroll */
 
 output.scrollTop = output.scrollHeight;
 
