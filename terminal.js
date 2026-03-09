@@ -8,6 +8,7 @@ Verfügbare Befehle:
 
 help      → Hilfe anzeigen
 about     → Über mich
+skills    → Fähigkeiten anzeigen
 projects  → Projekte öffnen
 blog      → Blog öffnen
 sysinfo   → Systemprofil anzeigen
@@ -22,6 +23,18 @@ Fokus:
 Linux
 Systemadministration
 Dokumentation
+`,
+
+skills: `
+SKILLS
+
+Linux
+Netzwerktechnik
+Systemadministration
+HTML
+CSS
+JavaScript
+Git
 `,
 
 sysinfo: `
@@ -74,6 +87,10 @@ output.innerHTML += `<p>Befehl nicht gefunden.</p>`;
 }
 
 input.value = "";
+
+/* automatische Terminal Scrollfunktion */
+
+output.scrollTop = output.scrollHeight;
 
 }
 
