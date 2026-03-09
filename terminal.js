@@ -6,12 +6,12 @@ const commands = {
 help: `
 Verfügbare Befehle:
 
-help       - Hilfe anzeigen
-about      - Über mich
-projects   - Projekte öffnen
-blog       - Blog öffnen
-sysinfo    - Systemprofil anzeigen
-clear      - Terminal leeren
+help      → Hilfe anzeigen
+about     → Über mich
+projects  → Projekte öffnen
+blog      → Blog öffnen
+sysinfo   → Systemprofil anzeigen
+clear     → Terminal leeren
 `,
 
 about: `
@@ -63,7 +63,7 @@ commands[cmd]();
 
 }else{
 
-output.innerHTML += `<p>${commands[cmd]}</p>`;
+output.innerHTML += `<pre>${commands[cmd]}</pre>`;
 
 }
 
