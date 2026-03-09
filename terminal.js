@@ -1,4 +1,3 @@
-
 const input = document.getElementById("terminal-input");
 const output = document.getElementById("terminal-output");
 
@@ -11,6 +10,7 @@ help       - Hilfe anzeigen
 about      - Über mich
 projects   - Projekte öffnen
 blog       - Blog öffnen
+sysinfo    - Systemprofil anzeigen
 clear      - Terminal leeren
 `,
 
@@ -22,6 +22,15 @@ Fokus:
 Linux
 Systemadministration
 Dokumentation
+`,
+
+sysinfo: `
+SYSTEM PROFILE
+
+Name: Denis Gotz
+Rolle: Fachinformatiker Systemintegration
+Fokus: Linux / Netzwerke / Systemadministration
+Portfolio: SYS-PORTFOLIO
 `,
 
 projects: () => {
