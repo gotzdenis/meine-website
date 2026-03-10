@@ -1,4 +1,6 @@
 const input = document.getElementById("terminal-input");
+let commandHistory = [];
+let historyIndex = -1;
 const output = document.getElementById("terminal-output");
 
 /* Linux Prompt */
@@ -77,9 +79,18 @@ output.innerHTML = "";
 
 input.addEventListener("keydown", function(e){
 
+/* ENTER */
+
 if(e.key === "Enter"){
 
 const cmd = input.value.trim().toLowerCase();
+
+/* History speichern */
+
+if(cmd !== ""){
+commandHistory.push(cmd);
+historyIndex = commandHistory.length;
+}
 
 /* Prompt Ausgabe */
 
@@ -110,6 +121,30 @@ input.value = "";
 /* Auto Scroll */
 
 output.scrollTop = output.scrollHeight;
+
+}
+
+/* HISTORY ↑ */
+
+if(e.key === "ArrowUp"){
+
+if(historyIndex > 0){
+historyIndex--;
+input.value = commandHistory[historyIndex];
+}
+
+}
+
+/* HISTORY ↓ */
+
+if(e.key === "ArrowDown"){
+
+if(historyIndex < commandHistory.length - 1){
+historyIndex++;
+input.value = commandHistory[historyIndex];
+}else{
+input.value = "";
+}
 
 }
 
