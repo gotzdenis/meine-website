@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    function animateCounter(element, target){
+
+let current = 0;
+
+const interval = setInterval(function(){
+
+current++;
+
+element.textContent = current;
+
+if(current >= target){
+clearInterval(interval);
+}
+
+}, 60);
+
+}
+
+
 function countProjects(){
 
 fetch("projects.html")
@@ -14,7 +33,7 @@ const projects = doc.querySelectorAll(".tech-box");
 const el = document.getElementById("project-count");
 
 if(el){
-el.textContent = projects.length;
+animateCounter(el, projects.length);
 }
 
 })
@@ -36,7 +55,7 @@ const posts = doc.querySelectorAll(".blog-card");
 const el = document.getElementById("blog-count");
 
 if(el){
-el.textContent = posts.length;
+animateCounter(el, posts.length);
 }
 
 })
