@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function animateCounter(element, target){
 
+if(target <= 0){
+element.textContent = 0;
+return;
+}
+
 let current = 0;
 const duration = 800;
 const stepTime = Math.max(Math.floor(duration / target), 50);
