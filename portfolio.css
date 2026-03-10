@@ -218,247 +218,6 @@ footer {
 
 
 /* =========================================
-   ASSISTENT – SCI-FI HUD
-   ========================================= */
-
-#assistant {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 9999;
-
-  padding: 6px 10px;
-  border: 1px solid #00ffcc33;
-  border-radius: 8px;
-
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(4px);
-
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#assistant:hover {
-  border-color: #00ffcc;
-  box-shadow: 0 0 10px #00ffcc33;
-}
-
-
-/* Assistent Bild */
-
-#assistant img {
-  width: 55px;
-  height: auto;
-  filter: drop-shadow(0 0 6px #00ffcc66);
-
-  transition: transform 0.3s ease,
-              filter 0.3s ease;
-}
-
-#assistant:hover img {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 12px #00ffcc);
-}
-
-
-/* Aktiv Zustand */
-
-#assistant.enabled img {
-  animation: assistantPulse 2.5s infinite;
-}
-
-@keyframes assistantPulse {
-
-  0% {
-    filter: drop-shadow(0 0 6px #00ffcc66);
-  }
-
-  50% {
-    filter: drop-shadow(0 0 16px #00ffcc);
-  }
-
-  100% {
-    filter: drop-shadow(0 0 6px #00ffcc66);
-  }
-
-}
-
-
-/* Hinweis Text */
-
-#assistant-hint {
-  text-align: right;
-  font-size: 12px;
-  color: #00ffcc;
-  line-height: 1.2;
-}
-
-#assistant-hint small {
-  display: block;
-  opacity: 0.7;
-}
-
-#assistant.enabled #assistant-hint {
-  display: none;
-}
-
-
-/* Button */
-
-#assistant-toggle {
-  background: none;
-  border: none;
-  color: #00ffcc;
-  cursor: pointer;
-  font-size: 14px;
-  transition: transform 0.2s ease;
-}
-
-#assistant-toggle:hover {
-  transform: scale(1.15);
-}
-
-/* =========================================
-   ASSISTENT SYSTEM PANEL
-   ========================================= */
-
-#assistant-panel {
-  display: flex;
-  flex-direction: column;
-  font-size: 10px;
-  line-height: 1.4;
-  margin-right: 6px;
-  font-family: monospace;
-}
-
-.assistant-title {
-  color: #00ffcc;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.assistant-status {
-  color: #00ffccaa;
-  font-size: 9px;
-}
-
-
-/* =========================================
-   RECHTLICHE SEITEN
-   ========================================= */
-
-.legal-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 32px 16px;
-}
-
-.legal-content {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.legal-content h1 {
-  font-size: 26px;
-}
-
-.legal-content h2 {
-  font-size: 20px;
-  margin-top: 24px;
-}
-
-.legal-footer {
-  text-align: center;
-  padding: 24px 0;
-  font-size: 14px;
-}
-
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 900px) {
-
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skill-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-@media (max-width: 600px) {
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 12px 18px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-    padding: 6px 0;
-  }
-
-  .logo {
-    font-size: 16px;
-  }
-
-  .process-grid,
-  .skill-grid {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 32px 0;
-  }
-
-  .legal-wrapper {
-    padding: 20px 14px;
-  }
-
-  .legal-content h1 {
-    font-size: 22px;
-  }
-
-  .legal-content h2 {
-    font-size: 18px;
-  }
-
-  #assistant {
-    bottom: 110px;
-  }
-
-}
-
-.assistant-status::after {
-  content: " ▌";
-  animation: assistantCursor 1s infinite;
-}
-
-@keyframes assistantCursor {
-
-  0% { opacity: 1; }
-
-  50% { opacity: 0; }
-
-  100% { opacity: 1; }
-
-}
-
-/* =========================================
    TERMINAL
    ========================================= */
 
@@ -509,6 +268,7 @@ footer {
   color: #00ffcc;
 }
 
+
 /* =========================================
    BOOT SCREEN
    ========================================= */
@@ -544,54 +304,10 @@ line-height: 1.6;
 
 }
 
-/* ================= BLOG MONATS CONTAINER ================= */
 
-.month-header {
-  grid-column: 1 / -1;
-  background: #020202;
-  border: 1px solid #00ffcc88;
-  text-align: center;
-}
-
-.month-header h3 {
-  margin: 0;
-  color: #00ffcc;
-}
-
-
-/* ================= BLOG CARD ================= */
-
-.blog-card {
-  position: relative;
-  padding-top: 36px;
-}
-
-.blog-meta {
-  position: absolute;
-  top: 8px;
-  left: 12px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.blog-date {
-  font-size: 11px;
-  padding: 3px 8px;
-  border: 1px solid #00ffcc;
-  color: #00ffcc;
-  letter-spacing: 1px;
-}
-
-.blog-tag {
-  font-size: 10px;
-  padding: 3px 6px;
-  border: 1px dashed #00ffcc88;
-  color: #00ffccaa;
-  letter-spacing: 1px;
-}
-
-/* ================= STATUS CENTER FIX ================= */
+/* =========================================
+   SYSTEM STATUS
+   ========================================= */
 
 .status-wrapper{
 display:flex;
@@ -599,7 +315,88 @@ justify-content:center;
 }
 
 #system-status .tech-box{
-max-width:400px;
+max-width:360px;
 width:100%;
 text-align:center;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+/* =========================================
+   STATUS LED
+   ========================================= */
+
+.status-led{
+
+display:inline-block;
+
+width:8px;
+height:8px;
+
+border-radius:50%;
+
+margin-right:8px;
+
+box-shadow:0 0 6px #00ffcc;
+
+background:#00ffcc;
+
+}
+
+.status-led.online{
+background:#00ffcc;
+}
+
+.status-led.offline{
+background:#ff4444;
+box-shadow:0 0 6px #ff4444;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 18px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .process-grid,
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
 }

@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+function countProjects(){
+
 fetch("projects.html")
 .then(res => res.text())
 .then(html => {
@@ -7,9 +11,18 @@ const doc = parser.parseFromString(html, "text/html");
 
 const projects = doc.querySelectorAll(".tech-box");
 
-document.getElementById("project-count").textContent = projects.length;
+const el = document.getElementById("project-count");
 
-});
+if(el){
+el.textContent = projects.length;
+}
+
+})
+.catch(err => console.log("Project count error:", err));
+
+}
+
+function countBlogs(){
 
 fetch("blog.html")
 .then(res => res.text())
@@ -20,6 +33,18 @@ const doc = parser.parseFromString(html, "text/html");
 
 const posts = doc.querySelectorAll(".blog-card");
 
-document.getElementById("blog-count").textContent = posts.length;
+const el = document.getElementById("blog-count");
+
+if(el){
+el.textContent = posts.length;
+}
+
+})
+.catch(err => console.log("Blog count error:", err));
+
+}
+
+countProjects();
+countBlogs();
 
 });
