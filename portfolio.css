@@ -590,3 +590,16 @@ line-height: 1.6;
   color: #00ffccaa;
   letter-spacing: 1px;
 }
+
+/* ================= STATUS CENTER FIX ================= */
+
+.status-wrapper{
+display:flex;
+justify-content:center;
+}
+
+#system-status .tech-box{
+max-width:400px;
+width:100%;
+text-align:center;
+}

@@ -29,11 +29,11 @@ System ready.
 <span class="logo">[ SYS-PORTFOLIO ]</span>
 
 <ul>
-<li><a href="#about" id="nav-about">Über mich</a></li>
-<li><a href="#projects" id="nav-projects">Aktuelles Projekt</a></li>
-<li><a href="projects.html" id="nav-projects-archive">Projekte</a></li>
-<li><a href="#skills" id="nav-skills">Kompetenzen</a></li>
-<li><a href="blog.html" id="nav-blog">Blog</a></li>
+<li><a href="#about">Über mich</a></li>
+<li><a href="#projects">Aktuelles Projekt</a></li>
+<li><a href="projects.html">Projekte</a></li>
+<li><a href="#skills">Kompetenzen</a></li>
+<li><a href="blog.html">Blog</a></li>
 </ul>
 </nav>
 
@@ -63,7 +63,7 @@ Systemadministration und technischer Analyse.
 
 <div class="container">
 
-<div class="skill-grid">
+<div class="status-wrapper">
 
 <div class="tech-box">
 
@@ -120,7 +120,6 @@ SYS-CONSOLE
 
 <div class="skill-grid">
 
-<!-- PROJEKT 002 -->
 <div class="tech-box">
 
 <span>PRJ-002 · ACTIVE</span>
@@ -143,7 +142,6 @@ HTML · CSS Grid · JavaScript
 
 </div>
 
-<!-- PROJEKT 001 -->
 <div class="tech-box">
 
 <span>PRJ-001 · COMPLETED</span>
@@ -209,6 +207,50 @@ Terminal Interface, System Status Dashboard
 und strukturierte Projektdokumentation.
 </p>
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SYSTEM ARCHITEKTUR ================= -->
+<section id="architecture">
+
+<div class="container">
+
+<h3>System Architektur</h3>
+
+<div class="tech-box">
+
+<p><strong>Frontend</strong></p>
+
+<p>
+HTML5 · CSS Grid · Vanilla JavaScript
+</p>
+
+<p><strong>Module</strong></p>
+
+<p>
+terminal.js – Terminal Interface<br>
+assistant.js – Sprachassistent<br>
+status.js – System Status Dashboard<br>
+boot.js – Boot Simulation
+</p>
+
+<p><strong>Deployment</strong></p>
+
+<p>
+GitHub Repository → GitHub Pages
+</p>
+
+<p><strong>Workflow</strong></p>
+
+<p>
+dev Branch → Entwicklung<br>
+main Branch → Live Website
+</p>
 
 </div>
 
@@ -401,11 +443,12 @@ meiner Umschulung weiter vertieft.
 
 <img src="assistant.png" alt="Digitale Assistentin">
 
-<button id="assistant-toggle" aria-label="Assistent aktivieren">
+<button id="assistant-toggle">
 🔊
 </button>
 
 </div>
+
 
 <!-- ================= JAVASCRIPT ================= -->
 <script src="assistant.js"></script>
