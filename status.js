@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    function animateCounter(element, target){
+function animateCounter(element, target){
 
 let current = 0;
+const duration = 800;
+const stepTime = Math.max(Math.floor(duration / target), 50);
 
 const interval = setInterval(function(){
 
@@ -14,10 +16,9 @@ if(current >= target){
 clearInterval(interval);
 }
 
-}, 60);
+}, stepTime);
 
 }
-
 
 function countProjects(){
 
