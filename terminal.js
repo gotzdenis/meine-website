@@ -125,7 +125,10 @@ const line = Math.random().toString(2).substring(2,22);
 
 output.innerHTML += `<pre>${line}</pre>`;
 
-output.scrollTop = output.scrollHeight;
+output.scrollTo({
+top: output.scrollHeight,
+behavior: "smooth"
+});
 
 count++;
 

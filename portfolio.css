@@ -281,8 +281,10 @@ footer {
 }
 
 #terminal-output {
-  min-height: 120px;
+  height: 220px;
+  overflow-y: auto;
   font-size: 13px;
+  white-space: pre-wrap;
 }
 
 .terminal-input-line {
@@ -533,4 +535,25 @@ nav a.active {
   color: #00ffcc;
   border-bottom: 1px solid #00ffcc;
   padding-bottom: 2px;
+}
+
+/* =========================================
+   TERMINAL SCROLLBAR
+   ========================================= */
+
+#terminal-output::-webkit-scrollbar {
+  width: 6px;
+}
+
+#terminal-output::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+#terminal-output::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 4px;
+}
+
+#terminal-output::-webkit-scrollbar-thumb:hover {
+  background: #00e6b8;
 }
