@@ -12,21 +12,35 @@ const commands = {
 help: `
 Verfügbare Befehle:
 
-help      → Hilfe anzeigen
+Navigation:
+
+open portfolio
+open projects
+open blog
+open linux
+
+Portfolio:
+
 about     → Über mich anzeigen
 skills    → Fähigkeiten anzeigen
 projects  → Zu Projekte springen
 blog      → Zum Blog springen
 system    → System Dashboard anzeigen
-sysinfo   → Systemprofil anzeigen
-neofetch  → Systemübersicht anzeigen
-whoami    → Benutzer anzeigen
-scan      → Portfolio System Scan
-matrix    → Matrix Animation starten
-contact   → Kontaktinformationen anzeigen
-resume    → Lebenslauf anzeigen
-ls        → Portfolio Dateien anzeigen
-clear     → Terminal leeren
+
+System:
+
+sysinfo
+neofetch
+scan
+ls
+whoami
+
+Extras:
+
+matrix
+contact
+resume
+clear
 `,
 
 about: () => {
