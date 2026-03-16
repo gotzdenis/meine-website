@@ -162,3 +162,25 @@ input.value = "";
 }
 
 });
+
+/* TAB AUTOCOMPLETE */
+
+input.addEventListener("keydown", function(e){
+
+if(e.key === "Tab"){
+
+e.preventDefault();
+
+const value = input.value.toLowerCase();
+
+const commandList = Object.keys(commands);
+
+const match = commandList.find(cmd => cmd.startsWith(value));
+
+if(match){
+input.value = match;
+}
+
+}
+
+});
