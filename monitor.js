@@ -1,32 +1,40 @@
-function random(min, max){
-return Math.floor(Math.random()*(max-min+1))+min;
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-function updateSystemMonitor(){
-
-document.getElementById("cpu-load").textContent = random(3,25);
-document.getElementById("memory-usage").textContent = random(20,60);
-
-}
-
-setInterval(updateSystemMonitor,2000);
-
-
-/* uptime */
+const cpu = document.getElementById("cpu-load");
+const memory = document.getElementById("memory-usage");
+const uptime = document.getElementById("system-uptime");
 
 let startTime = Date.now();
 
-function updateUptime(){
+function updateSystemStats(){
 
-let diff = Date.now()-startTime;
+if(cpu){
+cpu.textContent = Math.floor(Math.random() * 40 + 10);
+}
 
-let seconds = Math.floor(diff/1000)%60;
-let minutes = Math.floor(diff/60000)%60;
-let hours = Math.floor(diff/3600000);
+if(memory){
+memory.textContent = Math.floor(Math.random() * 50 + 30);
+}
 
-document.getElementById("system-uptime").textContent =
-hours+"h "+minutes+"m "+seconds+"s";
+if(uptime){
+
+let seconds = Math.floor((Date.now() - startTime) / 1000);
+
+let h = Math.floor(seconds / 3600);
+let m = Math.floor((seconds % 3600) / 60);
+let s = seconds % 60;
+
+uptime.textContent =
+String(h).padStart(2,"0") + ":" +
+String(m).padStart(2,"0") + ":" +
+String(s).padStart(2,"0");
 
 }
 
-setInterval(updateUptime,1000);
+}
+
+updateSystemStats();
+
+setInterval(updateSystemStats, 2000);
+
+});
