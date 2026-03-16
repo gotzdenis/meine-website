@@ -61,7 +61,7 @@ nav ul {
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 44px;
   margin-bottom: 10px;
 }
 
@@ -120,6 +120,7 @@ section {
   color: #00ffcc;
   margin: 0;
   letter-spacing: 1px;
+  font-size: 18px;
 }
 
 
@@ -129,7 +130,7 @@ section {
 
 .tech-box {
   border: 1px solid #00ffcc55;
-  padding: 14px;
+  padding: 18px;
   background: #050505;
   font-size: 14px;
   border-radius: 8px;
