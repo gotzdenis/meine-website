@@ -24,6 +24,7 @@ whoami    → Benutzer anzeigen
 scan      → Portfolio System Scan
 matrix    → Matrix Animation starten
 contact   → Kontaktinformationen anzeigen
+resume    → Lebenslauf anzeigen
 ls        → Portfolio Dateien anzeigen
 clear     → Terminal leeren
 `,
@@ -152,6 +153,23 @@ https://gotzdenis.github.io/meine-website/
 
 GitHub:
 https://github.com/gotzdenis
+`,
+
+resume: `
+RESUME
+------
+
+Name: Denis Gotz
+Role: Fachinformatiker Systemintegration
+
+Portfolio:
+https://gotzdenis.github.io/meine-website/
+
+GitHub:
+https://github.com/gotzdenis
+
+Blog:
+Technisches Lernjournal
 `,
 
 ls: `
