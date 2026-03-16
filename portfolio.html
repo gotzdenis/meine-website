@@ -217,54 +217,24 @@ SYS-CONSOLE
 </section>
 
 
-<!-- ================= SYSTEM STATUS ================= -->
-<section id="system-status">
+<!-- ================= SYSTEM DASHBOARD ================= -->
+<section id="system-dashboard">
 
 <div class="container">
 
-<div class="status-wrapper">
-
-<div class="tech-box system-status-box">
-
-<h4>SYSTEM STATUS</h4>
-
-<p>
-<span class="status-led"></span>
-Projects: <span id="project-count">0</span>
-</p>
-
-<p>
-<span class="status-led"></span>
-Blog Posts: <span id="blog-count">0</span>
-</p>
-
-<p>
-<span class="status-led"></span>
-Assistant: ONLINE
-</p>
-
-<p>
-<span class="status-led"></span>
-Terminal: ACTIVE
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= SYSTEM MONITOR ================= -->
-<section id="system-monitor">
-
-<div class="container">
-
-<h3>System Monitor</h3>
+<h3>System Dashboard</h3>
 
 <div class="skill-grid">
+
+<div class="tech-box">
+<h4>Projects</h4>
+<p><span id="project-count">0</span></p>
+</div>
+
+<div class="tech-box">
+<h4>Blog Posts</h4>
+<p><span id="blog-count">0</span></p>
+</div>
 
 <div class="tech-box">
 <h4>CPU Load</h4>
@@ -279,6 +249,16 @@ Terminal: ACTIVE
 <div class="tech-box">
 <h4>System Uptime</h4>
 <p><span id="system-uptime">starting...</span></p>
+</div>
+
+<div class="tech-box">
+<h4>Assistant</h4>
+<p>ONLINE</p>
+</div>
+
+<div class="tech-box">
+<h4>Terminal</h4>
+<p>ACTIVE</p>
 </div>
 
 </div>
@@ -383,7 +363,6 @@ main Branch → Live Website
 <h3>Technischer Blog</h3>
 
 <div class="skill-grid" id="blog-preview-container">
-<!-- Blogposts werden automatisch geladen -->
 </div>
 
 <p style="text-align:center;margin-top:20px;">
