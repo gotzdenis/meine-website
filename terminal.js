@@ -21,6 +21,7 @@ system    → System Dashboard anzeigen
 sysinfo   → Systemprofil anzeigen
 neofetch  → Systemübersicht anzeigen
 whoami    → Benutzer anzeigen
+scan      → Portfolio System Scan
 clear     → Terminal leeren
 `,
 
@@ -81,6 +82,28 @@ denis
 Fachinformatiker Systemintegration (Umschulung)
 SYS-PORTFOLIO Administrator
 `,
+
+scan: () => {
+
+const projects = document.getElementById("project-count")?.textContent || "?";
+const blogs = document.getElementById("blog-count")?.textContent || "?";
+
+output.innerHTML += `
+<pre>
+
+SYS-PORTFOLIO SCAN
+------------------
+
+Projects: ${projects}
+Blog Posts: ${blogs}
+Modules: 6
+
+System Status: OK
+
+</pre>
+`;
+
+},
 
 clear: () => {
 
