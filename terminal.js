@@ -13,35 +13,44 @@ help: `
 Verfügbare Befehle:
 
 help      → Hilfe anzeigen
-about     → Über mich
+about     → Über mich anzeigen
 skills    → Fähigkeiten anzeigen
-projects  → Projektseite öffnen
-blog      → letzte Blogposts anzeigen
+projects  → Zu Projekte springen
+blog      → Zum Blog springen
+system    → Systemstatus anzeigen
 sysinfo   → Systemprofil anzeigen
 clear     → Terminal leeren
 `,
 
-about: `
-Denis Gotz
-Fachinformatiker für Systemintegration (Umschulung)
+about: () => {
 
-Fokus:
-Linux
-Systemadministration
-Dokumentation
-`,
+document.getElementById("about").scrollIntoView({behavior:"smooth"});
 
-skills: `
-SKILLS
+},
 
-Linux
-Netzwerktechnik
-Systemadministration
-HTML
-CSS
-JavaScript
-Git
-`,
+skills: () => {
+
+document.getElementById("skills").scrollIntoView({behavior:"smooth"});
+
+},
+
+projects: () => {
+
+document.getElementById("projects").scrollIntoView({behavior:"smooth"});
+
+},
+
+blog: () => {
+
+document.getElementById("blog-preview").scrollIntoView({behavior:"smooth"});
+
+},
+
+system: () => {
+
+document.getElementById("system-status").scrollIntoView({behavior:"smooth"});
+
+},
 
 sysinfo: `
 SYSTEM PROFILE
@@ -51,23 +60,6 @@ Rolle: Fachinformatiker Systemintegration
 Fokus: Linux / Netzwerke / Systemadministration
 Portfolio: SYS-PORTFOLIO
 `,
-
-blog: `
-LETZTE BLOGPOSTS
-
-011  SYS-PORTFOLIO v2 – Technischer Umbau
-010  Einführung Datenbanken
-009  Einführung Programmierung
-
-Alle Artikel:
-blog.html
-`,
-
-projects: () => {
-
-window.location.href = "projects.html";
-
-},
 
 clear: () => {
 
