@@ -19,6 +19,8 @@ projects  → Zu Projekte springen
 blog      → Zum Blog springen
 system    → Systemstatus anzeigen
 sysinfo   → Systemprofil anzeigen
+neofetch  → Systemübersicht anzeigen
+whoami    → Benutzer anzeigen
 clear     → Terminal leeren
 `,
 
@@ -59,6 +61,25 @@ Name: Denis Gotz
 Rolle: Fachinformatiker Systemintegration
 Fokus: Linux / Netzwerke / Systemadministration
 Portfolio: SYS-PORTFOLIO
+`,
+
+neofetch: `
+denis@sys-portfolio
+--------------------
+
+OS: SYS-PORTFOLIO Linux
+Role: Fachinformatiker Systemintegration
+Focus: Linux / Netzwerke / Systemadministration
+Projects: Portfolio System Console
+Shell: Vanilla JavaScript Terminal
+
+Uptime: Learning every day
+`,
+
+whoami: `
+denis
+Fachinformatiker Systemintegration (Umschulung)
+SYS-PORTFOLIO Administrator
 `,
 
 clear: () => {
