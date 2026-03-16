@@ -143,7 +143,9 @@ section {
 .tech-box:hover {
   transform: translateY(-3px);
   border-color: #00ffcc;
-  box-shadow: 0 0 12px #00ffcc22;
+  box-shadow: 
+    0 0 12px #00ffcc22,
+    0 0 24px #00ffcc11;
 }
 
 .tech-box h4 {
