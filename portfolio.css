@@ -61,25 +61,38 @@ nav ul {
    ========================================= */
 
 .hero {
-  padding: 80px 20px;
+  padding: 100px 20px 70px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 44px;
-  margin-bottom: 10px;
+  font-size: 46px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
 .hero-role {
   color: #00ffcc;
   letter-spacing: 1px;
+  font-size: 16px;
 }
 
 .hero-desc {
-  max-width: 600px;
-  margin: auto;
+  max-width: 620px;
+  margin: 16px auto 0 auto;
   opacity: 0.85;
+  line-height: 1.6;
 }
+
+/* Hero Tech Focus */
+
+.hero-tech{
+  margin-top:16px;
+  font-size:14px;
+  color:#00ffcc;
+  letter-spacing:1px;
+}
+
 
 section {
   padding: 40px 0;
@@ -527,6 +540,7 @@ grid-template-columns: 1fr;
 
 }
 
+
 /* =========================================
    ACTIVE NAVIGATION
    ========================================= */
@@ -536,6 +550,7 @@ nav a.active {
   border-bottom: 1px solid #00ffcc;
   padding-bottom: 2px;
 }
+
 
 /* =========================================
    TERMINAL SCROLLBAR
