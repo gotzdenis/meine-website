@@ -24,6 +24,7 @@ whoami    → Benutzer anzeigen
 scan      → Portfolio System Scan
 matrix    → Matrix Animation starten
 contact   → Kontaktinformationen anzeigen
+ls        → Portfolio Dateien anzeigen
 clear     → Terminal leeren
 `,
 
@@ -148,6 +149,20 @@ https://gotzdenis.github.io/meine-website/
 
 GitHub:
 https://github.com/gotzdenis
+`,
+
+ls: `
+portfolio.html
+blog.html
+projects.html
+project-linux-001.html
+
+assistant.js
+terminal.js
+status.js
+monitor.js
+blog-preview.js
+nav.js
 `,
 
 clear: () => {
