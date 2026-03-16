@@ -98,6 +98,36 @@ if(e.key === "Enter"){
 
 const cmd = input.value.trim().toLowerCase();
 
+/* OPEN COMMAND */
+
+if(cmd.startsWith("open ")){
+
+const target = cmd.replace("open ","");
+
+const pages = {
+
+blog: "blog.html",
+projects: "projects.html",
+linux: "project-linux-001.html",
+portfolio: "portfolio.html"
+
+};
+
+if(pages[target]){
+
+window.location.href = pages[target];
+
+}else{
+
+output.innerHTML += `<p>Ziel nicht gefunden.</p>`;
+
+}
+
+input.value = "";
+return;
+
+}
+
 /* History speichern */
 
 if(cmd !== ""){
