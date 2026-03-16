@@ -22,6 +22,7 @@ sysinfo   → Systemprofil anzeigen
 neofetch  → Systemübersicht anzeigen
 whoami    → Benutzer anzeigen
 scan      → Portfolio System Scan
+matrix    → Matrix Animation starten
 clear     → Terminal leeren
 `,
 
@@ -102,6 +103,35 @@ System Status: OK
 
 </pre>
 `;
+
+},
+
+matrix: () => {
+
+output.innerHTML += `<pre>
+010101010101010101010
+101010101010101010101
+010101010101010101010
+101010101010101010101
+</pre>`;
+
+let count = 0;
+
+const interval = setInterval(() => {
+
+const line = Math.random().toString(2).substring(2,22);
+
+output.innerHTML += `<pre>${line}</pre>`;
+
+output.scrollTop = output.scrollHeight;
+
+count++;
+
+if(count > 12){
+clearInterval(interval);
+}
+
+},100);
 
 },
 
