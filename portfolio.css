@@ -100,7 +100,7 @@ section {
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 22px;
 }
 
 
