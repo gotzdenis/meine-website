@@ -168,33 +168,25 @@ section {
 
 
 /* =========================================
-   SKILL BARS
+   BLOG CARDS (KLICKBARE KARTEN)
    ========================================= */
 
-.skill {
-  margin-bottom: 10px;
+.blog-card {
+  display: block;
+  position: relative;
+  padding-top: 36px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.skill-bar {
-  background: #111;
-  border: 1px solid #00ffcc55;
-  height: 8px;
-}
-
-.skill-bar div {
-  background: #00ffcc;
-  height: 100%;
+.blog-card:hover {
+  text-decoration: none;
 }
 
 
 /* =========================================
    BLOG META
    ========================================= */
-
-.blog-card {
-  position: relative;
-  padding-top: 36px;
-}
 
 .blog-meta {
   position: absolute;
@@ -220,6 +212,26 @@ section {
   border: 1px dashed #00ffcc88;
   color: #00ffccaa;
   letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SKILL BARS
+   ========================================= */
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  background: #111;
+  border: 1px solid #00ffcc55;
+  height: 8px;
+}
+
+.skill-bar div {
+  background: #00ffcc;
+  height: 100%;
 }
 
 
