@@ -23,6 +23,7 @@ neofetch  → Systemübersicht anzeigen
 whoami    → Benutzer anzeigen
 scan      → Portfolio System Scan
 matrix    → Matrix Animation starten
+contact   → Kontaktinformationen anzeigen
 clear     → Terminal leeren
 `,
 
@@ -134,6 +135,20 @@ clearInterval(interval);
 },100);
 
 },
+
+contact: `
+CONTACT INFORMATION
+-------------------
+
+Name: Denis Gotz
+Role: Fachinformatiker Systemintegration
+
+Portfolio:
+https://gotzdenis.github.io/meine-website/
+
+GitHub:
+https://github.com/gotzdenis
+`,
 
 clear: () => {
 
