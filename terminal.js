@@ -17,7 +17,7 @@ about     → Über mich anzeigen
 skills    → Fähigkeiten anzeigen
 projects  → Zu Projekte springen
 blog      → Zum Blog springen
-system    → Systemstatus anzeigen
+system    → System Dashboard anzeigen
 sysinfo   → Systemprofil anzeigen
 neofetch  → Systemübersicht anzeigen
 whoami    → Benutzer anzeigen
@@ -50,7 +50,7 @@ document.getElementById("blog-preview").scrollIntoView({behavior:"smooth"});
 
 system: () => {
 
-document.getElementById("system-status").scrollIntoView({behavior:"smooth"});
+document.getElementById("system-dashboard").scrollIntoView({behavior:"smooth"});
 
 },
 
