@@ -9,19 +9,20 @@ return;
 
 let current = 0;
 const duration = 800;
-const stepTime = Math.max(Math.floor(duration / target), 50);
+const increment = Math.max(1, Math.floor(target / 40));
 
 const interval = setInterval(function(){
 
-current++;
-
-element.textContent = current;
+current += increment;
 
 if(current >= target){
+current = target;
 clearInterval(interval);
 }
 
-}, stepTime);
+element.textContent = current;
+
+}, duration / 40);
 
 }
 
@@ -34,7 +35,9 @@ fetch("projects.html")
 const parser = new DOMParser();
 const doc = parser.parseFromString(html, "text/html");
 
-const projects = doc.querySelectorAll(".tech-box");
+/* nur echte Projekte zählen */
+
+const projects = doc.querySelectorAll(".tech-box h4");
 
 const el = document.getElementById("project-count");
 
