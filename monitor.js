@@ -1,40 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-const cpu = document.getElementById("cpu-load");
-const memory = document.getElementById("memory-usage");
-const uptime = document.getElementById("system-uptime");
+    const cpu = document.getElementById("cpu-load");
+    const memory = document.getElementById("memory-usage");
+    const uptime = document.getElementById("system-uptime");
 
-let startTime = Date.now();
+    async function loadRealSystemData() {
+        try {
+            const response = await fetch('http://localhost:4000/status');
+            const data = await response.json();
 
-function updateSystemStats(){
+            // Uptime (echte Daten)
+            if (uptime) {
+                let seconds = Math.floor(data.uptime);
 
-if(cpu){
-cpu.textContent = Math.floor(Math.random() * 40 + 10);
-}
+                let h = Math.floor(seconds / 3600);
+                let m = Math.floor((seconds % 3600) / 60);
+                let s = seconds % 60;
 
-if(memory){
-memory.textContent = Math.floor(Math.random() * 50 + 30);
-}
+                uptime.textContent =
+                    String(h).padStart(2,"0") + ":" +
+                    String(m).padStart(2,"0") + ":" +
+                    String(s).padStart(2,"0");
+            }
 
-if(uptime){
+            // RAM (echte Daten)
+            if (memory) {
+                let percentFree = Math.round((data.freeMemory / data.totalMemory) * 100);
+                memory.textContent = percentFree;
+            }
 
-let seconds = Math.floor((Date.now() - startTime) / 1000);
+            // CPU (placeholder)
+            if (cpu) {
+                cpu.textContent = "LIVE";
+            }
 
-let h = Math.floor(seconds / 3600);
-let m = Math.floor((seconds % 3600) / 60);
-let s = seconds % 60;
+        } catch (error) {
+            console.error("Server nicht erreichbar:", error);
+        }
+    }
 
-uptime.textContent =
-String(h).padStart(2,"0") + ":" +
-String(m).padStart(2,"0") + ":" +
-String(s).padStart(2,"0");
+    // alle 3 Sekunden aktualisieren
+    setInterval(loadRealSystemData, 3000);
 
-}
-
-}
-
-updateSystemStats();
-
-setInterval(updateSystemStats, 2000);
+    // sofort beim Laden
+    loadRealSystemData();
 
 });

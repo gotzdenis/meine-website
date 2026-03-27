@@ -572,3 +572,12 @@ nav a.active {
 #terminal-output::-webkit-scrollbar-thumb:hover {
   background: #00e6b8;
 }
+
+/* =========================================
+   DASHBOARD POSITION FIX
+   ========================================= */
+
+#system-dashboard {
+  margin-top: 10px;
+  padding-top: 10px;
+}
