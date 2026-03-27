@@ -117,8 +117,9 @@ section {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  align-items: stretch;
 }
 
 
@@ -147,23 +148,27 @@ section {
    ========================================= */
 
 .tech-box {
-  border: 1px solid #00ffcc55;
-  padding: 18px;
-  background: #050505;
+  border: 1px solid #00ffcc33;
+  padding: 22px;
+  background: linear-gradient(145deg, #050505, #0a0a0a);
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 12px;
 
-  transition: transform 0.2s ease,
-              border-color 0.2s ease,
-              box-shadow 0.2s ease;
+  transition: transform 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+
+  backdrop-filter: blur(4px);
 }
 
 .tech-box:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px) scale(1.02);
   border-color: #00ffcc;
-  box-shadow: 
-    0 0 12px #00ffcc22,
-    0 0 24px #00ffcc11;
+
+  box-shadow:
+    0 0 10px #00ffcc33,
+    0 0 25px #00ffcc22,
+    0 0 50px #00ffcc11;
 }
 
 .tech-box h4 {
@@ -580,4 +585,15 @@ nav a.active {
 #system-dashboard {
   margin-top: 10px;
   padding-top: 10px;
+}
+
+#system-dashboard .skill-grid {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#system-dashboard h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
 }
