@@ -143,3 +143,16 @@ window.addEventListener("load", () => {
 document.getElementById("assistant").addEventListener("click", () => {
   console.log("Assistant aktiviert");
 });
+
+let clicks = 0;
+
+document.getElementById("assistant").addEventListener("click", () => {
+
+    clicks++;
+
+    if (clicks === 5) {
+        speak("Geheimes Feature aktiviert.");
+        alert("🎮 Secret unlocked!");
+    }
+
+});

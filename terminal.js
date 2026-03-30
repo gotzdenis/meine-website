@@ -44,33 +44,23 @@ clear
 `,
 
 about: () => {
-
 document.getElementById("about").scrollIntoView({behavior:"smooth"});
-
 },
 
 skills: () => {
-
 document.getElementById("skills").scrollIntoView({behavior:"smooth"});
-
 },
 
 projects: () => {
-
 document.getElementById("projects").scrollIntoView({behavior:"smooth"});
-
 },
 
 blog: () => {
-
 document.getElementById("blog-preview").scrollIntoView({behavior:"smooth"});
-
 },
 
 system: () => {
-
 document.getElementById("system-dashboard").scrollIntoView({behavior:"smooth"});
-
 },
 
 sysinfo: `
@@ -100,6 +90,29 @@ denis
 Fachinformatiker Systemintegration (Umschulung)
 SYS-PORTFOLIO Administrator
 `,
+
+// 🔥 EASTER EGG 2 – ADMIN ACCESS
+denis: () => {
+
+output.innerHTML += `<pre>
+
+🔐 ACCESS GRANTED
+-----------------
+
+Welcome Denis.
+
+Role: Administrator
+Access Level: ROOT
+
+System Control: ENABLED
+
+</pre>`;
+
+if (typeof speak === "function") {
+  speak("Administrator Zugriff bestätigt.");
+}
+
+},
 
 scan: () => {
 
@@ -201,9 +214,7 @@ nav.js
 `,
 
 clear: () => {
-
 output.innerHTML = "";
-
 }
 
 };
@@ -223,27 +234,20 @@ if(cmd.startsWith("open ")){
 const target = cmd.replace("open ","");
 
 const pages = {
-
 blog: "blog.html",
 projects: "projects.html",
 linux: "project-linux-001.html",
 portfolio: "portfolio.html"
-
 };
 
 if(pages[target]){
-
 window.location.href = pages[target];
-
 }else{
-
 output.innerHTML += `<p>Ziel nicht gefunden.</p>`;
-
 }
 
 input.value = "";
 return;
-
 }
 
 /* History speichern */
@@ -262,19 +266,13 @@ output.innerHTML += `<p><span class="cmd">${prompt}</span> ${cmd}</p>`;
 if(commands[cmd]){
 
 if(typeof commands[cmd] === "function"){
-
 commands[cmd]();
-
 }else{
-
 output.innerHTML += `<pre>${commands[cmd]}</pre>`;
-
 }
 
 }else{
-
 output.innerHTML += `<p>Befehl nicht gefunden.</p>`;
-
 }
 
 input.value = "";
@@ -282,31 +280,26 @@ input.value = "";
 /* Auto Scroll */
 
 output.scrollTop = output.scrollHeight;
-
 }
 
 /* HISTORY ↑ */
 
 if(e.key === "ArrowUp"){
-
 if(historyIndex > 0){
 historyIndex--;
 input.value = commandHistory[historyIndex];
 }
-
 }
 
 /* HISTORY ↓ */
 
 if(e.key === "ArrowDown"){
-
 if(historyIndex < commandHistory.length - 1){
 historyIndex++;
 input.value = commandHistory[historyIndex];
 }else{
 input.value = "";
 }
-
 }
 
 });
@@ -320,7 +313,6 @@ if(e.key === "Tab"){
 e.preventDefault();
 
 const value = input.value.toLowerCase();
-
 const commandList = Object.keys(commands);
 
 const match = commandList.find(cmd => cmd.startsWith(value));
