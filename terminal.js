@@ -38,6 +38,7 @@ whoami
 Extras:
 
 matrix
+hack
 contact
 resume
 clear
@@ -111,6 +112,64 @@ System Control: ENABLED
 if (typeof speak === "function") {
   speak("Administrator Zugriff bestätigt.");
 }
+
+},
+
+// 🔥 HACK MODE (NEU)
+hack: () => {
+
+const ip = `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
+
+output.innerHTML += `<pre>
+INITIATING SECURITY SCAN...
+TARGET: ${ip}
+
+Scanning ports...
+</pre>`;
+
+let steps = [
+"Port 22 (SSH) ........ OPEN",
+"Port 80 (HTTP) ....... OPEN",
+"Port 443 (HTTPS) ..... OPEN",
+"Bypassing firewall...",
+"Injecting payload...",
+"Access granted."
+];
+
+let i = 0;
+
+const interval = setInterval(() => {
+
+if(i < steps.length){
+
+output.innerHTML += `<pre>${steps[i]}</pre>`;
+
+output.scrollTo({
+top: output.scrollHeight,
+behavior: "smooth"
+});
+
+i++;
+
+}else{
+
+clearInterval(interval);
+
+output.innerHTML += `<pre>
+
+🔐 ROOT ACCESS ACHIEVED
+
+Welcome to SYS-PORTFOLIO CORE
+
+</pre>`;
+
+if(typeof speak === "function"){
+speak("Zugriff erfolgreich. System kompromittiert.");
+}
+
+}
+
+}, 700);
 
 },
 
@@ -221,13 +280,9 @@ output.innerHTML = "";
 
 input.addEventListener("keydown", function(e){
 
-/* ENTER */
-
 if(e.key === "Enter"){
 
 const cmd = input.value.trim().toLowerCase();
-
-/* OPEN COMMAND */
 
 if(cmd.startsWith("open ")){
 
@@ -250,18 +305,12 @@ input.value = "";
 return;
 }
 
-/* History speichern */
-
 if(cmd !== ""){
 commandHistory.push(cmd);
 historyIndex = commandHistory.length;
 }
 
-/* Prompt Ausgabe */
-
 output.innerHTML += `<p><span class="cmd">${prompt}</span> ${cmd}</p>`;
-
-/* Command prüfen */
 
 if(commands[cmd]){
 
@@ -276,13 +325,8 @@ output.innerHTML += `<p>Befehl nicht gefunden.</p>`;
 }
 
 input.value = "";
-
-/* Auto Scroll */
-
 output.scrollTop = output.scrollHeight;
 }
-
-/* HISTORY ↑ */
 
 if(e.key === "ArrowUp"){
 if(historyIndex > 0){
@@ -290,8 +334,6 @@ historyIndex--;
 input.value = commandHistory[historyIndex];
 }
 }
-
-/* HISTORY ↓ */
 
 if(e.key === "ArrowDown"){
 if(historyIndex < commandHistory.length - 1){
@@ -303,8 +345,6 @@ input.value = "";
 }
 
 });
-
-/* TAB AUTOCOMPLETE */
 
 input.addEventListener("keydown", function(e){
 
