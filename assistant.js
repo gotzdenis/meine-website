@@ -89,3 +89,29 @@ const navItems = [
   });
 
 });
+
+document.getElementById("assistant-toggle").addEventListener("click", () => {
+
+    const panel = document.getElementById("assistant-panel");
+
+    if (panel.style.display === "none") {
+        panel.style.display = "flex";
+    } else {
+        panel.style.display = "none";
+    }
+
+});
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+        alert("👋 Willkommen im SYS-PORTFOLIO\n\nTippe im Terminal 'help' für Funktionen.");
+    }, 1200);
+
+});
+
+document.getElementById("assistant").addEventListener("click", () => {
+
+    console.log("Assistant aktiviert");
+
+});

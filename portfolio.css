@@ -597,3 +597,20 @@ nav a.active {
   margin-bottom: 25px;
   letter-spacing: 1px;
 }
+
+/* =========================================
+   CURSOR GLOW
+   ========================================= */
+
+#cursor-glow {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+
+  pointer-events: none;
+
+  background: radial-gradient(circle, #00ffcc33 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+}
