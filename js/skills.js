@@ -2,18 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const bars = document.querySelectorAll(".skill-bar div");
 
-  bars.forEach(bar => {
-    bar.style.width = "0";
-  });
-
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
       if (entry.isIntersecting) {
 
         const bar = entry.target;
-        const targetWidth = bar.getAttribute("data-width");
+        const targetWidth = bar.dataset.width;
 
         bar.style.width = targetWidth;
 
@@ -22,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-  }, { threshold: 0.4 });
+  }, { threshold: 0.3 });
 
   bars.forEach(bar => observer.observe(bar));
 
