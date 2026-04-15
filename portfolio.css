@@ -260,22 +260,36 @@ section {
 
 
 /* =========================================
-   SKILL BARS
+   SKILL BARS (UPGRADED)
    ========================================= */
 
 .skill {
   margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
+/* Hintergrund */
 .skill-bar {
   background: #111;
-  border: 1px solid #00ffcc55;
+  border: 1px solid #00ffcc33;
   height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
+/* Fortschritt */
 .skill-bar div {
-  background: #00ffcc;
+  background: linear-gradient(90deg, #00ffcc, #00e6b8);
   height: 100%;
+
+  width: 0; /* wichtig für Animation */
+
+  transition: width 1.2s ease;
+
+  box-shadow:
+    0 0 6px #00ffcc88,
+    0 0 12px #00ffcc44;
 }
 
 
