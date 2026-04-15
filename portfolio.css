@@ -633,3 +633,37 @@ nav a.active {
 
   z-index: 0;
 }
+
+/* =========================================
+   CYBER MODE
+   ========================================= */
+
+body.cyber-mode {
+  background: #000;
+  color: #00ffcc;
+  transition: 0.3s;
+}
+
+body.cyber-mode::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    #00ffcc05 3px
+  );
+
+  pointer-events: none;
+}
+
+body.cyber-mode .tech-box {
+  border-color: #00ffcc !important;
+  box-shadow: 0 0 12px #00ffcc22;
+}
+
+body.cyber-mode #terminal {
+  box-shadow: 0 0 20px #00ffcc44;
+}

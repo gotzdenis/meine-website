@@ -92,7 +92,7 @@ Fachinformatiker Systemintegration (Umschulung)
 SYS-PORTFOLIO Administrator
 `,
 
-// 🔥 EASTER EGG 2 – ADMIN ACCESS
+// 🔥 EASTER EGG – ADMIN
 denis: () => {
 
 output.innerHTML += `<pre>
@@ -115,8 +115,10 @@ if (typeof speak === "function") {
 
 },
 
-// 🔥 HACK MODE (NEU)
+// 🔥 HACK MODE (UPGRADED)
 hack: () => {
+
+document.body.classList.add("cyber-mode");
 
 const ip = `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
 
@@ -124,38 +126,28 @@ output.innerHTML += `<pre>
 INITIATING SECURITY SCAN...
 TARGET: ${ip}
 
-Scanning ports...
+STATUS: CONNECTING...
 </pre>`;
 
-let steps = [
-"Port 22 (SSH) ........ OPEN",
-"Port 80 (HTTP) ....... OPEN",
-"Port 443 (HTTPS) ..... OPEN",
-"Bypassing firewall...",
-"Injecting payload...",
-"Access granted."
-];
-
-let i = 0;
+let percent = 0;
 
 const interval = setInterval(() => {
 
-if(i < steps.length){
+percent += Math.floor(Math.random()*15) + 5;
 
-output.innerHTML += `<pre>${steps[i]}</pre>`;
+if(percent < 100){
 
-output.scrollTo({
-top: output.scrollHeight,
-behavior: "smooth"
-});
-
-i++;
+output.innerHTML += `<pre>Scanning... ${percent}%</pre>`;
 
 }else{
 
 clearInterval(interval);
 
 output.innerHTML += `<pre>
+
+✔ PORT SCAN COMPLETE
+✔ FIREWALL BYPASSED
+✔ VULNERABILITIES FOUND
 
 🔐 ROOT ACCESS ACHIEVED
 
@@ -167,9 +159,15 @@ if(typeof speak === "function"){
 speak("Zugriff erfolgreich. System kompromittiert.");
 }
 
+setTimeout(() => {
+document.body.classList.remove("cyber-mode");
+}, 4000);
+
 }
 
-}, 700);
+output.scrollTop = output.scrollHeight;
+
+}, 500);
 
 },
 
