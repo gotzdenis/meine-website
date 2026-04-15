@@ -667,3 +667,31 @@ body.cyber-mode .tech-box {
 body.cyber-mode #terminal {
   box-shadow: 0 0 20px #00ffcc44;
 }
+
+/* =========================================
+   SKILL LEVEL HOVER
+   ========================================= */
+
+.skill {
+  position: relative;
+  cursor: pointer;
+}
+
+.skill::after {
+  content: attr(data-level);
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  font-size: 10px;
+  color: #00ffcc;
+  opacity: 0;
+
+  transform: translateY(-5px);
+  transition: 0.2s ease;
+}
+
+.skill:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
