@@ -84,8 +84,6 @@ nav ul {
   line-height: 1.6;
 }
 
-/* Hero Tech Focus */
-
 .hero-tech{
   margin-top:16px;
   font-size:14px;
@@ -208,6 +206,25 @@ section {
 
 .blog-card:hover {
   text-decoration: none;
+}
+
+
+/* =========================================
+   🔥 BLOG TEXT FIX (ALLE WEISS)
+   ========================================= */
+
+.blog-card,
+.blog-card h4,
+.blog-card p {
+  color: #e0e0e0;
+}
+
+.blog-card a {
+  color: #e0e0e0;
+}
+
+.blog-card a:hover {
+  color: #ffffff;
 }
 
 
@@ -578,6 +595,7 @@ nav a.active {
   background: #00e6b8;
 }
 
+
 /* =========================================
    DASHBOARD POSITION FIX
    ========================================= */
@@ -597,6 +615,7 @@ nav a.active {
   margin-bottom: 25px;
   letter-spacing: 1px;
 }
+
 
 /* =========================================
    CURSOR GLOW
