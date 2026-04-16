@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const bars = document.querySelectorAll(".skill-bar div");
 
+  // 🔴 WICHTIG: Start bei 0 setzen
+  bars.forEach(bar => {
+    bar.style.width = "0";
+  });
+
   const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
@@ -11,7 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const bar = entry.target;
         const targetWidth = bar.dataset.width;
 
-        bar.style.width = targetWidth;
+        // kleiner Delay für smooth Effekt
+        setTimeout(() => {
+          bar.style.width = targetWidth;
+        }, 100);
 
         observer.unobserve(bar);
       }
