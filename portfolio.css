@@ -734,3 +734,70 @@ a.tech-box {
 a.tech-box:hover {
   text-decoration: none;
 }
+
+/* =========================================
+   CYBER UPGRADE (ADD ONLY – NICHTS ERSETZEN)
+   ========================================= */
+
+/* 🔥 Scanlines + Grid Overlay */
+body.cyber-mode::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 2px,
+      rgba(0,255,204,0.06) 3px
+    ),
+    repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 60px,
+      rgba(0,255,204,0.04) 61px
+    );
+
+  animation: cyber-scan 8s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes cyber-scan {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 300px, 300px 0; }
+}
+
+
+/* 🔥 stärkerer Glow für Überschriften */
+body.cyber-mode h1,
+body.cyber-mode h3 {
+  text-shadow:
+    0 0 6px #00ffcc,
+    0 0 12px #00ffcc,
+    0 0 20px #00ffcc55;
+}
+
+
+/* 🔥 Hover Boost für Cards */
+body.cyber-mode .tech-box:hover {
+  box-shadow:
+    0 0 15px #00ffcc,
+    0 0 30px #00ffcc44,
+    0 0 60px #00ffcc22;
+}
+
+
+/* 🔥 Skill Glow je Level (BONUS) */
+.skill[data-level="Advanced"]:hover {
+  text-shadow: 0 0 6px #00ffcc;
+}
+
+.skill[data-level="Intermediate"]:hover {
+  text-shadow: 0 0 6px #ffaa00;
+}
+
+.skill[data-level="Beginner"]:hover {
+  text-shadow: 0 0 6px #ff5555;
+}
