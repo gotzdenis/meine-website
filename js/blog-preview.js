@@ -1,11 +1,10 @@
-// ================= BLOG PREVIEW (FIXED) =================
+// ================= BLOG PREVIEW (FINAL + META) =================
 
 document.addEventListener("DOMContentLoaded", () => {
 
   const container = document.getElementById("blog-preview-container");
   if (!container) return;
 
-  // 🔥 wichtig → verhindert doppelte Einträge
   container.innerHTML = "";
 
   fetch("blog.html")
@@ -26,16 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const post = posts[i];
 
+        // 🔹 Titel
         const title = post.querySelector("h4")?.innerText || "Blog Artikel";
-        const link = post.querySelector("a")?.getAttribute("href") || "#";
-        const text = post.querySelector("p")?.innerText || "";
 
+        // 🔹 Link erkennen
+        let link = "#";
+        if (post.tagName === "A") {
+          link = post.getAttribute("href") || "#";
+        } else {
+          const innerLink = post.querySelector("a");
+          if (innerLink) link = innerLink.getAttribute("href") || "#";
+        }
+
+        // 🔹 Text (nur Beschreibung)
+        let text = "";
+        const paragraphs = post.querySelectorAll("p");
+        if (paragraphs.length > 0) {
+          text = paragraphs[0].innerText;
+        }
+
+        // 🔹 META (Datum + Tag)
+        const date = post.querySelector(".blog-date")?.innerText || "";
+        const tag = post.querySelector(".blog-tag")?.innerText || "";
+
+        // 🔹 Karte bauen
         const card = document.createElement("div");
-        card.className = "tech-box";
+        card.className = "tech-box blog-card";
 
-        // 🔥 gleiche Struktur wie Projekte
         card.innerHTML = `
-          <span>BLOG</span>
+          <div class="blog-meta">
+            ${date ? `<span class="blog-date">${date}</span>` : ""}
+            ${tag ? `<span class="blog-tag">${tag}</span>` : ""}
+          </div>
+
           <h4>${title}</h4>
           <p>${text}</p>
           <p><a href="${link}">Artikel lesen →</a></p>
