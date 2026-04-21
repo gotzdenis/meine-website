@@ -701,6 +701,20 @@ body.cyber-mode #terminal {
   transform: translateY(0);
 }
 
+/* ================= LEVEL FARBEN ================= */
+
+.skill[data-level="Advanced"]::after {
+  color: #00ffcc; /* grün */
+}
+
+.skill[data-level="Intermediate"]::after {
+  color: #ffaa00; /* gelb/orange */
+}
+
+.skill[data-level="Beginner"]::after {
+  color: #ff5555; /* rot */
+}
+
 /* ================= FIX: CLICKABLE TECH BOX ================= */
 
 .tech-box {
