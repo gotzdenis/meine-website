@@ -275,35 +275,56 @@ SYS-CONSOLE
 
 <div class="container">
 
-<h3>Security Monitor</h3>
+<h3>Security Dashboard</h3>
 
 <div class="skill-grid">
 
 <div class="tech-box">
 <span>THREATS</span>
 <h4>Angriffe erkannt</h4>
-<p id="attack-count">0</p>
+<p id="sec-attacks">0</p>
 </div>
 
 <div class="tech-box">
 <span>ACCESS</span>
 <h4>Unbefugte Zugriffe</h4>
-<p id="unauth-count">0</p>
+<p id="sec-unauth">0</p>
 </div>
 
 <div class="tech-box">
-<span>STATUS</span>
-<h4>Firewall</h4>
-<p id="firewall-status">ACTIVE</p>
+<span>FIREWALL</span>
+<h4>Status</h4>
+<p id="sec-firewall">ACTIVE</p>
 </div>
 
 <div class="tech-box">
 <span>INTEGRITY</span>
 <h4>Systemstatus</h4>
-<p id="system-status-sec">SECURE</p>
+<p id="sec-system">SECURE</p>
 </div>
 
 </div>
+
+<!-- 🔥 LIVE LOG -->
+<div class="tech-box" style="margin-top:20px;">
+
+<span>LIVE SECURITY LOG</span>
+
+<div id="sec-log" style="
+height:220px;
+overflow-y:auto;
+font-family:monospace;
+font-size:12px;
+line-height:1.4;
+">
+<p>[✔] Security module initialized</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <!-- LOG -->
 <div class="tech-box" style="margin-top:20px;">
