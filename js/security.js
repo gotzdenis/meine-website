@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const log = document.getElementById("security-log");
-  const attackEl = document.getElementById("attack-count");
-  const unauthEl = document.getElementById("unauth-count");
+  const log = document.getElementById("sec-log");
+  const attackEl = document.getElementById("sec-attacks");
+  const unauthEl = document.getElementById("sec-unauth");
+
+  if (!log || !attackEl || !unauthEl) {
+    console.warn("Security Dashboard: Elemente nicht gefunden");
+    return;
+  }
 
   let attacks = 0;
   let unauth = 0;
@@ -44,6 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
   }
+
+  // Startlog
+  addLog("[✔] Security module initialized");
 
   setInterval(simulate, 2000);
 
