@@ -1,58 +1,52 @@
-// ================= BLOG PREVIEW =================
+// ================= BLOG PREVIEW (FIXED) =================
 
-fetch("blog.html")
-.then(res => res.text())
-.then(html => {
+document.addEventListener("DOMContentLoaded", () => {
 
-const parser = new DOMParser();
-const doc = parser.parseFromString(html, "text/html");
+  const container = document.getElementById("blog-preview-container");
+  if (!container) return;
 
-// Alle Blog Karten finden
-const posts = doc.querySelectorAll(".blog-card");
+  // 🔥 wichtig → verhindert doppelte Einträge
+  container.innerHTML = "";
 
-// Container auf Portfolio Seite
-const container = document.getElementById("blog-preview-container");
+  fetch("blog.html")
+    .then(res => res.text())
+    .then(html => {
 
-if(!container) return;
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
 
-// maximal 3 Artikel anzeigen
-for(let i = 0; i < 3 && i < posts.length; i++){
+      const posts = doc.querySelectorAll(".blog-card");
 
-const post = posts[i];
+      if (!posts.length) {
+        console.warn("Keine Blog Cards gefunden (.blog-card fehlt)");
+        return;
+      }
 
-// Titel
-const title = post.querySelector("h4") 
-    ? post.querySelector("h4").innerText 
-    : "Blog Artikel";
+      for (let i = 0; i < 3 && i < posts.length; i++) {
 
-// Link
-const link = post.querySelector("a") 
-    ? post.querySelector("a").getAttribute("href") 
-    : "#";
+        const post = posts[i];
 
-// Text
-const text = post.querySelector("p") 
-    ? post.querySelector("p").innerText 
-    : "";
+        const title = post.querySelector("h4")?.innerText || "Blog Artikel";
+        const link = post.querySelector("a")?.getAttribute("href") || "#";
+        const text = post.querySelector("p")?.innerText || "";
 
-// neue Karte erstellen
-const card = document.createElement("div");
-card.className = "tech-box";
+        const card = document.createElement("div");
+        card.className = "tech-box";
 
-// Inhalt einsetzen
-card.innerHTML = `
-<h4>${title}</h4>
-<p>${text}</p>
-<a href="${link}">Artikel lesen →</a>
-`;
+        // 🔥 gleiche Struktur wie Projekte
+        card.innerHTML = `
+          <span>BLOG</span>
+          <h4>${title}</h4>
+          <p>${text}</p>
+          <p><a href="${link}">Artikel lesen →</a></p>
+        `;
 
-container.appendChild(card);
+        container.appendChild(card);
+      }
 
-}
-
-})
-.catch(error => {
-
-console.warn("Blog Preview konnte nicht geladen werden", error);
+    })
+    .catch(error => {
+      console.warn("Blog Preview konnte nicht geladen werden", error);
+    });
 
 });
