@@ -700,3 +700,23 @@ body.cyber-mode #terminal {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ================= FIX: CLICKABLE TECH BOX ================= */
+
+.tech-box {
+  color: #e0e0e0;
+}
+
+.tech-box h4,
+.tech-box p {
+  color: #e0e0e0;
+}
+
+a.tech-box {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.tech-box:hover {
+  text-decoration: none;
+}
