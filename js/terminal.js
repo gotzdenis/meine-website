@@ -4,7 +4,6 @@ let historyIndex = -1;
 const output = document.getElementById("terminal-output");
 
 /* Linux Prompt */
-
 const prompt = "denis@sys-portfolio:~$";
 
 const commands = {
@@ -92,7 +91,7 @@ Fachinformatiker Systemintegration (Umschulung)
 SYS-PORTFOLIO Administrator
 `,
 
-// 🔥 EASTER EGG – ADMIN
+// 🔥 ADMIN EASTER EGG
 denis: () => {
 
 output.innerHTML += `<pre>
@@ -115,7 +114,7 @@ if (typeof speak === "function") {
 
 },
 
-// 🔥 HACK MODE (UPGRADED)
+// 🔥 HACK MODE
 hack: () => {
 
 document.body.classList.add("cyber-mode");
@@ -276,11 +275,22 @@ output.innerHTML = "";
 
 };
 
+
+// ===============================
+// INPUT HANDLING
+// ===============================
+
 input.addEventListener("keydown", function(e){
 
 if(e.key === "Enter"){
 
 const cmd = input.value.trim().toLowerCase();
+
+// 🔥 NEU – Assistant informieren
+window.dispatchEvent(new CustomEvent("terminalCommand", {
+  detail: cmd
+}));
+
 
 if(cmd.startsWith("open ")){
 
@@ -302,6 +312,7 @@ output.innerHTML += `<p>Ziel nicht gefunden.</p>`;
 input.value = "";
 return;
 }
+
 
 if(cmd !== ""){
 commandHistory.push(cmd);
@@ -326,6 +337,8 @@ input.value = "";
 output.scrollTop = output.scrollHeight;
 }
 
+
+// HISTORY ↑
 if(e.key === "ArrowUp"){
 if(historyIndex > 0){
 historyIndex--;
@@ -333,6 +346,7 @@ input.value = commandHistory[historyIndex];
 }
 }
 
+// HISTORY ↓
 if(e.key === "ArrowDown"){
 if(historyIndex < commandHistory.length - 1){
 historyIndex++;
@@ -343,6 +357,11 @@ input.value = "";
 }
 
 });
+
+
+// ===============================
+// TAB AUTOCOMPLETE
+// ===============================
 
 input.addEventListener("keydown", function(e){
 
