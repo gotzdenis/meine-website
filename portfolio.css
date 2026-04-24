@@ -801,3 +801,13 @@ body.cyber-mode .tech-box:hover {
 .skill[data-level="Beginner"]:hover {
   text-shadow: 0 0 6px #ff5555;
 }
+
+/* ================= FOOTER LINK FIX ================= */
+
+footer a {
+  color: #00ffcc !important;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+}
