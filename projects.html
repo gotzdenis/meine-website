@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="portfolio.css">
 </head>
-<body>
+
+<body class="cyber-mode">
 
 <!-- ================= NAVIGATION ================= -->
 <nav>
@@ -20,20 +21,34 @@
   </ul>
 </nav>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="hero">
   <h1>Projekte</h1>
   <p>Abgeschlossene Projekte & technische Dokumentation</p>
 </header>
 
-<!-- CONTENT -->
+<!-- ================= CONTENT ================= -->
 <section>
   <div class="container">
 
     <div class="skill-grid">
 
+      <!-- 🔥 NEU: HOMELAB -->
+<a href="#" class="tech-box">
+
+  <span>🚧 IN PROGRESS · Homelab</span>
+
+  <h4>Homelab – Linux Server & Cloud</h4>
+
+  <p>
+    Aufbau einer eigenen IT-Infrastruktur mit Ubuntu Server,
+    Netzwerkfreigaben, Remote-Zugriff (SSH) und eigener Cloud (Nextcloud).
+  </p>
+
+</a>
+
       <!-- PROJEKT 001 -->
-      <div class="tech-box">
+      <a href="project-linux-001.html" class="tech-box">
 
         <span>✅ Abgeschlossen · Linux / Systemintegration</span>
 
@@ -63,15 +78,11 @@
           und dient zusätzlich als Lernsystem für Linux.
         </p>
 
-        <p>
-          <a href="project-linux-001.html">Projekt ansehen →</a>
-        </p>
-
-      </div>
+      </a>
 
 
       <!-- PROJEKT 002 -->
-      <div class="tech-box">
+      <a href="blog-post-011.html" class="tech-box">
 
         <span>🧩 Portfolio / Webentwicklung</span>
 
@@ -103,26 +114,23 @@
           während der Umschulung.
         </p>
 
-        <p>
-          <a href="blog-post-011.html">Projektbeschreibung →</a>
-        </p>
-
-      </div>
-
+      </a>
 
     </div>
 
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
-  <p><a href="portfolio.html">← Zurück zum Portfolio</a></p><br>
-  <p>© 2026 · Projekte</p>
-</footer>
+  <div class="container">
+    <p>© 2026 · SYS-PORTFOLIO</p>
 
-<script src="cursor.js"></script>
+    <a href="kontakt.html">Kontakt</a> ·
+    <a href="impressum.html">Impressum</a> ·
+    <a href="datenschutz.html">Datenschutz</a>
+  </div>
+</footer>
 
 </body>
 </html>
-
