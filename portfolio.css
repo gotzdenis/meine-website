@@ -802,12 +802,19 @@ body.cyber-mode .tech-box:hover {
   text-shadow: 0 0 6px #ff5555;
 }
 
-/* ================= FOOTER LINK FIX ================= */
+/* ================= FOOTER FINAL FIX ================= */
 
-footer a {
-  color: #00ffcc !important;
+/* Text (SYS-PORTFOLIO) bleibt weiß */
+footer {
+  color: #e0e0e0;
 }
 
+/* Links sind grün */
+footer a {
+  color: #00ffcc;
+}
+
+/* Hover */
 footer a:hover {
-  color: #ffffff !important;
+  color: #ffffff;
 }
