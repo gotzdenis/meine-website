@@ -1,80 +1,199 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-<meta charset="UTF-8">
-<title>Kontakt – SYS-PORTFOLIO</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .contact-header h1 {
+      font-size: 92px;
+      font-weight: 700;
+      line-height: 1;
+      color: white;
+      text-shadow: 0 0 22px #00ffe0;
+      margin-bottom: 18px;
+    }
+
+    .contact-header p {
+      font-size: 22px;
+      color: #00ffe0;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .contact-card {
+      border: 1px solid rgba(0,255,224,0.35);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      padding: 35px;
+      min-height: 360px;
+      transition: 0.25s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 24px rgba(0,255,224,0.35);
+      border-color: #00ffe0;
+    }
+
+    .contact-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 6px 12px;
+      font-family: monospace;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .contact-card h3 {
+      font-size: 30px;
+      color: white;
+      margin-bottom: 26px;
+    }
+
+    .contact-card p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #d6d6d6;
+    }
+
+    .contact-card strong {
+      color: white;
+      font-size: 20px;
+    }
+
+    .contact-card a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-shadow: 0 0 10px #00ffe0;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
-<body class="cyber-mode">
+<body>
 
-<!-- ================= NAVIGATION ================= -->
 <nav>
   <div class="logo">
-  <img src="Logo.png">
-</div>
+    <img src="assets/logos/logo.png" alt="DG Logo">
+  </div>
 
   <ul>
-<li><a href="portfolio.html">Portfolio</a></li>
-<li><a href="projects.html">Projekte</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="kontakt.html" class="active">Kontakt</a></li>
+    <li><a href="index.html">Portfolio</a></li>
+    <li><a href="projects.html">Projekte</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
 </nav>
 
-<header class="hero">
-  <h1>Kontakt</h1>
-  <p>SYS-PORTFOLIO · Fachinformatiker Systemintegration</p>
-</header>
+<section class="page-container">
 
-<section>
-  
-<div class="container">
+  <div class="contact-header">
+    <div class="terminal-tag">contact@sys-portfolio:~#</div>
 
-<div class="tech-box">
-<span>CONTACT</span>
+    <h1>CONTACT</h1>
 
-<h4>Denis Gotz</h4>
+    <p>
+      Kontakt für Praktikum, IT-Austausch und technische Projekte.
+    </p>
+  </div>
 
-<p>
-Fachinformatiker Systemintegration (Umschulung)
-</p>
+  <div class="contact-grid">
 
-<p>
-Portfolio:<br>
-<a href="https://gotzdenis.github.io/meine-website/">
-https://gotzdenis.github.io/meine-website/
-</a>
-</p>
+    <div class="contact-card">
+      <span class="contact-tag">DIRECT CONTACT</span>
 
-<p>
-GitHub:<br>
-<a href="https://github.com/gotzdenis">
-https://github.com/gotzdenis
-</a>
-</p>
+      <h3>Kontakt</h3>
 
-<p>
-Blog:<br>
-<a href="blog.html">Technisches Lernjournal</a>
-</p>
+      <p>
+        Denis Gotz<br>
+        Fachinformatiker Systemintegration (Umschulung)<br><br>
 
-</div>
+        E-Mail:<br>
+        <a href="mailto:denis.gotz@web.de">denis.gotz@web.de</a><br><br>
 
-</div>
-</section>
+        GitHub Portfolio:<br>
+        <a href="https://github.com/gotzdenis/meine-website" target="_blank">
+          github.com/gotzdenis/meine-website
+        </a>
+      </p>
+    </div>
 
-<footer>
-  <div class="container">
+    <div class="contact-card">
+      <span class="contact-tag">PRAKTIKUM GESUCHT</span>
+
+      <h3>Praxisphase 2027</h3>
+
+      <p>
+        Aktuell auf der Suche nach einem Praktikumsplatz im Bereich
+        Fachinformatik Systemintegration / IT-Infrastruktur / IT-Sicherheit.<br><br>
+
+        Praxisphase:<br>
+        <strong>23.03.2027 – 31.08.2027</strong><br><br>
+
+        Zusatzphase:<br>
+        <strong>11.10.2027 – 29.10.2027</strong><br><br>
+
+        Interessen:<br>
+        Linux · Netzwerke · Infrastruktur · IT-Sicherheit
+      </p>
+    </div>
+
+  </div>
+
+  <div class="terminal-ghost">
+    <p>01 > Loading contact information...</p>
+    <p>02 > Checking communication channels...</p>
+    <p>03 > Internship status [ACTIVE]</p>
+    <p>04 > GitHub portfolio linked...</p>
+    <p>05 > Contact page online [READY]</p>
+  </div>
+
+  <footer>
     <p>© 2026 · SYS-PORTFOLIO</p>
 
-    <a href="kontakt.html">Kontakt</a> ·
-    <a href="impressum.html">Impressum</a> ·
-    <a href="datenschutz.html">Datenschutz</a>
-  </div>
-</footer>
+    <div class="footer-links">
+      <a href="kontakt.html">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</section>
 
 </body>
 </html>

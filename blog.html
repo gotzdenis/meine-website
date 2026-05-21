@@ -1,262 +1,354 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Blog – Lernjournal</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 100px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .blog-header h1 {
+      font-size: 92px;
+      font-weight: 700;
+      line-height: 1;
+      color: white;
+      text-shadow: 0 0 22px #00ffe0;
+      margin-bottom: 18px;
+    }
+
+    .blog-header p {
+      font-size: 22px;
+      color: #00ffe0;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .month-section {
+      margin-bottom: 70px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .month-box {
+      max-width: 1500px;
+      margin: 0 auto 24px auto;
+      border: 1px solid rgba(0,255,224,0.25);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(4px);
+      padding: 24px 30px;
+    }
+
+    .month-box h2 {
+      color: #00ffe0;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .month-box p {
+      color: #d6d6d6;
+      font-size: 17px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .blog-card {
+      text-decoration: none;
+      color: white;
+      border: 1px solid rgba(0,255,224,0.28);
+      background: rgba(0,0,0,0.52);
+      backdrop-filter: blur(6px);
+      padding: 22px;
+      min-height: 190px;
+      transition: 0.25s ease;
+      display: block;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(0,255,224,0.28);
+      border-color: #00ffe0;
+    }
+
+    .blog-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .blog-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 5px 10px;
+      font-family: monospace;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    .blog-card h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: white;
+    }
+
+    .blog-card p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #d6d6d6;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
 <nav>
   <div class="logo">
-  <img src="Logo.png">
-</div>
+    <img src="assets/logos/logo.png" alt="DG Logo">
+  </div>
 
   <ul>
-    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="index.html">Portfolio</a></li>
     <li><a href="projects.html">Projekte</a></li>
-    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
 </nav>
 
-<header class="hero">
-<h1>Lernjournal</h1>
-<p>Dokumentation meiner Umschulung & Projekte</p>
-</header>
+<section class="page-container">
 
-<section>
-<div class="container">
+  <div class="blog-header">
+    <div class="terminal-tag">blog@sys-portfolio:~#</div>
+    <h1>LEARNING JOURNAL</h1>
+    <p>
+      Dokumentation meiner Umschulung, Projekte, technischen Lernfortschritte
+      und meines Weges in die IT.
+    </p>
+  </div>
 
-<!-- BLOG INTRO -->
-<div class="tech-box" style="margin-bottom:30px;">
-<p>
-Dieses Lernjournal dokumentiert meinen Weg
-durch die Umschulung zum Fachinformatiker
-für Systemintegration.
-</p>
+  <!-- MAY -->
+  <div class="month-section">
+    <div class="month-box">
+      <h2>📂 Mai 2026</h2>
+      <p>Netzwerk, Homelab Planung & Portfolio Weiterentwicklung</p>
+    </div>
 
-<p>
-Technische Entscheidungen, Projekte
-und Lernfortschritte werden hier
-nachvollziehbar dokumentiert.
-</p>
-</div>
+    <div class="blog-grid">
 
-<div class="skill-grid">
+      <a href="blog/blog-post-015.html" class="blog-card">
+        <div class="blog-date">IN ARBEIT</div>
+        <span class="blog-tag">NETZWERK</span>
+        <h3>Netzwerk- und Kommunikationstechnik</h3>
+        <p>
+          OSI-Modell, TCP/IP, IPv4-Adressierung,
+          Subnetting und erste praktische Netzwerkaufbauten.
+        </p>
+      </a>
 
-<!-- ================= MAI 2026 ================= -->
-<div class="tech-box month-header">
-<h3>📂 Mai 2026</h3>
-<p>Netzwerk- und Kommunikationstechnik (in Arbeit)</p>
-</div>
+      <a href="blog/blog-post-016.html" class="blog-card">
+        <div class="blog-date">2026-05</div>
+        <span class="blog-tag">HOMELAB</span>
+        <h3>Homelab Journey – Planung & Zielsetzung</h3>
+        <p>
+          Geplanter Aufbau einer eigenen Lernumgebung
+          für Linux, Docker, Infrastruktur und IT-Sicherheit.
+        </p>
+      </a>
 
-<div class="tech-box">
-<div class="blog-meta">
-<span class="blog-date">IN ARBEIT</span>
-<span class="blog-tag">Netzwerk</span>
-</div>
-<h4>Netzwerk- und Kommunikationstechnik</h4>
-<p>
-OSI-Modell, TCP/IP, IP-Adressierung und erste praktische Netzwerkaufbauten im Homelab.
-</p>
-</div>
+      <a href="blog/blog-post-017.html" class="blog-card">
+        <div class="blog-date">2026-05</div>
+        <span class="blog-tag">PORTFOLIO</span>
+        <h3>Vorlesefunktion vorerst entfernt</h3>
+        <p>
+          Die erste TTS-Lösung wurde bewusst entfernt.
+          Eine modernere und technisch bessere Version ist geplant.
+        </p>
+      </a>
 
+    </div>
+  </div>
 
-<!-- ================= APRIL 2026 ================= -->
-<div class="tech-box month-header">
-<h3>📂 April 2026</h3>
-<p>BWL Grundlagen & IT-Sicherheit</p>
-</div>
+  <!-- APRIL -->
+  <div class="month-section">
+    <div class="month-box">
+      <h2>📂 April 2026</h2>
+      <p>BWL Grundlagen & IT-Sicherheit</p>
+    </div>
 
-<a href="blog-post-014.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-04</span>
-<span class="blog-tag">Security</span>
-</div>
-<h4>IT-Sicherheit & Datenschutz Grundlagen</h4>
-<p>
-Grundlagen zu IT-Sicherheit, DSGVO und Schutzmaßnahmen.
-</p>
-</a>
+    <div class="blog-grid">
+      <a href="blog/blog-post-014.html" class="blog-card">
+        <div class="blog-date">2026-04</div>
+        <span class="blog-tag">SECURITY</span>
+        <h3>IT-Sicherheit & Datenschutz Grundlagen</h3>
+        <p>Grundlagen zu IT-Sicherheit, DSGVO und Schutzmaßnahmen.</p>
+      </a>
 
-<a href="blog-post-013.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-04</span>
-<span class="blog-tag">BWL</span>
-</div>
-<h4>BWL Grundlagen abgeschlossen</h4>
-<p>
-Grundlagen der Betriebswirtschaft und deren Bedeutung für IT-Systeme.
-</p>
-</a>
+      <a href="blog/blog-post-013.html" class="blog-card">
+        <div class="blog-date">2026-04</div>
+        <span class="blog-tag">BWL</span>
+        <h3>BWL Grundlagen abgeschlossen</h3>
+        <p>Grundlagen der Betriebswirtschaft und deren Bedeutung für IT-Systeme.</p>
+      </a>
+    </div>
+  </div>
 
+  <!-- MARCH -->
+  <div class="month-section">
+    <div class="month-box">
+      <h2>📂 März 2026</h2>
+      <p>Datenbanken & Portfolio Weiterentwicklung</p>
+    </div>
 
-<!-- ================= MÄRZ 2026 ================= -->
-<div class="tech-box month-header">
-<h3>📂 März 2026</h3>
-<p>Datenbanken & Portfolio Weiterentwicklung</p>
-</div>
+    <div class="blog-grid">
+      <a href="blog/blog-post-012.html" class="blog-card">
+        <div class="blog-date">2026-03-20</div>
+        <span class="blog-tag">NETZWERKE</span>
+        <h3>Einführung Netzwerktechnik</h3>
+        <p>OSI-Modell, Topologien, Ethernet und Netzwerkkommunikation.</p>
+      </a>
 
-<a href="blog-post-012.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-03-20</span>
-<span class="blog-tag">Netzwerke</span>
-</div>
-<h4>Einführung Netzwerktechnik</h4>
-<p>
-OSI-Modell, Topologien, Ethernet und Netzwerkkommunikation.
-</p>
-</a>
+      <a href="blog/blog-post-011.html" class="blog-card">
+        <div class="blog-date">2026-03</div>
+        <span class="blog-tag">PORTFOLIO</span>
+        <h3>SYS-PORTFOLIO v2</h3>
+        <p>Neue Struktur, Terminal-Interface und technische Weiterentwicklung.</p>
+      </a>
 
-<a href="blog-post-011.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-03</span>
-<span class="blog-tag">Portfolio</span>
-</div>
-<h4>SYS-PORTFOLIO v2 – Technischer Umbau</h4>
-<p>
-Neue Struktur, Terminal-Interface und lokale Assistentin.
-</p>
-</a>
+      <a href="blog/blog-post-010.html" class="blog-card">
+        <div class="blog-date">2026-03-10</div>
+        <span class="blog-tag">DATENBANKEN</span>
+        <h3>Einführung Datenbanken</h3>
+        <p>ER-Modelle, Normalisierung und SQL Grundlagen.</p>
+      </a>
+    </div>
+  </div>
 
-<a href="blog-post-010.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-03-10</span>
-<span class="blog-tag">Datenbanken</span>
-</div>
-<h4>Einführung Datenbanken</h4>
-<p>
-ER-Modelle, Normalisierung und SQL Grundlagen.
-</p>
-</a>
+  <!-- FEBRUARY -->
+  <div class="month-section">
+    <div class="month-box">
+      <h2>📂 Februar 2026</h2>
+      <p>Technische Grundlagen der Umschulung</p>
+    </div>
 
+    <div class="blog-grid">
+      <a href="blog/blog-post-009.html" class="blog-card">
+        <div class="blog-date">2026-02-27</div>
+        <span class="blog-tag">PROGRAMMIERUNG</span>
+        <h3>Einführung Programmierung</h3>
+        <p>Variablen, Bedingungen und Schleifen.</p>
+      </a>
 
-<!-- ================= FEBRUAR 2026 ================= -->
-<div class="tech-box month-header">
-<h3>📂 Februar 2026</h3>
-<p>Technische Grundlagen der Umschulung</p>
-</div>
+      <a href="blog/blog-post-008.html" class="blog-card">
+        <div class="blog-date">2026-02-18</div>
+        <span class="blog-tag">DIGITALTECHNIK</span>
+        <h3>Digitaltechnik Grundlagen</h3>
+        <p>Binärsystem, Hexadezimalsystem und Logik.</p>
+      </a>
 
-<a href="blog-post-009.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-02-27</span>
-<span class="blog-tag">Programmierung</span>
-</div>
-<h4>Einführung Programmierung</h4>
-<p>
-Variablen, Bedingungen und Schleifen.
-</p>
-</a>
+      <a href="blog/blog-post-007.html" class="blog-card">
+        <div class="blog-date">2026-02-06</div>
+        <span class="blog-tag">SYSTEMTECHNIK</span>
+        <h3>Einführung Systemtechnik</h3>
+        <p>Hardwareaufbau und Systemarchitektur.</p>
+      </a>
+    </div>
+  </div>
 
-<a href="blog-post-008.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-02-18</span>
-<span class="blog-tag">Digitaltechnik</span>
-</div>
-<h4>Digitaltechnik Grundlagen</h4>
-<p>
-Binärsystem, Hexadezimalsystem und Logik.
-</p>
-</a>
+  <!-- JANUARY -->
+  <div class="month-section">
+    <div class="month-box">
+      <h2>📂 Januar 2026</h2>
+      <p>Startphase & Portfolio Aufbau</p>
+    </div>
 
-<a href="blog-post-007.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-02-06</span>
-<span class="blog-tag">Systemtechnik</span>
-</div>
-<h4>Einführung Systemtechnik</h4>
-<p>
-Hardwareaufbau und Systemarchitektur.
-</p>
-</a>
+    <div class="blog-grid">
+      <a href="blog/blog-post-006.html" class="blog-card">
+        <div class="blog-date">2026-01-30</div>
+        <span class="blog-tag">UMSCHULUNG</span>
+        <h3>Wirtschafts- und Sozialkunde</h3>
+        <p>Grundlagen von Arbeitsrecht und Wirtschaft.</p>
+      </a>
 
+      <a href="blog/blog-post-005.html" class="blog-card">
+        <div class="blog-date">2026-01-14</div>
+        <span class="blog-tag">LINUX</span>
+        <h3>Ubuntu als Lernsystem</h3>
+        <p>Installation auf alter Hardware inkl. Secure Boot.</p>
+      </a>
 
-<!-- ================= JANUAR 2026 ================= -->
-<div class="tech-box month-header">
-<h3>📂 Januar 2026</h3>
-<p>Startphase & Portfolio Aufbau</p>
-</div>
+      <a href="blog/blog-post-004.html" class="blog-card">
+        <div class="blog-date">2026-01-12</div>
+        <span class="blog-tag">BARRIEREFREIHEIT</span>
+        <h3>Vorlesefunktion im Browser</h3>
+        <p>Lokale TTS ohne externe APIs.</p>
+      </a>
 
-<a href="blog-post-006.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-01-30</span>
-<span class="blog-tag">Umschulung</span>
-</div>
-<h4>Wirtschafts- und Sozialkunde</h4>
-<p>
-Grundlagen von Arbeitsrecht und Wirtschaft.
-</p>
-</a>
+      <a href="blog/blog-post-003.html" class="blog-card">
+        <div class="blog-date">2026-01-09</div>
+        <span class="blog-tag">PORTFOLIO</span>
+        <h3>KI-Assistentin Aufbau</h3>
+        <p>Konzept und Umsetzung der lokalen Assistentin.</p>
+      </a>
 
-<a href="blog-post-005.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-01-14</span>
-<span class="blog-tag">Linux</span>
-</div>
-<h4>Ubuntu als Lernsystem</h4>
-<p>
-Installation auf alter Hardware inkl. Secure Boot.
-</p>
-</a>
+      <a href="blog/blog-post-002.html" class="blog-card">
+        <div class="blog-date">2026-01-08</div>
+        <span class="blog-tag">LERNEN</span>
+        <h3>KI als Lernhilfe</h3>
+        <p>Effizienter Einsatz beim Lernen.</p>
+      </a>
 
-<a href="blog-post-004.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-01-12</span>
-<span class="blog-tag">Barrierefreiheit</span>
-</div>
-<h4>Vorlesefunktion im Browser</h4>
-<p>
-Lokale TTS ohne externe APIs.
-</p>
-</a>
+      <a href="blog/blog-post-001.html" class="blog-card">
+        <div class="blog-date">2026-01-08</div>
+        <span class="blog-tag">PORTFOLIO</span>
+        <h3>Projektstart Portfolio</h3>
+        <p>Grundstruktur und erste Entscheidungen.</p>
+      </a>
+    </div>
+  </div>
 
-<a href="blog-post-003.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-01-09</span>
-<span class="blog-tag">Portfolio</span>
-</div>
-<h4>KI-Assistentin Aufbau</h4>
-<p>
-Konzept und Umsetzung der lokalen Assistentin.
-</p>
-</a>
+  <div class="terminal-ghost">
+    <p>01 > Loading learning journal...</p>
+    <p>02 > Parsing documentation...</p>
+    <p>03 > Grouping entries by month...</p>
+    <p>04 > Rendering journal structure...</p>
+    <p>05 > Journal online [READY]</p>
+  </div>
 
-<a href="blog-post-002.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-01-08</span>
-<span class="blog-tag">Lernen</span>
-</div>
-<h4>KI als Lernhilfe</h4>
-<p>
-Effizienter Einsatz beim Lernen.
-</p>
-</a>
+  <footer>
+    <p>© 2026 · SYS-PORTFOLIO</p>
+    <div class="footer-links">
+      <a href="kontakt.html">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
 
-<a href="blog-post-001.html" class="tech-box blog-card">
-<div class="blog-meta">
-<span class="blog-date">2026-01-08</span>
-<span class="blog-tag">Portfolio</span>
-</div>
-<h4>Projektstart Portfolio</h4>
-<p>
-Grundstruktur und erste Entscheidungen.
-</p>
-</a>
-
-</div>
-</div>
 </section>
-
-<footer>
-<p><a href="portfolio.html">← Zurück zum Portfolio</a></p><br>
-<p>© 2026 · Persönliches Lernjournal</p>
-</footer>
-
-<script src="js/cursor.js"></script>
 
 </body>
 </html>

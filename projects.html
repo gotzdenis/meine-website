@@ -2,137 +2,205 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Projekte – Übersicht</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="portfolio.css">
+  <title>Projects | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 100px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .page-header h1 {
+      font-size: 92px;
+      font-weight: 700;
+      line-height: 1;
+      color: white;
+      text-shadow: 0 0 22px #00ffe0;
+      margin-bottom: 18px;
+    }
+
+    .page-header p {
+      font-size: 22px;
+      color: #00ffe0;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+      max-width: 1500px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .project-card {
+      text-decoration: none;
+      color: white;
+      border: 1px solid rgba(0,255,224,0.28);
+      background: rgba(0,0,0,0.52);
+      backdrop-filter: blur(6px);
+      padding: 22px;
+      min-height: 220px;
+      transition: 0.25s ease;
+      display: block;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(0,255,224,0.28);
+      border-color: #00ffe0;
+    }
+
+    .project-status {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 5px 10px;
+      font-family: monospace;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: white;
+    }
+
+    .project-card p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #d6d6d6;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
-<body class="cyber-mode">
+<body>
 
-<!-- ================= NAVIGATION ================= -->
 <nav>
   <div class="logo">
-  <img src="Logo.png">
-</div>
+    <img src="assets/logos/logo.png" alt="DG Logo">
+  </div>
 
   <ul>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="projects.html" class="active">Projekte</a></li>
+    <li><a href="index.html">Portfolio</a></li>
+    <li><a href="projects.html">Projekte</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
 </nav>
 
-<!-- ================= HEADER ================= -->
-<header class="hero">
-  <h1>Projekte</h1>
-  <p>Abgeschlossene Projekte & technische Dokumentation</p>
-</header>
+<section class="page-container">
 
-<!-- ================= CONTENT ================= -->
-<section>
-  <div class="container">
+  <div class="page-header">
+    <div class="terminal-tag">projects@sys-portfolio:~#</div>
 
-    <div class="skill-grid">
+    <h1>PROJECTS</h1>
 
-      <!-- 🔥 NEU: HOMELAB -->
-<a href="#" class="tech-box">
+    <p>
+      Eigene IT-Projekte, Infrastruktur und technische Lernumgebungen.
+    </p>
+  </div>
 
-  <span>🚧 IN PROGRESS · Homelab</span>
+  <div class="project-grid">
 
-  <h4>Homelab – Linux Server & Cloud</h4>
+    <a href="projects/portfolio/" class="project-card">
+      <div class="project-status">ACTIVE</div>
+      <span class="project-tag">PORTFOLIO</span>
+      <h3>SYS-PORTFOLIO v2</h3>
+      <p>
+        Persönliche Portfolio-Website als technische Dokumentationsplattform
+        für Umschulung, Projekte und Lernfortschritte.
+      </p>
+    </a>
 
-  <p>
-    Aufbau einer eigenen IT-Infrastruktur mit Ubuntu Server,
-    Netzwerkfreigaben, Remote-Zugriff (SSH) und eigener Cloud (Nextcloud).
-  </p>
+    <a href="projects/linux/" class="project-card">
+      <div class="project-status">COMPLETED</div>
+      <span class="project-tag">LINUX</span>
+      <h3>Linux Ubuntu Lernsystem</h3>
+      <p>
+        Linux-Migration eines älteren Laptops als stabiles Lern-
+        und Alltagssystem mit Ubuntu.
+      </p>
+    </a>
 
-</a>
+    <a href="projects/homelab/" class="project-card">
+      <div class="project-status">PLANNED</div>
+      <span class="project-tag">INFRASTRUCTURE</span>
+      <h3>Homelab</h3>
+      <p>
+        Eigene Serverumgebung mit Virtualisierung, Docker,
+        Nextcloud, Netzwerkdiensten und Monitoring.
+      </p>
+    </a>
 
-      <!-- PROJEKT 001 -->
-      <a href="project-linux-001.html" class="tech-box">
+    <a href="projects/network/" class="project-card">
+      <div class="project-status">LEARNING</div>
+      <span class="project-tag">NETWORK</span>
+      <h3>Network Lab</h3>
+      <p>
+        Netzwerktechnik aus Umschulung und Homelab:
+        IPv4, Routing, Switching, TCP/IP und praktische Setups.
+      </p>
+    </a>
 
-        <span>✅ Abgeschlossen · Linux / Systemintegration</span>
-
-        <h4>Linux Ubuntu – Entwicklungsumgebung (Laptop)</h4>
-
-        <p><strong>Ziel</strong></p>
-
-        <p>
-          Umbau eines älteren, nicht Windows-11-tauglichen Laptops
-          zu einer stabilen Linux Lern- und Entwicklungsplattform.
-        </p>
-
-        <p><strong>Technik</strong></p>
-
-        <p>
-          Ubuntu Linux · Broadcom WLAN Treiber ·
-          Secure Boot (MOK) · Benutzer- und Rechteverwaltung ·
-          kindgerechtes Setup
-        </p>
-
-        <p><strong>Ergebnis</strong></p>
-
-        <p>
-          Stabiles Linux System für Entwicklung,
-          Lernen und tägliche Nutzung.
-          Der Laptop kann weiterhin sinnvoll genutzt werden
-          und dient zusätzlich als Lernsystem für Linux.
-        </p>
-
-      </a>
-
-
-      <!-- PROJEKT 002 -->
-      <a href="blog-post-011.html" class="tech-box">
-
-        <span>🧩 Portfolio / Webentwicklung</span>
-
-        <h4>SYS-PORTFOLIO v2 – Website & System-Console</h4>
-
-        <p><strong>Ziel</strong></p>
-
-        <p>
-          Entwicklung einer persönlichen Portfolio-Website
-          zur Dokumentation meiner Umschulung zum
-          Fachinformatiker für Systemintegration
-          sowie zur Darstellung technischer Projekte.
-        </p>
-
-        <p><strong>Technik</strong></p>
-
-        <p>
-          HTML · CSS Grid · Vanilla JavaScript<br>
-          Terminal-Interface · lokaler Assistent ·
-          Vorlesefunktion für Blogartikel
-        </p>
-
-        <p><strong>Ergebnis</strong></p>
-
-        <p>
-          Interaktive Portfolio-Website mit Terminal-Konsole,
-          technischem Blog und strukturierter Projektdokumentation.
-          Die Seite dient gleichzeitig als Lernjournal
-          während der Umschulung.
-        </p>
-
-      </a>
-
-    </div>
+    <a href="projects/security/" class="project-card">
+      <div class="project-status">PLANNED</div>
+      <span class="project-tag">SECURITY</span>
+      <h3>Security Lab</h3>
+      <p>
+        Geplante Security-Umgebung für Härtung, Monitoring,
+        Firewall-Konzepte und IT-Sicherheitsprojekte.
+      </p>
+    </a>
 
   </div>
-</section>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  <div class="container">
+  <div class="terminal-ghost">
+    <p>01 > Loading project registry...</p>
+    <p>02 > Parsing infrastructure roadmap...</p>
+    <p>03 > Linux environment [READY]</p>
+    <p>04 > Security modules [PLANNED]</p>
+    <p>05 > Project overview online [READY]</p>
+  </div>
+
+  <footer>
     <p>© 2026 · SYS-PORTFOLIO</p>
 
-    <a href="kontakt.html">Kontakt</a> ·
-    <a href="impressum.html">Impressum</a> ·
-    <a href="datenschutz.html">Datenschutz</a>
-  </div>
-</footer>
+    <div class="footer-links">
+      <a href="kontakt.html">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</section>
 
 </body>
 </html>

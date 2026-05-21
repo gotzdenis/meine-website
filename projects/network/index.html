@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Lab | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .project-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .project-box {
+      border: 1px solid rgba(0,255,224,0.28);
+      background: rgba(0,0,0,0.52);
+      backdrop-filter: blur(6px);
+      padding: 55px;
+    }
+
+    .project-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 5px 10px;
+      font-family: monospace;
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    .project-box h1 {
+      font-size: 82px;
+      line-height: 1.05;
+      color: white;
+      margin-bottom: 50px;
+      text-shadow: 0 0 22px #00ffe0;
+    }
+
+    .project-box h2 {
+      font-size: 30px;
+      color: #00ffe0;
+      margin-top: 45px;
+      margin-bottom: 18px;
+    }
+
+    .project-box p,
+    .project-box li {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .project-box ul {
+      padding-left: 24px;
+    }
+
+    .back-link {
+      margin-top: 50px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    .back-link:hover {
+      text-shadow: 0 0 12px #00ffe0;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .project-box {
+        padding: 30px;
+      }
+
+      .project-box h1 {
+        font-size: 48px;
+      }
+
+      .project-box p,
+      .project-box li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="../../index.html">
+      <img src="../../assets/logos/logo.png" alt="DG Logo">
+    </a>
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">Portfolio</a></li>
+    <li><a href="../../projects.html">Projekte</a></li>
+    <li><a href="../../blog.html">Blog</a></li>
+    <li><a href="../../kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+
+  <div class="project-container">
+    <article class="project-box">
+
+      <div class="project-date">Aktives Lernprojekt</div>
+
+      <span class="project-tag">NETWORK</span>
+
+      <h1>Network Lab – Netzwerktechnik & Praxis</h1>
+
+      <h2>Ziel</h2>
+      <p>
+        Ziel dieses Projekts ist der praktische Aufbau und das Verständnis
+        moderner Netzwerktechnik als Ergänzung zu den theoretischen Inhalten
+        meiner Umschulung zum Fachinformatiker für Systemintegration.
+      </p>
+
+      <h2>Ausgangslage</h2>
+      <p>
+        Netzwerktechnik gehört zu den zentralen Grundlagen der Systemintegration.
+        Um Theorie nicht nur auswendig zu lernen, soll dieses Projekt
+        praktische Übungen und echte Netzwerkumgebungen dokumentieren.
+      </p>
+
+      <h2>Aktuelle Themen</h2>
+      <ul>
+        <li>OSI Referenzmodell</li>
+        <li>TCP/IP Grundlagen</li>
+        <li>IPv4 Adressierung</li>
+        <li>Subnetting</li>
+        <li>Routing Grundlagen</li>
+        <li>Switching Grundlagen</li>
+        <li>Netzwerkdiagnose</li>
+      </ul>
+
+      <h2>Praxisbezug</h2>
+      <p>
+        Neben den theoretischen Lerninhalten werden praktische Netzwerkaufbauten
+        im Homelab umgesetzt, getestet und dokumentiert.
+      </p>
+
+      <p>
+        Ziel ist es, Netzwerke nicht nur konzeptionell zu verstehen,
+        sondern Konfigurationen und Fehleranalysen praktisch anwenden zu können.
+      </p>
+
+      <h2>Lernpunkte</h2>
+      <ul>
+        <li>Netzwerkkommunikation verstehen</li>
+        <li>IPv4 Adressierung sicher anwenden</li>
+        <li>Subnetting praktisch nutzen</li>
+        <li>Fehler systematisch analysieren</li>
+        <li>Netzwerk-Infrastruktur nachvollziehen</li>
+      </ul>
+
+      <a href="../../projects.html" class="back-link">← Zurück zu den Projekten</a>
+
+    </article>
+  </div>
+
+  <div class="terminal-ghost">
+    <p>01 > Loading network modules...</p>
+    <p>02 > Initializing TCP/IP stack...</p>
+    <p>03 > Routing table [ACTIVE]</p>
+    <p>04 > Network diagnostics [ONLINE]</p>
+    <p>05 > Lab ready [LEARNING]</p>
+  </div>
+
+  <footer>
+    <p>© 2026 · SYS-PORTFOLIO</p>
+
+    <div class="footer-links">
+      <a href="../../kontakt.html">Kontakt</a>
+      <a href="../../impressum.html">Impressum</a>
+      <a href="../../datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.72)),
+    url("../assets/wallpapers/hero-bg-v2.png");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ================= GLOBAL NAV ================= */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 28px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 100;
+}
+
+.logo img {
+  width: 72px;
+  filter: drop-shadow(0 0 14px #00ffe0);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 42px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00ffe0;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffe0;
+}
+
+/* ================= GLOBAL PAGE LAYOUT ================= */
+
+.page-container {
+  min-height: 100vh;
+  padding: 180px 80px 140px;
+  position: relative;
+}
+
+/* ================= GLOBAL TERMINAL TAG ================= */
+
+.terminal-tag {
+  display: inline-block;
+  border: 1px solid #00ffe0;
+  color: #00ffe0;
+  font-family: monospace;
+  padding: 10px 18px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* ================= INDEX LAYOUT ================= */
+
+.hero-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
+  z-index: 20;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+h1 {
+  font-size: 108px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 0 24px #00ffe0;
+}
+
+.hero-line {
+  width: 560px;
+  height: 4px;
+  background: #00ffe0;
+  box-shadow: 0 0 20px #00ffe0;
+  margin: 30px 0;
+}
+
+h2 {
+  color: #00ffe0;
+  font-size: 58px;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  text-shadow: 0 0 12px rgba(0,255,224,0.25);
+}
+
+.hero-text {
+  color: #e5e5e5;
+  font-size: 20px;
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  margin-top: 46px;
+  display: flex;
+  gap: 22px;
+}
+
+.btn {
+  text-decoration: none;
+  color: #00ffe0;
+  border: 1px solid #00ffe0;
+  padding: 16px 28px;
+  font-family: monospace;
+  font-size: 15px;
+  background: rgba(0, 0, 0, 0.45);
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 0 16px #00ffe0;
+  transform: translateY(-2px);
+}
+
+/* ================= STATUS BOX ================= */
+
+.status-box {
+  width: 380px;
+  padding: 34px;
+  border: 1px solid rgba(0,255,224,0.8);
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(3px);
+}
+
+.status-box h3 {
+  color: #00ffe0;
+  font-size: 22px;
+  margin-bottom: 24px;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.status-box p {
+  font-size: 17px;
+  line-height: 1.85;
+  font-family: monospace;
+  color: #f0f0f0;
+}
+
+/* ================= TERMINAL GHOST ================= */
+
+.terminal-log,
+.terminal-ghost {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(0, 255, 224, 0.035);
+  pointer-events: none;
+}
+
+.terminal-log {
+  margin-top: 80px;
+}
+
+.terminal-log p,
+.terminal-ghost p {
+  margin-bottom: 5px;
+}
+
+/* ================= BOTTOM ICONS ================= */
+
+.bottom-icons {
+  margin-top: 60px;
+  display: flex;
+  gap: 34px;
+  color: #00ffe0;
+  font-size: 22px;
+}
+
+.bottom-icons div {
+  transition: 0.2s ease;
+}
+
+.bottom-icons div:hover {
+  text-shadow: 0 0 10px #00ffe0;
+  transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+
+  background: rgba(0, 0, 0, 0.22);
+  padding: 12px 28px;
+  border: 1px solid rgba(0,255,224,0.18);
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 0 18px rgba(0,255,224,0.08);
+
+  margin-top: 80px;
+  position: relative;
+  z-index: 20;
+}
+
+.footer-links {
+  margin-top: 6px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #00ffe0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.footer-links a:hover {
+  text-shadow: 0 0 10px #00ffe0;
+  color: #ffffff;
+}

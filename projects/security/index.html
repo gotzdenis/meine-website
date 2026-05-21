@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Lab | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .project-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .project-box {
+      border: 1px solid rgba(0,255,224,0.28);
+      background: rgba(0,0,0,0.52);
+      backdrop-filter: blur(6px);
+      padding: 55px;
+    }
+
+    .project-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 5px 10px;
+      font-family: monospace;
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    .project-box h1 {
+      font-size: 82px;
+      line-height: 1.05;
+      color: white;
+      margin-bottom: 50px;
+      text-shadow: 0 0 22px #00ffe0;
+    }
+
+    .project-box h2 {
+      font-size: 30px;
+      color: #00ffe0;
+      margin-top: 45px;
+      margin-bottom: 18px;
+    }
+
+    .project-box p,
+    .project-box li {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .project-box ul {
+      padding-left: 24px;
+    }
+
+    .back-link {
+      margin-top: 50px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    .back-link:hover {
+      text-shadow: 0 0 12px #00ffe0;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .project-box {
+        padding: 30px;
+      }
+
+      .project-box h1 {
+        font-size: 48px;
+      }
+
+      .project-box p,
+      .project-box li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="../../index.html">
+      <img src="../../assets/logos/logo.png" alt="DG Logo">
+    </a>
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">Portfolio</a></li>
+    <li><a href="../../projects.html">Projekte</a></li>
+    <li><a href="../../blog.html">Blog</a></li>
+    <li><a href="../../kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+
+  <div class="project-container">
+    <article class="project-box">
+
+      <div class="project-date">Geplant</div>
+
+      <span class="project-tag">SECURITY</span>
+
+      <h1>Security Lab – Geplante Lernumgebung</h1>
+
+      <h2>Ziel</h2>
+      <p>
+        Ziel dieses Projekts ist der schrittweise Aufbau einer praktischen
+        Lernumgebung für IT-Sicherheit, Systemhärtung und sichere Infrastruktur.
+      </p>
+
+      <h2>Warum ein Security Lab?</h2>
+      <p>
+        IT-Sicherheit ist ein zentraler Bestandteil moderner IT-Infrastruktur.
+        Theoretisches Wissen allein reicht dabei langfristig nicht aus.
+      </p>
+
+      <p>
+        Dieses Projekt soll eine praktische Umgebung schaffen,
+        in der Sicherheitsmaßnahmen getestet, Systeme abgesichert
+        und reale Konzepte nachvollzogen werden können.
+      </p>
+
+      <h2>Geplante Inhalte</h2>
+      <ul>
+        <li>Linux System Härtung</li>
+        <li>Firewall Konzepte</li>
+        <li>SSH Absicherung</li>
+        <li>Benutzer- und Rechteverwaltung</li>
+        <li>Log Analyse & Systemüberwachung</li>
+        <li>Backup Strategien</li>
+        <li>Grundlagen Netzwerk-Security</li>
+      </ul>
+
+      <h2>Geplanter Stack</h2>
+      <p>
+        Linux Systeme, SSH, Firewall-Konfiguration,
+        Benutzer- und Rechteverwaltung,
+        Netzwerkanalyse und Sicherheitsmaßnahmen.
+      </p>
+
+      <h2>Status</h2>
+      <p>
+        Projekt aktuell in Planung.
+      </p>
+
+      <p>
+        Die praktische Umsetzung erfolgt schrittweise
+        parallel zum Homelab und den fachlichen Lerninhalten
+        der Umschulung.
+      </p>
+
+      <a href="../../projects.html" class="back-link">← Zurück zu den Projekten</a>
+
+    </article>
+  </div>
+
+  <div class="terminal-ghost">
+    <p>01 > Loading security environment...</p>
+    <p>02 > Parsing hardening roadmap...</p>
+    <p>03 > Security modules [PLANNED]</p>
+    <p>04 > Infrastructure preparation...</p>
+    <p>05 > Project ready [PLANNED]</p>
+  </div>
+
+  <footer>
+    <p>© 2026 · SYS-PORTFOLIO</p>
+
+    <div class="footer-links">
+      <a href="../../kontakt.html">Kontakt</a>
+      <a href="../../impressum.html">Impressum</a>
+      <a href="../../datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</section>
+
+</body>
+</html>

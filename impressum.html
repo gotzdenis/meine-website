@@ -1,72 +1,147 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Impressum – SYS-PORTFOLIO</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .legal-header {
+      text-align: center;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .legal-header h1 {
+      font-size: 92px;
+      font-weight: 700;
+      line-height: 1;
+      color: white;
+      text-shadow: 0 0 22px #00ffe0;
+      margin-bottom: 18px;
+    }
+
+    .legal-header p {
+      font-size: 22px;
+      color: #00ffe0;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .legal-card {
+      max-width: 1100px;
+      margin: 0 auto;
+      border: 1px solid rgba(0,255,224,0.35);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      padding: 45px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .legal-card h3 {
+      font-size: 30px;
+      color: white;
+      margin-bottom: 28px;
+    }
+
+    .legal-card p {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .legal-card a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
+
+    .legal-card a:hover {
+      text-shadow: 0 0 10px #00ffe0;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
-<body class="cyber-mode">
+<body>
 
-<!-- ================= NAVIGATION ================= -->
 <nav>
   <div class="logo">
-  <img src="Logo.png">
-</div>
+    <img src="assets/logos/logo.png" alt="DG Logo">
+  </div>
+
   <ul>
-    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="index.html">Portfolio</a></li>
     <li><a href="projects.html">Projekte</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="container">
-    <h1>Impressum</h1>
+<section class="page-container">
+
+  <div class="legal-header">
+    <div class="terminal-tag">legal@sys-portfolio:~#</div>
+
+    <h1>IMPRESSUM</h1>
+
+    <p>
+      Anbieterkennzeichnung gemäß geltender gesetzlicher Vorgaben.
+    </p>
   </div>
-</header>
 
-<!-- CONTENT -->
-<section>
-  <div class="container">
+  <div class="legal-card">
+    <h3>Angaben gemäß § 5 TMG</h3>
 
-    <div class="tech-box" style="max-width:700px; margin:auto;">
-      <span>LEGAL</span>
+    <p>
+      Denis Gotz<br>
+      Prinzenstraße 57<br>
+      47475 Kamp-Lintfort<br>
+      Deutschland<br><br>
 
-      <p><strong>Angaben gemäß § 5 DDG</strong></p>
+      Kontakt:<br>
+      E-Mail:
+      <a href="mailto:denis.gotz@web.de">denis.gotz@web.de</a><br><br>
 
-      <p>
-        Denis Gotz<br>
-        Deutschland
-      </p>
-
-      <p>
-        E-Mail:<br>
-        <a href="mailto:denis.gotz@web.de">denis.gotz@web.de</a>
-      </p>
-
-      <p>
-        Private Website im Rahmen eines Lern- und Portfolio-Projekts.
-      </p>
-
-    </div>
-
+      Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br>
+      Denis Gotz<br>
+      Prinzenstraße 57<br>
+      47475 Kamp-Lintfort
+    </p>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
+  <div class="terminal-ghost">
+    <p>01 > Loading legal information...</p>
+    <p>02 > Verifying provider identity...</p>
+    <p>03 > Contact endpoint [ACTIVE]</p>
+    <p>04 > Compliance check [OK]</p>
+    <p>05 > Legal page online [READY]</p>
+  </div>
+
+  <footer>
     <p>© 2026 · SYS-PORTFOLIO</p>
 
-    <a href="kontakt.html">Kontakt</a> ·
-    <a href="impressum.html">Impressum</a> ·
-    <a href="datenschutz.html">Datenschutz</a>
-  </div>
-</footer>
+    <div class="footer-links">
+      <a href="kontakt.html">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</section>
 
 </body>
 </html>

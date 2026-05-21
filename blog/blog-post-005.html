@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux & Ubuntu | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .blog-post-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .blog-post-card {
+      border: 1px solid rgba(0,255,224,0.35);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      padding: 50px;
+    }
+
+    .post-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .post-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 6px 12px;
+      font-family: monospace;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .blog-post-card h1 {
+      font-size: 54px;
+      color: white;
+      margin-bottom: 35px;
+      text-shadow: 0 0 18px #00ffe0;
+    }
+
+    .blog-post-card h2 {
+      font-size: 28px;
+      color: #00ffe0;
+      margin-top: 35px;
+      margin-bottom: 16px;
+    }
+
+    .blog-post-card p,
+    .blog-post-card li {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .blog-post-card ul {
+      margin-left: 24px;
+      margin-top: 15px;
+    }
+
+    .back-link {
+      margin-top: 40px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      border: 1px solid #00ffe0;
+      padding: 12px 18px;
+      transition: 0.25s ease;
+    }
+
+    .back-link:hover {
+      box-shadow: 0 0 14px rgba(0,255,224,0.35);
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="../assets/logos/logo.png" alt="DG Logo">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">Portfolio</a></li>
+    <li><a href="../projects.html">Projekte</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="../kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+
+  <div class="blog-post-container">
+
+    <div class="blog-post-card">
+
+      <div class="post-date">2026-01-14</div>
+      <div class="post-tag">LINUX / SYSTEMINTEGRATION</div>
+
+      <h1>Linux statt Wegwerfen – Ubuntu als Lernsystem für alte Hardware</h1>
+
+      <h2>Ziel</h2>
+      <p>
+        Ein älterer Laptop, der nicht mehr Windows-11-tauglich ist,
+        sollte sinnvoll weiterverwendet werden.
+      </p>
+
+      <p>
+        Ziel war ein stabiles Linux-System,
+        das später von meiner Tochter zum Lernen und Spielen genutzt werden kann.
+      </p>
+
+      <h2>Ausgangslage</h2>
+      <ul>
+        <li>Lenovo Laptop mit Windows-10-Lizenz</li>
+        <li>Hardware technisch weiterhin funktionsfähig</li>
+        <li>Kein Upgrade auf Windows 11 möglich</li>
+        <li>Bewusste Entscheidung gegen Neukauf</li>
+      </ul>
+
+      <h2>Installation</h2>
+      <p>
+        Ubuntu 24.04 LTS wurde per USB-Stick installiert.
+      </p>
+
+      <p>
+        Die Installation erfolgte bewusst minimal,
+        ohne unnötige Zusatzsoftware,
+        um ein sauberes und stabiles Basissystem aufzubauen.
+      </p>
+
+      <h2>Erster Start & Systemprüfung</h2>
+      <p>
+        Nach dem ersten Start wurde das System vollständig geprüft.
+      </p>
+
+      <p>
+        Dazu gehörten Versionskontrolle,
+        Hardwareerkennung
+        und die Überprüfung der grundlegenden Funktionalität.
+      </p>
+
+      <h2>Treiber & Secure Boot</h2>
+      <p>
+        Der Laptop nutzt einen Broadcom BCM43142 WLAN-Chip,
+        der unter Linux einen proprietären Treiber benötigt.
+      </p>
+
+      <p>
+        Da Secure Boot aktiv war,
+        musste der Treiber über das MOK-Verfahren autorisiert werden.
+      </p>
+
+      <p>
+        Nach der Freigabe und einem Neustart
+        funktionierte WLAN zuverlässig
+        und das System war vollständig einsatzbereit.
+      </p>
+
+      <h2>Ergebnis</h2>
+      <ul>
+        <li>Ubuntu 24.04 LTS läuft stabil</li>
+        <li>WLAN funktioniert zuverlässig</li>
+        <li>System ist alltagstauglich</li>
+        <li>Kinderkonto ohne Administratorrechte eingerichtet</li>
+      </ul>
+
+      <h2>Lernpunkte</h2>
+      <ul>
+        <li>Analyse von Hardware und Treibern unter Linux</li>
+        <li>Umgang mit Secure Boot und MOK</li>
+        <li>Bewusste Systementscheidungen treffen</li>
+        <li>Nutzerorientierte Einrichtung für reale Anwendungsfälle</li>
+      </ul>
+
+      <h2>Fazit</h2>
+      <p>
+        Linux ist eine sehr gute Möglichkeit,
+        ältere Hardware sinnvoll weiterzuverwenden.
+      </p>
+
+      <p>
+        Ubuntu bietet eine stabile,
+        sichere und kostenlose Basis
+        für Lern- und Alltagszwecke.
+      </p>
+
+      <a href="../blog.html" class="back-link">← Zurück zum Blog</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

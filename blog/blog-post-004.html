@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vorlesefunktion | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .blog-post-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .blog-post-card {
+      border: 1px solid rgba(0,255,224,0.35);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      padding: 50px;
+    }
+
+    .post-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .post-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 6px 12px;
+      font-family: monospace;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .blog-post-card h1 {
+      font-size: 54px;
+      color: white;
+      margin-bottom: 35px;
+      text-shadow: 0 0 18px #00ffe0;
+    }
+
+    .blog-post-card h2 {
+      font-size: 28px;
+      color: #00ffe0;
+      margin-top: 35px;
+      margin-bottom: 16px;
+    }
+
+    .blog-post-card p,
+    .blog-post-card li {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .blog-post-card ul {
+      margin-left: 24px;
+      margin-top: 15px;
+    }
+
+    .back-link {
+      margin-top: 40px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      border: 1px solid #00ffe0;
+      padding: 12px 18px;
+      transition: 0.25s ease;
+    }
+
+    .back-link:hover {
+      box-shadow: 0 0 14px rgba(0,255,224,0.35);
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="../assets/logos/logo.png" alt="DG Logo">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">Portfolio</a></li>
+    <li><a href="../projects.html">Projekte</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="../kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+
+  <div class="blog-post-container">
+
+    <div class="blog-post-card">
+
+      <div class="post-date">2026-01-20</div>
+      <div class="post-tag">BARRIEREFREIHEIT</div>
+
+      <h1>Vorlesefunktion: Barrierefreiheit ohne externe Dienste</h1>
+
+      <h2>Ziel</h2>
+      <p>
+        Ziel dieses Beitrags war es,
+        die Zugänglichkeit der Inhalte dieser Website zu verbessern,
+        ohne dabei auf externe Dienste oder APIs zurückzugreifen.
+      </p>
+
+      <p>
+        Die Vorlesefunktion sollte vollständig lokal im Browser arbeiten
+        und sich nahtlos in das bestehende statische Konzept einfügen.
+      </p>
+
+      <h2>Ausgangslage</h2>
+      <p>
+        Im Rahmen der Weiterentwicklung der Website stellte sich die Frage,
+        wie Barrierefreiheit sinnvoll umgesetzt werden kann,
+        ohne Datenschutz, Einfachheit oder Kontrolle über die Inhalte zu verlieren.
+      </p>
+
+      <p>
+        Viele bestehende Lösungen setzen auf externe Text-to-Speech-Dienste,
+        die Daten übertragen oder zusätzliche technische Abhängigkeiten erzeugen.
+      </p>
+
+      <h2>Umsetzung</h2>
+      <p>
+        Die Vorlesefunktion wurde vollständig mit browserinternen Möglichkeiten umgesetzt.
+      </p>
+
+      <p>
+        Technisch kam die Web Speech API des Browsers zum Einsatz.
+        Dabei wurden keine Texte an externe Server übertragen
+        und keine Audiodateien gespeichert.
+      </p>
+
+      <p>
+        Die Funktion wurde bewusst nur über aktive Benutzeraktion gestartet.
+        Es gab keine automatische Wiedergabe,
+        wodurch die Kontrolle jederzeit beim Nutzer blieb.
+      </p>
+
+      <h2>Ergebnis</h2>
+      <p>
+        Das Ergebnis war eine funktionierende Vorlesefunktion,
+        die Barrierefreiheit, Datenschutz und technische Einfachheit verbindet.
+      </p>
+
+      <p>
+        Sie fügte sich sauber in das bestehende Portfolio-Konzept ein
+        und unterstützte die Nutzung als Lern- und Dokumentationsplattform.
+      </p>
+
+      <h2>Lernpunkte</h2>
+      <ul>
+        <li>Barrierefreiheit lässt sich auch ohne externe Dienste umsetzen</li>
+        <li>Browserinterne APIs bieten mehr Möglichkeiten als oft erwartet</li>
+        <li>Datenschutz und Funktionalität schließen sich nicht aus</li>
+        <li>Bewusste Nutzersteuerung erhöht Transparenz und Kontrolle</li>
+      </ul>
+
+      <a href="../blog.html" class="back-link">← Zurück zum Blog</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

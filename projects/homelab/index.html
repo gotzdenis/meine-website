@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homelab | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .project-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .project-box {
+      border: 1px solid rgba(0,255,224,0.28);
+      background: rgba(0,0,0,0.52);
+      backdrop-filter: blur(6px);
+      padding: 55px;
+    }
+
+    .project-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 5px 10px;
+      font-family: monospace;
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    .project-box h1 {
+      font-size: 82px;
+      line-height: 1.05;
+      color: white;
+      margin-bottom: 50px;
+      text-shadow: 0 0 22px #00ffe0;
+    }
+
+    .project-box h2 {
+      font-size: 30px;
+      color: #00ffe0;
+      margin-top: 45px;
+      margin-bottom: 18px;
+    }
+
+    .project-box p,
+    .project-box li {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .project-box ul {
+      padding-left: 24px;
+    }
+
+    .back-link {
+      margin-top: 50px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    .back-link:hover {
+      text-shadow: 0 0 12px #00ffe0;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .project-box {
+        padding: 30px;
+      }
+
+      .project-box h1 {
+        font-size: 48px;
+      }
+
+      .project-box p,
+      .project-box li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="../../index.html">
+      <img src="../../assets/logos/logo.png" alt="DG Logo">
+    </a>
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">Portfolio</a></li>
+    <li><a href="../../projects.html">Projekte</a></li>
+    <li><a href="../../blog.html">Blog</a></li>
+    <li><a href="../../kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+
+  <div class="project-container">
+    <article class="project-box">
+
+      <div class="project-date">Geplantes Hauptprojekt</div>
+
+      <span class="project-tag">HOMELAB</span>
+
+      <h1>Homelab – Private Infrastruktur & Lernumgebung</h1>
+
+      <h2>Ziel</h2>
+      <p>
+        Ziel dieses Projekts ist der Aufbau einer eigenen privaten
+        IT-Infrastruktur als praktische Lern- und Entwicklungsumgebung.
+      </p>
+
+      <p>
+        Das Homelab soll reale Infrastruktur-Themen aus der Umschulung
+        praktisch abbilden und gleichzeitig als Grundlage
+        für zukünftige Projekte dienen.
+      </p>
+
+      <h2>Geplante Infrastruktur</h2>
+      <ul>
+        <li>Linux Server Systeme</li>
+        <li>Docker Container Umgebung</li>
+        <li>Netzwerksegmentierung</li>
+        <li>SSH Administration</li>
+        <li>Benutzer- und Rechteverwaltung</li>
+        <li>Backup Strategien</li>
+      </ul>
+
+      <h2>Geplante Erweiterungen</h2>
+      <ul>
+        <li>Nextcloud</li>
+        <li>Monitoring</li>
+        <li>Remote Zugriff</li>
+        <li>System Härtung</li>
+        <li>Netzwerkdienste</li>
+        <li>Dokumentierte Infrastruktur-Projekte</li>
+      </ul>
+
+      <h2>Warum ein Homelab?</h2>
+      <p>
+        Viele Themen der Systemintegration lassen sich erst durch praktische
+        Umsetzung wirklich verstehen.
+      </p>
+
+      <p>
+        Das Homelab dient deshalb als persönliche Testumgebung,
+        um Netzwerke, Server, Sicherheit und Administration
+        unter realistischen Bedingungen aufzubauen und zu dokumentieren.
+      </p>
+
+      <h2>Status</h2>
+      <p>
+        Projekt aktuell in Planung.
+      </p>
+
+      <p>
+        Der Aufbau erfolgt schrittweise parallel zu den Lerninhalten
+        der Umschulung und zukünftigen Infrastruktur-Projekten.
+      </p>
+
+      <a href="../../projects.html" class="back-link">← Zurück zu den Projekten</a>
+
+    </article>
+  </div>
+
+  <div class="terminal-ghost">
+    <p>01 > Initializing homelab architecture...</p>
+    <p>02 > Parsing infrastructure roadmap...</p>
+    <p>03 > Docker environment [PLANNED]</p>
+    <p>04 > Network topology preparation...</p>
+    <p>05 > Homelab ready [PLANNED]</p>
+  </div>
+
+  <footer>
+    <p>© 2026 · SYS-PORTFOLIO</p>
+
+    <div class="footer-links">
+      <a href="../../kontakt.html">Kontakt</a>
+      <a href="../../impressum.html">Impressum</a>
+      <a href="../../datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</section>
+
+</body>
+</html>

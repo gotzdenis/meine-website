@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Ubuntu Lernsystem | SYS-PORTFOLIO v2</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .project-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .project-box {
+      border: 1px solid rgba(0,255,224,0.28);
+      background: rgba(0,0,0,0.52);
+      backdrop-filter: blur(6px);
+      padding: 55px;
+    }
+
+    .project-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 5px 10px;
+      font-family: monospace;
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    .project-box h1 {
+      font-size: 82px;
+      line-height: 1.05;
+      color: white;
+      margin-bottom: 50px;
+      text-shadow: 0 0 22px #00ffe0;
+    }
+
+    .project-box h2 {
+      font-size: 30px;
+      color: #00ffe0;
+      margin-top: 45px;
+      margin-bottom: 18px;
+    }
+
+    .project-box p,
+    .project-box li {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .project-box ul {
+      padding-left: 24px;
+    }
+
+    .back-link {
+      margin-top: 50px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    .back-link:hover {
+      text-shadow: 0 0 12px #00ffe0;
+    }
+
+    .terminal-ghost {
+      margin-top: 80px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .project-box {
+        padding: 30px;
+      }
+
+      .project-box h1 {
+        font-size: 48px;
+      }
+
+      .project-box p,
+      .project-box li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="../../index.html">
+      <img src="../../assets/logos/logo.png" alt="DG Logo">
+    </a>
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">Portfolio</a></li>
+    <li><a href="../../projects.html">Projekte</a></li>
+    <li><a href="../../blog.html">Blog</a></li>
+    <li><a href="../../kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+
+  <div class="project-container">
+    <article class="project-box">
+
+      <div class="project-date">Abgeschlossen</div>
+
+      <span class="project-tag">LINUX</span>
+
+      <h1>Linux Ubuntu – Lern- & Entwicklungssystem</h1>
+
+      <h2>Ziel</h2>
+      <p>
+        Ziel dieses Projekts war die sinnvolle Weiterverwendung eines älteren
+        Laptops, der die Anforderungen für Windows 11 nicht mehr erfüllte.
+      </p>
+
+      <p>
+        Statt ungenutzter Alt-Hardware entstand daraus ein stabiles Linux-System
+        für Lernen, Entwicklung und praktische Systemerfahrung.
+      </p>
+
+      <h2>Ausgangslage</h2>
+      <p>
+        Die vorhandene Hardware war technisch weiterhin funktionstüchtig,
+        jedoch nicht sinnvoll für moderne Windows-Upgrades geeignet.
+      </p>
+
+      <p>
+        Ziel war daher eine vollständige Umstellung auf Ubuntu Linux
+        als nachhaltige Alternative zum Neukauf.
+      </p>
+
+      <h2>Technische Umsetzung</h2>
+      <ul>
+        <li>Installation Ubuntu 24.04 LTS</li>
+        <li>Systemanalyse und Hardwareprüfung</li>
+        <li>Broadcom BCM43142 WLAN Treiber Einrichtung</li>
+        <li>Secure Boot / MOK Autorisierung</li>
+        <li>Benutzerverwaltung und Grundkonfiguration</li>
+      </ul>
+
+      <h2>Technische Herausforderung</h2>
+      <p>
+        Eine besondere Herausforderung war der verbaute Broadcom WLAN-Chip,
+        der unter Linux proprietäre Treiber benötigt.
+      </p>
+
+      <p>
+        Aufgrund aktivem Secure Boot musste die Treiberinstallation
+        zusätzlich über das MOK-Verfahren autorisiert werden,
+        bevor WLAN vollständig funktionierte.
+      </p>
+
+      <h2>Projektwert</h2>
+      <p>
+        Dieses Projekt war nicht nur eine technische Übung,
+        sondern eine praktische Lösung zur sinnvollen Weiterverwendung
+        vorhandener Hardware.
+      </p>
+
+      <p>
+        Perspektivisch kann das Gerät später innerhalb der Familie
+        als Lern- und Alltagsgerät weiter genutzt werden.
+      </p>
+
+      <h2>Lernpunkte</h2>
+      <ul>
+        <li>Linux Installation & Systemeinrichtung</li>
+        <li>Hardwareanalyse unter Linux</li>
+        <li>Treiberprobleme systematisch lösen</li>
+        <li>Secure Boot und MOK Verständnis</li>
+        <li>Benutzer- und Rechteverwaltung</li>
+      </ul>
+
+      <a href="../../projects.html" class="back-link">← Zurück zu den Projekten</a>
+
+    </article>
+  </div>
+
+  <div class="terminal-ghost">
+    <p>01 > Loading Linux environment...</p>
+    <p>02 > Initializing kernel modules...</p>
+    <p>03 > Broadcom driver [OK]</p>
+    <p>04 > Secure Boot validation [OK]</p>
+    <p>05 > System ready [COMPLETED]</p>
+  </div>
+
+  <footer>
+    <p>© 2026 · SYS-PORTFOLIO</p>
+
+    <div class="footer-links">
+      <a href="../../kontakt.html">Kontakt</a>
+      <a href="../../impressum.html">Impressum</a>
+      <a href="../../datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</section>
+
+</body>
+</html>
