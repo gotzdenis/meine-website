@@ -3,120 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SYS-Garden | SYS-PORTFOLIO v2</title>
+  <title>SYS-Garden v1.0 veröffentlicht | SYS-PORTFOLIO</title>
 
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
   <style>
     body {
       overflow-y: auto;
     }
 
-    .project-container {
-      max-width: 1200px;
+    .blog-post-container {
+      max-width: 1100px;
       margin: 0 auto;
       position: relative;
       z-index: 20;
     }
 
-    .project-box {
-      border: 1px solid rgba(0,255,224,0.28);
-      background: rgba(0,0,0,0.52);
+    .blog-post-card {
+      border: 1px solid rgba(0,255,224,0.35);
+      background: rgba(0,0,0,0.55);
       backdrop-filter: blur(6px);
-      padding: 55px;
+      padding: 50px;
     }
 
-    .project-date {
+    .post-date {
       color: #8dfcf0;
       font-family: monospace;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .project-tag {
-      display: inline-block;
-      color: #00ffe0;
-      border: 1px solid #00ffe0;
-      padding: 5px 10px;
-      font-family: monospace;
-      font-size: 12px;
-      margin-bottom: 26px;
-    }
-
-    .project-box h1 {
-      font-size: 82px;
-      line-height: 1.05;
-      color: white;
-      margin-bottom: 50px;
-      text-shadow: 0 0 22px #00ffe0;
-    }
-
-    .project-box h2 {
-      font-size: 30px;
-      color: #00ffe0;
-      margin-top: 45px;
+      font-size: 15px;
       margin-bottom: 18px;
     }
 
-    .project-box p,
-    .project-box li {
+    .post-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 6px 12px;
+      font-family: monospace;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .blog-post-card h1 {
+      font-size: 54px;
+      color: white;
+      margin-bottom: 35px;
+      text-shadow: 0 0 18px #00ffe0;
+    }
+
+    .blog-post-card h2 {
+      font-size: 28px;
+      color: #00ffe0;
+      margin-top: 35px;
+      margin-bottom: 16px;
+    }
+
+    .blog-post-card p,
+    .blog-post-card li {
       font-size: 18px;
       line-height: 1.9;
       color: #d6d6d6;
     }
 
-    .project-box ul {
+    .blog-post-card ul {
       padding-left: 24px;
+    }
+
+    .back-link {
+      margin-top: 40px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      border: 1px solid #00ffe0;
+      padding: 12px 18px;
+      transition: 0.25s ease;
+    }
+
+    .back-link:hover {
+      box-shadow: 0 0 14px rgba(0,255,224,0.35);
     }
 
     .demo-button {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 24px;
-      border: 1px solid #00ffe0;
+      margin-top: 15px;
       color: #00ffe0;
       text-decoration: none;
+      border: 1px solid #00ffe0;
+      padding: 12px 18px;
       font-family: monospace;
       transition: 0.25s ease;
     }
 
     .demo-button:hover {
-      background: rgba(0,255,224,0.1);
-      box-shadow: 0 0 15px rgba(0,255,224,0.3);
-    }
-
-    .back-link {
-      margin-top: 50px;
-      display: inline-block;
-      color: #00ffe0;
-      text-decoration: none;
-      font-family: monospace;
-      font-size: 15px;
-    }
-
-    .back-link:hover {
-      text-shadow: 0 0 12px #00ffe0;
-    }
-
-    .terminal-ghost {
-      margin-top: 80px;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 900px) {
-      .project-box {
-        padding: 30px;
-      }
-
-      .project-box h1 {
-        font-size: 48px;
-      }
-
-      .project-box p,
-      .project-box li {
-        font-size: 16px;
-      }
+      box-shadow: 0 0 14px rgba(0,255,224,0.35);
     }
   </style>
 </head>
@@ -125,31 +104,31 @@
 
 <nav>
   <div class="logo">
-    <a href="../../index.html">
-      <img src="../../assets/logos/logo.png" alt="DG Logo">
-    </a>
+    <img src="../assets/logos/logo.png" alt="DG Logo">
   </div>
 
   <ul>
-    <li><a href="../../index.html">Portfolio</a></li>
-    <li><a href="../../projects.html">Projekte</a></li>
-    <li><a href="../../blog.html">Blog</a></li>
-    <li><a href="../../kontakt.html">Kontakt</a></li>
+    <li><a href="../index.html">Portfolio</a></li>
+    <li><a href="../projects.html">Projekte</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="../kontakt.html">Kontakt</a></li>
   </ul>
 </nav>
 
 <section class="page-container">
 
-  <div class="project-container">
-    <article class="project-box">
+  <div class="blog-post-container">
 
-      <div class="project-date">Mai 2026</div>
+    <div class="blog-post-card">
 
-      <span class="project-tag">WEB APPLICATION</span>
+      <div class="post-date">Mai 2026</div>
 
-      <h1>SYS-Garden v1.0</h1>
+      <div class="post-tag">WEBAPP</div>
+
+      <h1>SYS-Garden v1.0 veröffentlicht</h1>
 
       <h2>Ziel</h2>
+
       <p>
         SYS-Garden ist eine digitale Gartenverwaltung zur Planung,
         Dokumentation und Organisation eines privaten Nutzgartens.
@@ -157,8 +136,8 @@
 
       <p>
         Ziel des Projekts ist die zentrale Verwaltung von Beeten,
-        Gewächshausflächen, Pflanzen, Mischkulturen, Terminen
-        und Notizen innerhalb einer eigenen Webanwendung.
+        Gewächshausflächen, Pflanzen, Mischkulturen,
+        Terminen und Notizen innerhalb einer eigenen Webanwendung.
       </p>
 
       <h2>Technische Umsetzung</h2>
@@ -173,7 +152,7 @@
         <li>GitHub Pages</li>
       </ul>
 
-      <h2>Aktueller Stand</h2>
+      <h2>Funktionen in Version 1.0</h2>
 
       <ul>
         <li>Dashboard</li>
@@ -199,15 +178,6 @@
         und keine persönlichen Informationen gespeichert.
       </p>
 
-      <h2>Roadmap</h2>
-
-      <ul>
-        <li>Aufgabenverwaltung 2.0</li>
-        <li>Automatischer Gartenkalender</li>
-        <li>Dashboard Erweiterungen</li>
-        <li>Weitere Planungsfunktionen</li>
-      </ul>
-
       <h2>Live Demo</h2>
 
       <p>
@@ -221,32 +191,30 @@
         🌱 LIVE DEMO ÖFFNEN
       </a>
 
-      <br>
+      <h2>Ausblick</h2>
 
-      <a href="../../projects.html" class="back-link">
-        ← Zurück zu den Projekten
+      <ul>
+        <li>Aufgabenverwaltung 2.0</li>
+        <li>Automatischer Gartenkalender</li>
+        <li>Dashboard Erweiterungen</li>
+        <li>Weitere Planungsfunktionen</li>
+      </ul>
+
+      <h2>Lernpunkt</h2>
+
+      <p>
+        SYS-Garden zeigt die praktische Umsetzung eines vollständigen
+        Webprojekts – von der Planung über die Entwicklung
+        bis zur Veröffentlichung als Live-Anwendung.
+      </p>
+
+      <a href="../blog.html" class="back-link">
+        ← Zurück zum Blog
       </a>
 
-    </article>
-  </div>
-
-  <div class="terminal-ghost">
-    <p>01 > Loading SYS-Garden...</p>
-    <p>02 > Initializing local storage...</p>
-    <p>03 > Garden modules [ACTIVE]</p>
-    <p>04 > Calendar system [ONLINE]</p>
-    <p>05 > Version 1.0 deployed [READY]</p>
-  </div>
-
-  <footer>
-    <p>© 2026 · SYS-PORTFOLIO</p>
-
-    <div class="footer-links">
-      <a href="../../kontakt.html">Kontakt</a>
-      <a href="../../impressum.html">Impressum</a>
-      <a href="../../datenschutz.html">Datenschutz</a>
     </div>
-  </footer>
+
+  </div>
 
 </section>
 
