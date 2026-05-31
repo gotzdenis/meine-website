@@ -1,266 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Denis Gotz | SYS-PORTFOLIO v2</title>
-  <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denis Gotz | SYS-PORTFOLIO v2</title>
+    <link rel="stylesheet" href="css/style.css" />
 
-  <style>
-    .skills-section {
-      margin-top: 100px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .skills-box,
-    .skills-terminal {
-      border: 1px solid rgba(0,255,224,0.28);
-      background: rgba(0,0,0,0.52);
-      backdrop-filter: blur(6px);
-      padding: 35px;
-    }
-
-    .skills-box h3,
-    .skills-terminal h3 {
-      color: #00ffe0;
-      font-size: 28px;
-      margin-bottom: 28px;
-      text-shadow: 0 0 12px rgba(0,255,224,0.4);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .skill-card {
-      border: 1px solid rgba(0,255,224,0.22);
-      background: rgba(255,255,255,0.03);
-      padding: 20px;
-      transition: 0.25s ease;
-    }
-
-    .skill-card:hover {
-      border-color: #00ffe0;
-      box-shadow: 0 0 18px rgba(0,255,224,0.2);
-      transform: translateY(-3px);
-    }
-
-    .skill-card h4 {
-      color: white;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .skill-status {
-      display: inline-block;
-      color: #00ffe0;
-      border: 1px solid rgba(0,255,224,0.5);
-      padding: 4px 10px;
-      font-family: monospace;
-      font-size: 12px;
-      margin-bottom: 12px;
-    }
-
-    .skill-card p {
-      color: #bfbfbf;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .skills-terminal p {
-      font-family: monospace;
-      color: #8dfcf0;
-      font-size: 15px;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 1100px) {
+    <style>
       .skills-section {
-        grid-template-columns: 1fr;
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+
+      .skills-box,
+      .skills-terminal {
+        border: 1px solid rgba(0, 255, 224, 0.28);
+        background: rgba(0, 0, 0, 0.52);
+        backdrop-filter: blur(6px);
+        padding: 35px;
+      }
+
+      .skills-box h3,
+      .skills-terminal h3 {
+        color: #00ffe0;
+        font-size: 28px;
+        margin-bottom: 28px;
+        text-shadow: 0 0 12px rgba(0, 255, 224, 0.4);
       }
 
       .skills-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
       }
-    }
-  </style>
-</head>
 
-<body>
+      .skill-card {
+        border: 1px solid rgba(0, 255, 224, 0.22);
+        background: rgba(255, 255, 255, 0.03);
+        padding: 20px;
+        transition: 0.25s ease;
+      }
 
-  <nav>
-    <div class="logo">
-      <img src="assets/logos/logo.png" alt="DG Logo">
-    </div>
+      .skill-card:hover {
+        border-color: #00ffe0;
+        box-shadow: 0 0 18px rgba(0, 255, 224, 0.2);
+        transform: translateY(-3px);
+      }
 
-    <ul>
-      <li><a href="index.html">Portfolio</a></li>
-      <li><a href="projects.html">Projekte</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
+      .skill-card h4 {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
 
-  <section class="page-container">
+      .skill-status {
+        display: inline-block;
+        color: #00ffe0;
+        border: 1px solid rgba(0, 255, 224, 0.5);
+        padding: 4px 10px;
+        font-family: monospace;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
 
-    <div class="hero-layout">
+      .skill-card p {
+        color: #bfbfbf;
+        font-size: 14px;
+        line-height: 1.5;
+      }
 
-      <div class="hero-content">
+      .skills-terminal p {
+        font-family: monospace;
+        color: #8dfcf0;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
 
-        <div class="terminal-tag">root@sys-portfolio:~#</div>
+      @media (max-width: 1100px) {
+        .skills-section {
+          grid-template-columns: 1fr;
+        }
 
-        <h1>Denis Gotz</h1>
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
 
-        <div class="hero-line"></div>
-
-        <h2>Fachinformatiker Systemintegration</h2>
-
-        <p class="hero-text">
-          Technik begeistert. Systeme verbinden. Probleme lösen.
-          Mein Weg in die IT – dokumentiert in Projekten,
-          Lernjournalen und zukünftigen Infrastrukturprojekten.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="blog.html" class="btn">>_ ZUM LERNJOURNAL</a>
-          <a href="projects.html" class="btn">📁 ZU DEN PROJEKTEN</a>
-        </div>
-
-        <div class="terminal-log">
-          <p>> Initializing system...</p>
-          <p>> Loading portfolio modules [OK]</p>
-          <p>> Linux learning environment [ACTIVE]</p>
-          <p>> Networking labs [ACTIVE]</p>
-          <p>> Homelab planning [IN PROGRESS]</p>
-          <p>> Documentation engine [ONLINE]</p>
-          <p>> System ready.</p>
-        </div>
-
-        <div class="bottom-icons">
-          <div>🐧 Linux</div>
-          <div>🖥 Homelab</div>
-          <div>🌐 Network</div>
-          <div>🔒 Security</div>
-        </div>
-
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="assets/logos/logo.png" alt="DG Logo" />
       </div>
 
-      <div class="status-box">
-        <h3>SYSTEM STATUS</h3>
+      <ul>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="projects.html">Projekte</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
 
-        <p>ROLE: FISI Trainee</p>
-        <p>STATUS: active learning</p>
-        <p>PROJECTS: live</p>
-        <p>BLOG: online</p>
-        <p>SECURITY: building knowledge</p>
-        <p>HOMELAB: planned</p>
-        <p>NEXT GOAL: infrastructure expansion</p>
-      </div>
+    <section class="page-container">
+      <div class="hero-layout">
+        <div class="hero-content">
+          <div class="terminal-tag">root@sys-portfolio:~#</div>
 
-    </div>
+          <h1>Denis Gotz</h1>
 
-    <section class="skills-section">
+          <div class="hero-line"></div>
 
-      <div class="skills-box">
-        <h3>TECHNOLOGIEN & LERNFELDER</h3>
+          <h2>Fachinformatiker Systemintegration</h2>
 
-        <div class="skills-grid">
+          <p class="hero-text">
+            Technik begeistert. Systeme verbinden. Probleme lösen. Mein Weg in
+            die IT – dokumentiert in Projekten, Lernjournalen und zukünftigen
+            Infrastrukturprojekten.
+          </p>
 
-          <div class="skill-card">
-            <h4>Linux Administration</h4>
-            <div class="skill-status">PRAXIS AKTIV</div>
-            <p>Ubuntu Installation, Benutzerverwaltung, Secure Boot und Systemeinrichtung.</p>
+          <div class="hero-buttons">
+            <a href="blog.html" class="btn">>_ ZUM LERNJOURNAL</a>
+            <a href="projects.html" class="btn">📁 ZU DEN PROJEKTEN</a>
           </div>
 
-          <div class="skill-card">
-            <h4>Netzwerktechnik</h4>
-            <div class="skill-status">PRAXIS AKTIV</div>
-            <p>OSI-Modell, TCP/IP, Routing, Switching und Netzwerkgrundlagen.</p>
+          <div class="terminal-log">
+            <p>> Initializing system...</p>
+            <p>> Loading portfolio modules [OK]</p>
+            <p>> Linux learning environment [ACTIVE]</p>
+            <p>> Networking labs [ACTIVE]</p>
+            <p>> Homelab planning [IN PROGRESS]</p>
+            <p>> Documentation engine [ONLINE]</p>
+            <p>> System ready.</p>
           </div>
 
-          <div class="skill-card">
-            <h4>IPv4 & Subnetting</h4>
-            <div class="skill-status">IM AUFBAU</div>
-            <p>Adressierung, Subnetting und technische Netzplanung im Lernprozess.</p>
+          <div class="bottom-icons">
+            <div>🐧 Linux</div>
+            <div>🖥 Homelab</div>
+            <div>🌐 Network</div>
+            <div>🔒 Security</div>
           </div>
+        </div>
 
-          <div class="skill-card">
-            <h4>IT-Sicherheit</h4>
-            <div class="skill-status">GRUNDLAGEN</div>
-            <p>Härtung, Datenschutz, Zugriffskontrolle und erste Sicherheitskonzepte.</p>
-          </div>
+        <div class="status-box">
+          <h3>SYSTEM STATUS</h3>
 
-          <div class="skill-card">
-            <h4>Git & GitHub</h4>
-            <div class="skill-status">PRAXIS AKTIV</div>
-            <p>Versionsverwaltung, Deployment und strukturierte Projektpflege.</p>
-          </div>
-
-          <div class="skill-card">
-            <h4>HTML / CSS / JavaScript</h4>
-            <div class="skill-status">PRAXIS AKTIV</div>
-            <p>Statische Webentwicklung mit Fokus auf Struktur und Wartbarkeit.</p>
-          </div>
-
-          <div class="skill-card">
-            <h4>Virtualisierung</h4>
-            <div class="skill-status">GEPLANT</div>
-            <p>Geplantes Lernfeld für zukünftige virtuelle Test- und Infrastrukturumgebungen.</p>
-          </div>
-
-          <div class="skill-card">
-            <h4>Docker & Container</h4>
-            <div class="skill-status">GEPLANT</div>
-            <p>Geplante praktische Umsetzung im Homelab-Projekt.</p>
-          </div>
-
-          <div class="skill-card">
-            <h4>Active Directory</h4>
-            <div class="skill-status">GEPLANT</div>
-            <p>Geplantes Lernfeld für Windows-Infrastruktur und Benutzerverwaltung.</p>
-          </div>
-
-          <div class="skill-card">
-            <h4>PowerShell</h4>
-            <div class="skill-status">GEPLANT</div>
-            <p>Automatisierung und Administration zukünftiger Windows-Systeme.</p>
-          </div>
-
+          <p>ROLE: FISI Trainee</p>
+          <p>STATUS: active learning</p>
+          <p>PROJECTS: live</p>
+          <p>BLOG: online</p>
+          <p>SECURITY: building knowledge</p>
+          <p>HOMELAB: planned</p>
+          <p>NEXT GOAL: infrastructure expansion</p>
         </div>
       </div>
 
-      <div class="skills-terminal">
-        <h3>CAPABILITY SCAN</h3>
+      <section class="skills-section">
+        <div class="skills-box">
+          <h3>TECHNOLOGIEN & LERNFELDER</h3>
 
-        <p>skills@sys-portfolio:~# scan</p>
-        <p>> Linux administration .......... [Praxis aktiv]</p>
-        <p>> Networking fundamentals ....... [Praxis aktiv]</p>
-        <p>> IPv4 / subnetting ............. [Im Aufbau]</p>
-        <p>> IT security basics ............ [Grundlagen]</p>
-        <p>> Git / version control ......... [Praxis aktiv]</p>
-        <p>> Virtualization ................ [Geplant]</p>
-        <p>> Docker / containers ........... [Geplant]</p>
-        <p>> Active Directory .............. [Geplant]</p>
-      </div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h4>Linux Administration</h4>
+              <div class="skill-status">PRAXIS AKTIV</div>
+              <p>
+                Ubuntu Installation, Benutzerverwaltung, Secure Boot und
+                Systemeinrichtung.
+              </p>
+            </div>
 
+            <div class="skill-card">
+              <h4>Netzwerktechnik</h4>
+              <div class="skill-status">PRAXIS AKTIV</div>
+              <p>
+                OSI-Modell, TCP/IP, Routing, Switching und Netzwerkgrundlagen.
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <h4>IPv4 & Subnetting</h4>
+              <div class="skill-status">IM AUFBAU</div>
+              <p>
+                Adressierung, Subnetting und technische Netzplanung im
+                Lernprozess.
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <h4>IT-Sicherheit</h4>
+              <div class="skill-status">GRUNDLAGEN</div>
+              <p>
+                Härtung, Datenschutz, Zugriffskontrolle und erste
+                Sicherheitskonzepte.
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <h4>Git & GitHub</h4>
+              <div class="skill-status">PRAXIS AKTIV</div>
+              <p>
+                Versionsverwaltung, Deployment und strukturierte Projektpflege.
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <h4>HTML / CSS / JavaScript</h4>
+              <div class="skill-status">PRAXIS AKTIV</div>
+              <p>
+                Statische Webentwicklung mit Fokus auf Struktur und Wartbarkeit.
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <h4>Virtualisierung</h4>
+              <div class="skill-status">GEPLANT</div>
+              <p>
+                Geplantes Lernfeld für zukünftige virtuelle Test- und
+                Infrastrukturumgebungen.
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <h4>Docker & Container</h4>
+              <div class="skill-status">GEPLANT</div>
+              <p>Geplante praktische Umsetzung im Homelab-Projekt.</p>
+            </div>
+
+            <div class="skill-card">
+              <h4>Active Directory</h4>
+              <div class="skill-status">GEPLANT</div>
+              <p>
+                Geplantes Lernfeld für Windows-Infrastruktur und
+                Benutzerverwaltung.
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <h4>PowerShell</h4>
+              <div class="skill-status">GEPLANT</div>
+              <p>
+                Automatisierung und Administration zukünftiger Windows-Systeme.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-terminal">
+          <h3>CAPABILITY SCAN</h3>
+
+          <p>skills@sys-portfolio:~# scan</p>
+          <p>> Linux administration .......... [Praxis aktiv]</p>
+          <p>> Networking fundamentals ....... [Praxis aktiv]</p>
+          <p>> IPv4 / subnetting ............. [Im Aufbau]</p>
+          <p>> IT security basics ............ [Grundlagen]</p>
+          <p>> Git / version control ......... [Praxis aktiv]</p>
+          <p>> Virtualization ................ [Geplant]</p>
+          <p>> Docker / containers ........... [Geplant]</p>
+          <p>> Active Directory .............. [Geplant]</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2026 · SYS-PORTFOLIO</p>
+
+        <div class="footer-links">
+          <a href="kontakt.html">Kontakt</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </footer>
     </section>
-
-    <footer>
-      <p>© 2026 · SYS-PORTFOLIO</p>
-
-      <div class="footer-links">
-        <a href="kontakt.html">Kontakt</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </footer>
-
-  </section>
-
-</body>
+  </body>
 </html>
