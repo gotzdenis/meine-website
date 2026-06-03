@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYS-HOMELAB #001 – Erster Ubuntu-Server erfolgreich eingerichtet | SYS-PORTFOLIO</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .blog-post-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 20;
+    }
+
+    .blog-post-card {
+      border: 1px solid rgba(0,255,224,0.35);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      padding: 50px;
+    }
+
+    .post-date {
+      color: #8dfcf0;
+      font-family: monospace;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .post-tag {
+      display: inline-block;
+      color: #00ffe0;
+      border: 1px solid #00ffe0;
+      padding: 6px 12px;
+      font-family: monospace;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .blog-post-card h1 {
+      font-size: 54px;
+      color: white;
+      margin-bottom: 35px;
+      text-shadow: 0 0 18px #00ffe0;
+    }
+
+    .blog-post-card h2 {
+      font-size: 28px;
+      color: #00ffe0;
+      margin-top: 35px;
+      margin-bottom: 16px;
+    }
+
+    .blog-post-card p,
+    .blog-post-card li {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #d6d6d6;
+    }
+
+    .blog-post-card ul {
+      padding-left: 24px;
+    }
+
+    .back-link {
+      margin-top: 40px;
+      display: inline-block;
+      color: #00ffe0;
+      text-decoration: none;
+      font-family: monospace;
+      border: 1px solid #00ffe0;
+      padding: 12px 18px;
+      transition: 0.25s ease;
+    }
+
+    .back-link:hover {
+      box-shadow: 0 0 14px rgba(0,255,224,0.35);
+    }
+  </style>
+
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="../assets/logos/logo.png" alt="DG Logo">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">Portfolio</a></li>
+    <li><a href="../projects.html">Projekte</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="../kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+
+  <div class="blog-post-container">
+
+```
+<div class="blog-post-card">
+
+  <div class="post-date">Juni 2026</div>
+
+  <div class="post-tag">HOMELAB</div>
+
+  <h1>SYS-HOMELAB #001 – Erster Ubuntu-Server erfolgreich eingerichtet</h1>
+
+  <h2>Ziel</h2>
+
+  <p>
+    Ziel des SYS-HOMELAB-Projekts ist der Aufbau einer privaten
+    Linux-Infrastruktur als Lern-, Test- und Dokumentationsumgebung
+    für die FISI-Umschulung und zukünftige Infrastrukturprojekte.
+  </p>
+
+  <p>
+    Der erste Meilenstein bestand darin, einen betriebsbereiten
+    Ubuntu-Server bereitzustellen, der vollständig über das Netzwerk
+    verwaltet werden kann.
+  </p>
+
+  <h2>Technische Umsetzung</h2>
+
+  <ul>
+    <li>Ubuntu Server 24.04 LTS</li>
+    <li>OpenSSH</li>
+    <li>TP-Link Router</li>
+    <li>DHCP-Reservierung</li>
+    <li>Windows 11 SSH Client</li>
+  </ul>
+
+  <h2>Erfolgreich umgesetzt</h2>
+
+  <ul>
+    <li>Ubuntu Server 24.04 LTS installiert</li>
+    <li>System vollständig aktualisiert</li>
+    <li>Hostname „sys-homelab“ eingerichtet</li>
+    <li>Netzwerk erfolgreich konfiguriert</li>
+    <li>DHCP-Adresse erhalten</li>
+    <li>DHCP-Reservierung im Router eingerichtet</li>
+    <li>OpenSSH aktiviert</li>
+    <li>Erster SSH-Zugriff von Windows 11 durchgeführt</li>
+    <li>Headless-Betrieb erfolgreich getestet</li>
+  </ul>
+
+  <h2>Netzwerk & Erreichbarkeit</h2>
+
+  <p>
+    Der Server wurde erfolgreich in das lokale Netzwerk integriert
+    und ist dauerhaft unter einer festen IP-Adresse erreichbar.
+  </p>
+
+  <p>
+    Durch die eingerichtete DHCP-Reservierung bleibt die Adresse
+    auch nach Neustarts unverändert und ermöglicht eine zuverlässige
+    Administration sowie die spätere Bereitstellung weiterer Dienste.
+  </p>
+
+  <h2>SSH-Verwaltung</h2>
+
+  <p>
+    Nach der Installation und Aktivierung von OpenSSH konnte die
+    erste erfolgreiche SSH-Verbindung vom Windows-11-Hauptrechner
+    aufgebaut werden.
+  </p>
+
+  <p>
+    Damit ist eine vollständige Fernverwaltung des Servers möglich,
+    ohne dass dauerhaft ein Monitor oder eine Tastatur angeschlossen
+    werden müssen.
+  </p>
+
+  <h2>Dokumentierte Meilensteine</h2>
+
+  <ul>
+    <li>IP-Adresse des Servers</li>
+    <li>Status des SSH-Dienstes</li>
+    <li>SSH-Verbindung von Windows 11</li>
+    <li>DHCP-Reservierung im Router</li>
+    <li>Clientliste mit sys-homelab</li>
+  </ul>
+
+  <h2>Nächste Schritte</h2>
+
+  <ul>
+    <li>Hardwaredaten dokumentieren</li>
+    <li>Docker installieren</li>
+    <li>Samba-Freigaben einrichten</li>
+    <li>Backup-Konzept entwickeln</li>
+    <li>Monitoring aufbauen</li>
+    <li>System-Härtung umsetzen</li>
+  </ul>
+
+  <h2>Fazit</h2>
+
+  <p>
+    Die Planungsphase des SYS-HOMELAB-Projekts wurde erfolgreich
+    abgeschlossen.
+  </p>
+
+  <p>
+    Mit dem ersten betriebsbereiten Ubuntu-Server wurde die
+    technische Grundlage für zukünftige Linux-, Netzwerk-,
+    Docker- und Monitoring-Projekte geschaffen.
+  </p>
+
+  <p>
+    Das Projekt befindet sich nun offiziell in der aktiven
+    Aufbauphase.
+  </p>
+
+  <a href="../blog.html" class="back-link">
+    ← Zurück zum Blog
+  </a>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+</body>
+</html>
