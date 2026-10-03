@@ -37,7 +37,7 @@ nav {
 
 .logo img {
   width: 72px;
-  filter: drop-shadow(0 0 14px #00ffe0);
+  filter: drop-shadow(0 0 14px #8dff00);
 }
 
 nav ul {
@@ -48,7 +48,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #00ffe0;
+  color: #8dff00;
   font-size: 18px;
   font-weight: 500;
   transition: 0.25s ease;
@@ -56,7 +56,7 @@ nav a {
 
 nav a:hover {
   color: #ffffff;
-  text-shadow: 0 0 10px #00ffe0;
+  text-shadow: 0 0 10px #8dff00;
 }
 
 /* ================= GLOBAL PAGE LAYOUT ================= */
@@ -71,8 +71,8 @@ nav a:hover {
 
 .terminal-tag {
   display: inline-block;
-  border: 1px solid #00ffe0;
-  color: #00ffe0;
+  border: 1px solid #8dff00;
+  color: #8dff00;
   font-family: monospace;
   padding: 10px 18px;
   margin-bottom: 30px;
@@ -99,23 +99,23 @@ h1 {
   font-size: 108px;
   font-weight: 700;
   line-height: 1;
-  text-shadow: 0 0 24px #00ffe0;
+  text-shadow: 0 0 24px #8dff00;
 }
 
 .hero-line {
   width: 560px;
   height: 4px;
-  background: #00ffe0;
-  box-shadow: 0 0 20px #00ffe0;
+  background: #8dff00;
+  box-shadow: 0 0 20px #8dff00;
   margin: 30px 0;
 }
 
 h2 {
-  color: #00ffe0;
+  color: #8dff00;
   font-size: 58px;
   line-height: 1.05;
   margin-bottom: 28px;
-  text-shadow: 0 0 12px rgba(0,255,224,0.25);
+  text-shadow: 0 0 12px rgba(141, 255, 0, 0.25);
 }
 
 .hero-text {
@@ -135,8 +135,8 @@ h2 {
 
 .btn {
   text-decoration: none;
-  color: #00ffe0;
-  border: 1px solid #00ffe0;
+  color: #8dff00;
+  border: 1px solid #8dff00;
   padding: 16px 28px;
   font-family: monospace;
   font-size: 15px;
@@ -145,7 +145,7 @@ h2 {
 }
 
 .btn:hover {
-  box-shadow: 0 0 16px #00ffe0;
+  box-shadow: 0 0 16px #8dff00;
   transform: translateY(-2px);
 }
 
@@ -154,13 +154,13 @@ h2 {
 .status-box {
   width: 380px;
   padding: 34px;
-  border: 1px solid rgba(0,255,224,0.8);
+  border: 1px solid rgba(141, 255, 0, 0.8);
   background: rgba(0, 0, 0, 0.62);
   backdrop-filter: blur(3px);
 }
 
 .status-box h3 {
-  color: #00ffe0;
+  color: #8dff00;
   font-size: 22px;
   margin-bottom: 24px;
   font-family: monospace;
@@ -181,7 +181,7 @@ h2 {
   font-family: monospace;
   font-size: 14px;
   line-height: 1.45;
-  color: rgba(0, 255, 224, 0.035);
+  color: rgba(141, 255, 0, 0.035);
   pointer-events: none;
 }
 
@@ -200,7 +200,7 @@ h2 {
   margin-top: 60px;
   display: flex;
   gap: 34px;
-  color: #00ffe0;
+  color: #8dff00;
   font-size: 22px;
 }
 
@@ -209,7 +209,7 @@ h2 {
 }
 
 .bottom-icons div:hover {
-  text-shadow: 0 0 10px #00ffe0;
+  text-shadow: 0 0 10px #8dff00;
   transform: translateY(-2px);
 }
 
@@ -222,10 +222,10 @@ footer {
 
   background: rgba(0, 0, 0, 0.22);
   padding: 12px 28px;
-  border: 1px solid rgba(0,255,224,0.18);
+  border: 1px solid rgba(141, 255, 0, 0.18);
   backdrop-filter: blur(6px);
 
-  box-shadow: 0 0 18px rgba(0,255,224,0.08);
+  box-shadow: 0 0 18px rgba(141, 255, 0, 0.08);
 
   margin-top: 80px;
   position: relative;
@@ -240,13 +240,13 @@ footer {
 }
 
 .footer-links a {
-  color: #00ffe0;
+  color: #8dff00;
   text-decoration: none;
   font-size: 14px;
   transition: 0.25s ease;
 }
 
 .footer-links a:hover {
-  text-shadow: 0 0 10px #00ffe0;
+  text-shadow: 0 0 10px #8dff00;
   color: #ffffff;
 }
