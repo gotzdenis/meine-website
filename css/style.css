@@ -433,3 +433,28 @@ footer {
   .contact-grid { grid-template-columns: 1fr; }
   .project-box, .blog-post-card { padding: 24px !important; }
 }
+
+.nav-clock {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  min-width: 82px;
+  font-family: monospace;
+  text-align: right;
+}
+.nav-clock b {
+  color: var(--sys-green);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.nav-clock span {
+  color: var(--sys-muted);
+  font-size: 10px;
+}
+@media (max-width: 760px) {
+  .nav-clock { order: 1; margin-left: auto; }
+  nav ul { order: 2; }
+}
